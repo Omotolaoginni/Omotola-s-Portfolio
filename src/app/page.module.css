@@ -1,19 +1,31 @@
-/* Hero Section */
-.hero {
-  max-width: 800px;
+/* 1. Hero Section */
+.heroSection {
+  padding-top: var(--spacing-10);
+  padding-bottom: var(--spacing-10);
+}
+
+@media (min-width: 768px) {
+  .heroSection {
+    padding-top: var(--spacing-20);
+    padding-bottom: var(--spacing-20);
+  }
 }
 
 .heroTitle {
-  font-size: var(--display-text-size);
-  margin-bottom: var(--spacing-6);
-  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-4);
 }
 
 .heroSubtitle {
-  font-size: var(--body-large-size);
-  color: var(--color-text-muted);
-  margin-bottom: var(--spacing-10);
-  max-width: 600px;
+  margin-bottom: var(--spacing-8);
+}
+
+@media (min-width: 768px) {
+  .heroTitle {
+    margin-bottom: var(--spacing-6);
+  }
+  .heroSubtitle {
+    margin-bottom: var(--spacing-10);
+  }
 }
 
 .heroActions {
@@ -22,24 +34,26 @@
   flex-wrap: wrap;
 }
 
-/* Sections */
-.sectionHeader {
+/* 2. Selected Projects Section */
+.projectsSection {
+  padding-top: var(--spacing-10);
+  padding-bottom: var(--spacing-10);
+}
+
+@media (min-width: 768px) {
+  .projectsSection {
+    padding-top: var(--spacing-20);
+    padding-bottom: var(--spacing-20);
+  }
+}
+
+.projectsHeader {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: var(--spacing-10);
-  border-bottom: 1px solid var(--color-border);
-  padding-bottom: var(--spacing-4);
 }
 
-.sectionTitle {
-  font-family: var(--font-headings-h2-family);
-  font-size: var(--font-headings-h2-size);
-  font-weight: var(--font-headings-h2-weight);
-  color: var(--color-text-primary);
-}
-
-/* Grid */
 .projectGrid {
   display: grid;
   grid-template-columns: 1fr;
@@ -52,14 +66,64 @@
   }
 }
 
-/* Philosophy */
-.philosophy {
-  max-width: 800px;
+/* 3. About Preview Section */
+.aboutSection {
+  padding-top: var(--spacing-10);
+  padding-bottom: var(--spacing-10);
 }
 
-.philosophyText {
-  font-size: var(--body-large-size);
-  color: var(--color-text-muted);
+@media (min-width: 768px) {
+  .aboutSection {
+    padding-top: var(--spacing-20);
+    padding-bottom: var(--spacing-20);
+  }
+}
+
+.aboutTitle {
+  margin-bottom: var(--spacing-6);
+}
+
+.aboutNarrative {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.aboutAction {
+  margin-top: var(--spacing-8);
+}
+
+/* 4. Contact / CTA Section */
+.contactSection {
+  padding-top: var(--spacing-10);
+  padding-bottom: var(--spacing-10);
+}
+
+@media (min-width: 768px) {
+  .contactSection {
+    padding-top: var(--spacing-20);
+    padding-bottom: var(--spacing-20);
+  }
+}
+
+.contactTitle {
+  margin-bottom: var(--spacing-6);
+}
+
+.contactSubtitle {
   margin-bottom: var(--spacing-8);
-  margin-top: var(--spacing-6);
+}
+
+.contactEmail {
+  display: inline-block;
+  font-family: var(--font-headings-h2-family);
+  font-size: var(--font-headings-h2-size);
+  font-weight: var(--font-headings-h2-weight);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contactEmail:hover {
+  color: var(--color-link-hover);
 }

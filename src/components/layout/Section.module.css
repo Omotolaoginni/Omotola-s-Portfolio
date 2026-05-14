@@ -3,18 +3,30 @@
 }
 
 .padding-normal {
-  padding-top: var(--spacing-16);
-  padding-bottom: var(--spacing-16);
+  padding-top: var(--spacing-10);
+  padding-bottom: var(--spacing-10);
 }
 
 .padding-large {
-  padding-top: var(--spacing-20);
-  padding-bottom: var(--spacing-20);
+  padding-top: var(--spacing-12);
+  padding-bottom: var(--spacing-12);
 }
 
 .padding-none {
   padding-top: 0;
   padding-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .padding-normal {
+    padding-top: var(--spacing-16);
+    padding-bottom: var(--spacing-16);
+  }
+
+  .padding-large {
+    padding-top: var(--spacing-20);
+    padding-bottom: var(--spacing-20);
+  }
 }
 
 .container {
