@@ -1,0 +1,91 @@
+:root {
+  /* Color Roles */
+  --color-primary: #5248e5ff;
+  --color-secondary-bg: #f4f4f1ff;
+  --color-text-primary: #121212ff;
+  --color-text-muted: #6f6f7bff;
+  --color-border: #e4e4e7ff;
+  --color-surface: #ffffffff;
+  --color-link-hover: #3329bcff;
+  --color-secondary-hover: #f6f6f8ff;
+  --color-border-hover: #cdcdd5ff;
+  --color-focus-ring: #dddbfaff;
+
+  /* Spacing Variables */
+  --spacing-0: 0px;
+  --spacing-1: 2px;
+  --spacing-2: 4px;
+  --spacing-3: 8px;
+  --spacing-4: 12px;
+  --spacing-5: 14px;
+  --spacing-6: 16px;
+  --spacing-7: 20px;
+  --spacing-8: 24px;
+  --spacing-9: 32px;
+  --spacing-10: 36px;
+  --spacing-11: 40px;
+  --spacing-12: 44px;
+  --spacing-13: 48px;
+  --spacing-14: 52px;
+  --spacing-15: 56px;
+  --spacing-16: 60px;
+  --spacing-17: 64px;
+  --spacing-18: 72px;
+  --spacing-19: 80px;
+  --spacing-20: 96px;
+  --spacing-21: 128px;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 10000px;
+
+  /* Typography */
+  --display-text-xl-size: 5.5rem;
+  --display-text-xl-line-height: 1.5;
+  --display-text-xl-weight: 700;
+  --display-text-xl-family: 'Onest', sans-serif;
+  --display-text-xl-letter-spacing: -0.005681818181818182em;
+  --display-text-size: 4.5rem;
+  --display-text-line-height: 1.6;
+  --display-text-weight: 700;
+  --display-text-family: 'Onest', sans-serif;
+  --display-text-letter-spacing: -0.006944444444444444em;
+  --h1-size: 3.5rem;
+  --h1-line-height: 1.5999999999999999;
+  --h1-weight: 600;
+  --h1-family: 'Onest', sans-serif;
+  --h1-letter-spacing: -0.008928571428571428em;
+  --h2-size: 2.5rem;
+  --h2-line-height: 1.5;
+  --h2-weight: 600;
+  --h2-family: 'Onest', sans-serif;
+  --h2-letter-spacing: -0.0125em;
+  --h3-size: 2.5rem;
+  --h3-line-height: 1.5;
+  --h3-weight: 600;
+  --h3-family: 'Onest', sans-serif;
+  --h3-letter-spacing: -0.0125em;
+  --body-large-size: 1.125rem;
+  --body-large-line-height: 1.6;
+  --body-large-weight: 400;
+  --body-large-family: 'Onest', sans-serif;
+  --body-large-letter-spacing: -0.027777777777777776em;
+  --body-text-size: 1rem;
+  --body-text-line-height: 1.5;
+  --body-text-weight: 400;
+  --body-text-family: 'Onest', sans-serif;
+  --body-text-letter-spacing: -0.03125em;
+  --small-text-size: 0.875rem;
+  --small-text-line-height: 1.5999999999999999;
+  --small-text-weight: 500;
+  --small-text-family: 'Onest', sans-serif;
+  --small-text-letter-spacing: -0.03571428571428571em;
+  --caption-size: 0.75rem;
+  --caption-line-height: 1.8666666666666665;
+  --caption-weight: 500;
+  --caption-family: 'Onest', sans-serif;
+  --caption-letter-spacing: -0.041666666666666664em;
+}
