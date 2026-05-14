@@ -1,66 +1,60 @@
-import Image from "next/image";
 import styles from "./page.module.css";
+import { Section } from "@/components/layout/Section";
+import { Button } from "@/components/ui/Button";
+import { ProjectCard } from "@/components/ui/ProjectCard";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main>
+      {/* Hero Section */}
+      <Section padding="large">
+        <div className={styles.hero}>
+          <h1 className={styles.heroTitle}>
+            Omotola Oginni. Product Designer focusing on systems, metrics, and scale.
+          </h1>
+          <p className={styles.heroSubtitle}>
+            I bridge the gap between visual craft and strategic UX thinking to create impactful digital experiences for fintech systems and the creator economy.
           </p>
+          <div className={styles.heroActions}>
+            <Button href="/projects" variant="primary">View Selected Work</Button>
+            <Button href="/about" variant="secondary">Read My Philosophy</Button>
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </Section>
+
+      {/* Selected Work Section */}
+      <Section padding="large">
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>Selected Work</h2>
+          <Button href="/projects" variant="link">View all projects &rarr;</Button>
         </div>
-      </main>
-    </div>
+        
+        <div className={styles.projectGrid}>
+          <ProjectCard 
+            slug="fintech-dashboard"
+            title="Next-Gen Fintech Dashboard"
+            description="Redesigning a high-volume trading dashboard to increase user retention and improve data density."
+            tags={["Product Design", "Design Systems", "Fintech"]}
+          />
+          <ProjectCard 
+            slug="creator-platform"
+            title="Creator Economy Platform"
+            description="A seamless monetization and analytics platform designed specifically for independent creators."
+            tags={["UX Research", "UI Design", "SaaS"]}
+          />
+        </div>
+      </Section>
+
+      {/* Philosophy Snippet Section */}
+      <Section padding="large">
+        <div className={styles.philosophy}>
+          <h2 className={styles.sectionTitle}>Design Philosophy</h2>
+          <p className={styles.philosophyText}>
+            I believe that great design is inherently systemic. It's not just about what an interface looks like, but how it scales, how it solves business constraints, and how effortlessly it guides the user to success.
+          </p>
+          <Button href="/about" variant="secondary">Learn more about my process</Button>
+        </div>
+      </Section>
+    </main>
   );
 }

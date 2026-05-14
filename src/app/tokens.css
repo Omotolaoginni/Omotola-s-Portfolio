@@ -1,8 +1,7 @@
 :root {
-  /* Color Roles */
-  --color-primary: #5248e5ff;
-  --color-secondary-bg: #f4f4f1ff;
-  --color-text-primary: #121212ff;
+  /* Explicitly Mapped Tokens based on System Rules */
+  --color-primary: #121212ff;
+  --color-surface-secondary: #f4f4f1ff;
   --color-text-muted: #6f6f7bff;
   --color-border: #e4e4e7ff;
   --color-surface: #ffffffff;
@@ -10,8 +9,6 @@
   --color-secondary-hover: #f6f6f8ff;
   --color-border-hover: #cdcdd5ff;
   --color-focus-ring: #dddbfaff;
-
-  /* Spacing Variables */
   --spacing-0: 0px;
   --spacing-1: 2px;
   --spacing-2: 4px;
@@ -34,15 +31,11 @@
   --spacing-19: 80px;
   --spacing-20: 96px;
   --spacing-21: 128px;
-
-  /* Border Radius */
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-xl: 16px;
   --radius-full: 10000px;
-
-  /* Typography */
   --display-text-xl-size: 5.5rem;
   --display-text-xl-line-height: 1.5;
   --display-text-xl-weight: 700;

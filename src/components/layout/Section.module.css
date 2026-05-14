@@ -1,0 +1,33 @@
+.section {
+  width: 100%;
+}
+
+.padding-normal {
+  padding-top: var(--spacing-16);
+  padding-bottom: var(--spacing-16);
+}
+
+.padding-large {
+  padding-top: var(--spacing-20);
+  padding-bottom: var(--spacing-20);
+}
+
+.padding-none {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: var(--spacing-6);
+  padding-right: var(--spacing-6);
+  width: 100%;
+}
+
+.width-full {
+  max-width: 1200px;
+}
+
+.width-reading {
+  max-width: 800px;
+}
