@@ -1,14 +1,15 @@
 :root {
-  /* Explicitly Mapped Tokens based on System Rules */
-  --color-primary: #121212ff;
-  --color-surface-secondary: #f4f4f1ff;
-  --color-text-muted: #6f6f7bff;
-  --color-border: #e4e4e7ff;
-  --color-surface: #ffffffff;
-  --color-link-hover: #3329bcff;
-  --color-secondary-hover: #f6f6f8ff;
-  --color-border-hover: #cdcdd5ff;
-  --color-focus-ring: #dddbfaff;
+  /* Color Roles — Single Source of Truth */
+  --color-primary: #5248e5;
+  --color-surface-secondary: #f4f4f1;
+  --color-text-primary: #121212;
+  --color-text-muted: #6f6f7b;
+  --color-border: #e4e4e7;
+  --color-surface: #ffffff;
+  --color-link-hover: #3329bc;
+  --color-secondary-hover: #f6f6f8;
+  --color-border-hover: #cdcdd5;
+  --color-focus-ring: #dddbf9;
   --spacing-0: 0px;
   --spacing-1: 2px;
   --spacing-2: 4px;
@@ -81,4 +82,18 @@
   --caption-weight: 500;
   --caption-family: 'Onest', sans-serif;
   --caption-letter-spacing: -0.041666666666666664em;
+  /* Aliases for backward compatibility */
+  --font-utility-small-text-family: var(--small-text-family);
+  --font-utility-small-text-size: var(--small-text-size);
+  --font-utility-small-text-weight: var(--small-text-weight);
+  --font-utility-caption-family: var(--caption-family);
+  --font-utility-caption-size: var(--caption-size);
+  --font-utility-caption-weight: var(--caption-weight);
+  --font-headings-h3-family: var(--h3-family);
+  --font-headings-h3-size: var(--h3-size);
+  --font-headings-h3-weight: var(--h3-weight);
+  --font-body-body-text-family: var(--body-text-family);
+  --font-body-body-text-size: var(--body-text-size);
+  --font-body-body-text-weight: var(--body-text-weight);
+  --font-body-body-large-size: var(--body-large-size);
 }

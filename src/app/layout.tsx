@@ -11,6 +11,24 @@ const onest = Onest({
 export const metadata: Metadata = {
   title: "Omotola Oginni - Product Designer",
   description: "A thoughtful product designer who combines visual craft, strategic UX thinking, and scalable systems design to create impactful digital experiences.",
+  keywords: ["product design", "UX design", "design systems", "fintech", "creator economy", "portfolio", "Omotola Oginni"],
+  authors: [{ name: "Omotola Oginni" }],
+  openGraph: {
+    title: "Omotola Oginni - Product Designer",
+    description: "A thoughtful product designer who combines visual craft, strategic UX thinking, and scalable systems design to create impactful digital experiences.",
+    url: "https://omotola.com",
+    siteName: "Omotola Oginni Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Omotola Oginni - Product Designer",
+    description: "A thoughtful product designer who combines visual craft, strategic UX thinking, and scalable systems design to create impactful digital experiences.",
+  },
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 import { Navbar } from "@/components/layout/Navbar";
@@ -25,9 +43,9 @@ export default function RootLayout({
     <html lang="en" className={`${onest.variable}`}>
       <body className={onest.className}>
         <Navbar />
-        <div style={{ flex: 1 }}>
+        <main style={{ flex: 1, backgroundColor: 'var(--color-surface)' }}>
           {children}
-        </div>
+        </main>
         <Footer />
       </body>
     </html>

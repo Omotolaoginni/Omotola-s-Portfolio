@@ -3,26 +3,61 @@ import { Section } from "@/components/layout/Section";
 import { Button } from "@/components/ui/Button";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { Typography } from "@/components/ui/Typography";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <main>
       {/* 1. Hero Section */}
-      <Section width="reading" padding="none" className={styles.heroSection}>
-        <div className={styles.heroContent}>
-          <Typography as="h1" variant="display" className={styles.heroTitle}>
-            Omotola Oginni. Product Designer focusing on systems, metrics, and scale.
-          </Typography>
-          
+      <Section width="full" padding="none" className={styles.heroSection}>
+
+        {/* Decorative ambient background — non-interactive, aria-hidden */}
+        <div className={styles.heroAccentEllipse} aria-hidden="true" />
+
+        {/* Hero stage — heading ABOVE portrait */}
+        <div className={styles.heroStage}>
+
+          {/* Introductory Badge — gradient border, centered */}
+          <div className={styles.heroBadgeRow}>
+            <div className={styles.heroBadgeGradientRing}>
+              <div className={styles.heroBadgeGradientInner}>
+                HELLO! I AM OMOTOLA OGINNI
+              </div>
+            </div>
+          </div>
+
+          {/* Full H1 heading sits above image */}
+          <h1 className={styles.heroHeadingFull}>
+            Designing systems<br />& scale
+          </h1>
+
+          {/* Portrait container below heading */}
+          <div className={styles.heroPortraitWrapper}>
+            <div className={styles.heroPortrait}>
+<Image 
+                src="/my-photo 2.png" 
+                alt="Omotola Oginni" 
+                fill
+                className={styles.heroImage}
+                priority
+              />
+            </div>
+          </div>
+
+        </div>
+
+        {/* Sub-copy + CTAs — below the stage */}
+        <div className={styles.heroFooter}>
           <Typography as="p" variant="body-large" color="muted" className={styles.heroSubtitle}>
-            I bridge the gap between visual craft and strategic UX thinking to create impactful digital experiences for fintech systems and the creator economy.
+            I bridge visual craft and strategic UX to build impactful digital products — for fintech systems and the creator economy.
           </Typography>
-          
+
           <div className={styles.heroActions}>
             <Button href="/projects" variant="primary">View Selected Work</Button>
             <Button href="/about" variant="secondary">Read My Process</Button>
           </div>
         </div>
+
       </Section>
 
       {/* 2. Selected Projects Section */}

@@ -1,40 +1,236 @@
-/* 1. Hero Section */
+/* ─────────────────────────────────────────
+   1. Hero Section
+──────────────────────────────────────── */
 .heroSection {
-  padding-top: var(--spacing-10);
-  padding-bottom: var(--spacing-10);
+  position: relative;
+  padding-top: 12.5rem;
+  padding-bottom: 0;
+}
+
+/* ── Hero Accent Ellipse ────────────────────────────────────────
+   Intentionally non-circular radial glow field.
+   - Horizontal radius >> vertical radius (aspect ratio ≠ 1:1)
+   - radial-gradient(ellipse) with asymmetric stop positions
+   - scaleY(0.5) further compresses the vertical axis
+     producing the flattened arch seen in modern portfolio heros.
+   - Gradient source anchored at top-center (50% 0%)
+     so illumination radiates downward in an arch shape.
+   - All colors reference design tokens only.
+────────────────────────────────────────────────────── */
+.heroAccentEllipse {
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%) scaleY(0.5);
+  transform-origin: top center;
+
+  width: 160%;
+  max-width: 1600px;
+  height: 680px;
+
+  background: radial-gradient(
+    ellipse 70% 55% at 50% 0%,
+    var(--color-focus-ring)      0%,
+    var(--color-surface-secondary) 50%,
+    transparent                  80%
+  );
+
+  opacity: 0.9;
+  filter: blur(40px);
+
+  pointer-events: none;
+  z-index: 0;
 }
 
 @media (min-width: 768px) {
-  .heroSection {
-    padding-top: var(--spacing-20);
-    padding-bottom: var(--spacing-20);
+  .heroAccentEllipse {
+    width: 140%;
+    height: 700px;
+    top: -200px;
+    /* Maintain proportional scaleY distortion at larger breakpoints */
+    transform: translateX(-50%) scaleY(0.45);
+    filter: blur(32px);
+    opacity: 0.6;
   }
 }
 
-.heroTitle {
-  margin-bottom: var(--spacing-4);
+@media (min-width: 1200px) {
+  .heroAccentEllipse {
+    height: 800px;
+    top: -200px;
+    transform: translateX(-50%) scaleY(0.42);
+    filter: blur(40px);
+  }
+}
+
+/* Badge row — centered above heading */
+.heroBadgeRow {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-6);
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Gradient border badge
+   Outer ring: gradient using only token colors
+   Inner fill: solid surface so text remains readable
+─────────────────────────────────────────── */
+.heroBadgeGradientRing {
+  /* 1.5px gradient padding = the visible border thickness */
+  padding: 1.5px;
+  border-radius: var(--radius-full);
+  /* Gradient uses only token custom properties — no raw hex */
+  background: linear-gradient(
+    135deg,
+    var(--color-focus-ring),
+    var(--color-border),
+    var(--color-focus-ring)
+  );
+  display: inline-flex;
+}
+
+.heroBadgeGradientInner {
+  background: var(--color-surface);
+  border-radius: var(--radius-full);
+  padding: var(--spacing-2) var(--spacing-6);
+  font-family: var(--caption-family);
+  font-size: var(--caption-size);
+  font-weight: var(--caption-weight);
+  letter-spacing: 0.08em; /* slight tracking for caps label, no token needed — unitless ratio */
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+/* ── Stage: the layered heading + portrait block ── */
+.heroStage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 0;
+  z-index: 1;
+}
+
+/* Full heading — reduced to H1 token for better visual balance */
+.heroHeadingFull {
+  font-family: var(--h1-family);
+  font-size: var(--h1-size);
+  font-weight: var(--h1-weight);
+  line-height: 1.2;
+  letter-spacing: var(--h1-letter-spacing);
+  color: var(--color-text-primary);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 0;
+  transform: translateY(40px);
+  position: relative;
+  z-index: 2;
+}
+
+/* Line 1 — above the portrait */
+.heroLine1 {
+  display: block;
+}
+
+/* Portrait wrapper — sits below the heading */
+.heroPortraitWrapper {
+  /* 280px + 32px = 312px → 312/16 = 19.5rem (mobile) */
+  max-width: 20.5rem;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .heroPortraitWrapper {
+    max-width: 32.5rem;
+  }
+}
+
+/* Portrait placeholder — warm neutral surface, full radius on all corners */
+.heroPortrait {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-color: var(--color-surface-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Overlapping label — visually layered at the bottom edge of the portrait */
+.heroPortraitLabel {
+  position: absolute;
+  bottom: var(--spacing-6); /* inset from bottom edge — overlaps portrait */
+  left: 50%;
+  transform: translateX(-50%);
+  /* Pill using design tokens */
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: var(--spacing-2) var(--spacing-5);
+  /* Typography */
+  font-family: var(--caption-family);
+  font-size: var(--caption-size);
+  font-weight: var(--caption-weight);
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  /* Ensure it floats above the portrait fill */
+  z-index: 2;
+}
+
+/* Line 2 — below the portrait */
+.heroLine2 {
+  display: block;
+}
+
+/* ── Footer: sub-copy + CTAs ── */
+.heroFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto;
+  padding-top: var(--spacing-9);
+  padding-bottom: var(--spacing-13);
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .heroFooter {
+    padding-top: var(--spacing-10);
+    padding-bottom: var(--spacing-20);
+  }
 }
 
 .heroSubtitle {
   margin-bottom: var(--spacing-8);
 }
 
-@media (min-width: 768px) {
-  .heroTitle {
-    margin-bottom: var(--spacing-6);
-  }
-  .heroSubtitle {
-    margin-bottom: var(--spacing-10);
-  }
-}
-
 .heroActions {
   display: flex;
   gap: var(--spacing-4);
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* 2. Selected Projects Section */
+/* ─────────────────────────────────────────
+   2. Selected Projects Section
+───────────────────────────────────────── */
 .projectsSection {
   padding-top: var(--spacing-10);
   padding-bottom: var(--spacing-10);
@@ -66,7 +262,9 @@
   }
 }
 
-/* 3. About Preview Section */
+/* ─────────────────────────────────────────
+   3. About Preview Section
+───────────────────────────────────────── */
 .aboutSection {
   padding-top: var(--spacing-10);
   padding-bottom: var(--spacing-10);
@@ -93,7 +291,9 @@
   margin-top: var(--spacing-8);
 }
 
-/* 4. Contact / CTA Section */
+/* ─────────────────────────────────────────
+   4. Contact / CTA Section
+───────────────────────────────────────── */
 .contactSection {
   padding-top: var(--spacing-10);
   padding-bottom: var(--spacing-10);
@@ -116,9 +316,9 @@
 
 .contactEmail {
   display: inline-block;
-  font-family: var(--font-headings-h2-family);
-  font-size: var(--font-headings-h2-size);
-  font-weight: var(--font-headings-h2-weight);
+  font-family: var(--h2-family);
+  font-size: var(--h2-size);
+  font-weight: var(--h2-weight);
   color: var(--color-text-primary);
   text-decoration: none;
   transition: color 0.2s ease;

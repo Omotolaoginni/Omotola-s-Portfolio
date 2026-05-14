@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import styles from './Navbar.module.css';
 
@@ -13,7 +14,14 @@ export const Navbar = () => {
       <nav className={styles.nav}>
         <div className={styles.brand}>
           <Link href="/" className={styles.logo}>
-            Omotola Oginni
+            <Image 
+              src="/logo-icon.svg" 
+              alt="Logo" 
+              width={28} 
+              height={28}
+              className={styles.logoIcon}
+            />
+            <span>Omotola Oginni</span>
           </Link>
         </div>
         <ul className={styles.links}>
@@ -38,6 +46,11 @@ export const Navbar = () => {
           <li>
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>
               Resume
+            </a>
+          </li>
+          <li>
+            <a href="/contact" className={styles.link}>
+              Contact
             </a>
           </li>
         </ul>

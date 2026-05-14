@@ -3,9 +3,7 @@
   top: 0;
   z-index: 100;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-surface);
 }
 
 .nav {
@@ -22,11 +20,21 @@
 @media (min-width: 768px) {
   .nav {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-10);
+  }
+
+  .brand {
+    position: absolute;
+    left: var(--spacing-6);
   }
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
   font-family: var(--font-headings-h3-family);
   font-size: var(--font-body-body-large-size);
   font-weight: var(--font-headings-h3-weight);
@@ -39,6 +47,10 @@
   color: var(--color-link-hover);
 }
 
+.logoIcon {
+  border-radius: 4px;
+}
+
 .links {
   display: flex;
   list-style: none;
@@ -49,8 +61,8 @@
 
 .link {
   font-family: var(--font-body-body-text-family);
-  font-size: var(--font-utility-small-text-size);
-  font-weight: var(--font-utility-small-text-weight);
+  font-size: var(--font-body-body-text-size);
+  font-weight: var(--font-body-body-text-weight);
   color: var(--color-text-muted);
   text-decoration: none;
   transition: color 0.2s ease;
@@ -58,5 +70,5 @@
 
 .link:hover,
 .link.active {
-  color: var(--color-text-primary);
+  color: var(--color-primary);
 }
