@@ -3,20 +3,15 @@
 ──────────────────────────────────────── */
 .heroSection {
   position: relative;
-  padding-top: 12.5rem;
+  padding-top: 11.25rem;
   padding-bottom: 0;
 }
 
-/* ── Hero Accent Ellipse ────────────────────────────────────────
-   Intentionally non-circular radial glow field.
-   - Horizontal radius >> vertical radius (aspect ratio ≠ 1:1)
-   - radial-gradient(ellipse) with asymmetric stop positions
-   - scaleY(0.5) further compresses the vertical axis
-     producing the flattened arch seen in modern portfolio heros.
-   - Gradient source anchored at top-center (50% 0%)
-     so illumination radiates downward in an arch shape.
-   - All colors reference design tokens only.
-────────────────────────────────────────────────────── */
+/* ── Hero Accent Ellipse ────────────────────────────────
+   Non-circular radial glow field using gradient token.
+   scaleY(0.5) compresses vertical axis producing the
+   flattened arch anchored at top-center.
+────────────────────────────────────────────── */
 .heroAccentEllipse {
   position: absolute;
   top: -200px;
@@ -28,12 +23,7 @@
   max-width: 1600px;
   height: 680px;
 
-  background: radial-gradient(
-    ellipse 70% 55% at 50% 0%,
-    var(--color-focus-ring)      0%,
-    var(--color-surface-secondary) 50%,
-    transparent                  80%
-  );
+  background: var(--gradient-hero-glow);
 
   opacity: 0.9;
   filter: blur(40px);
@@ -72,25 +62,41 @@
   z-index: 1;
 }
 
-/* ── Gradient border badge
-   Outer ring: gradient using only token colors
+/* ── Gradient border badge (shimmer sweep)
+   Pseudo-element sweeps left→right via background-position,
+   clipped behind the inner surface fill so only the 2px
+   padding gap reveals the moving gradient.
+   Uses primary gradient for the sweep + border gradient
+   as a static base layer.
    Inner fill: solid surface so text remains readable
 ─────────────────────────────────────────── */
+@keyframes shimmerSweep {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
 .heroBadgeGradientRing {
-  /* 1.5px gradient padding = the visible border thickness */
-  padding: 1.5px;
+  position: relative;
+  padding: 2px;
   border-radius: var(--radius-full);
-  /* Gradient uses only token custom properties — no raw hex */
-  background: linear-gradient(
-    135deg,
-    var(--color-focus-ring),
-    var(--color-border),
-    var(--color-focus-ring)
-  );
+  background: var(--gradient-border);
   display: inline-flex;
+  overflow: hidden;
+}
+
+.heroBadgeGradientRing::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-primary);
+  background-size: 400% 100%;
+  animation: shimmerSweep 2.5s linear infinite;
+  z-index: 0;
 }
 
 .heroBadgeGradientInner {
+  position: relative;
+  z-index: 1;
   background: var(--color-surface);
   border-radius: var(--radius-full);
   padding: var(--spacing-2) var(--spacing-6);
@@ -115,11 +121,11 @@
 
 /* Full heading — reduced to H1 token for better visual balance */
 .heroHeadingFull {
-  font-family: var(--h1-family);
-  font-size: var(--h1-size);
-  font-weight: var(--h1-weight);
-  line-height: 1.2;
-  letter-spacing: var(--h1-letter-spacing);
+  font-family: var(--display-text-family);
+  font-size: var(--display-text-size);
+  font-weight: var(--display-text-weight);
+  line-height: 1.08;
+  letter-spacing: var(--display-text-letter-spacing);
   color: var(--color-text-primary);
   text-align: center;
   margin: 0;
@@ -196,7 +202,7 @@
   display: block;
 }
 
-/* ── Footer: sub-copy + CTAs ── */
+/* ── Footer: sub-copy ── */
 .heroFooter {
   display: flex;
   flex-direction: column;
@@ -205,7 +211,7 @@
   max-width: 560px;
   margin: 0 auto;
   padding-top: var(--spacing-9);
-  padding-bottom: var(--spacing-13);
+  padding-bottom: var(--spacing-9);
   position: relative;
   z-index: 1;
 }
@@ -213,19 +219,62 @@
 @media (min-width: 768px) {
   .heroFooter {
     padding-top: var(--spacing-10);
-    padding-bottom: var(--spacing-20);
+    padding-bottom: var(--spacing-10);
   }
 }
 
 .heroSubtitle {
-  margin-bottom: var(--spacing-8);
+  margin-bottom: var(--spacing-9);
 }
 
-.heroActions {
+@keyframes marqueeScroll {
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.heroToolMarquee {
+  width: 100%;
+  overflow: hidden;
+  padding-left: var(--spacing-6);
+  padding-right: var(--spacing-6);
+  padding-bottom: 128px;
+  margin-top: 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+}
+
+.heroToolMarqueeTrack {
   display: flex;
-  gap: var(--spacing-4);
-  flex-wrap: wrap;
+  gap: var(--spacing-13);
+  width: max-content;
+  animation: marqueeScroll 30s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.heroToolItem {
+  display: flex;
+  align-items: center;
   justify-content: center;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  line-height: 0;
+}
+
+.heroToolItem svg,
+.toolLogoImage {
+  display: block;
+}
+
+.toolLogoImage {
+  object-fit: contain;
+}
+
+.toolTextLabel {
+  font-family: var(--body-text-family);
+  font-size: var(--body-text-size);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  white-space: nowrap;
 }
 
 /* ─────────────────────────────────────────
@@ -247,19 +296,13 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: var(--spacing-10);
+  margin-bottom: 52px;
 }
 
 .projectGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--spacing-8);
-}
-
-@media (min-width: 768px) {
-  .projectGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  gap: 56px;
 }
 
 /* ─────────────────────────────────────────

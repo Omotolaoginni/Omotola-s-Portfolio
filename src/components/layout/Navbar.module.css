@@ -47,8 +47,16 @@
   color: var(--color-link-hover);
 }
 
+.logoText {
+  background: var(--gradient-primary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .logoIcon {
   border-radius: 4px;
+  flex-shrink: 0;
 }
 
 .links {

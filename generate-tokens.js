@@ -18,16 +18,16 @@ for (const [key, obj] of Object.entries(colorRoles)) {
   if (!obj.value) continue;
   
   let varName = '';
-  if (key.includes('primary')) varName = '--color-primary';
-  else if (key.includes('secondary-bg')) varName = '--color-surface-secondary';
-  else if (key.includes('text-primary')) varName = '--color-text-primary';
+  if (key.includes('text-primary')) varName = '--color-text-primary';
   else if (key.includes('text-muted')) varName = '--color-text-muted';
-  else if (key.includes('border') && !key.includes('hover')) varName = '--color-border';
-  else if (key.includes('surface')) varName = '--color-surface';
-  else if (key.includes('focus -ring')) varName = '--color-focus-ring';
-  else if (key.includes('link-hover')) varName = '--color-link-hover';
-  else if (key.includes('secondary -hover')) varName = '--color-secondary-hover';
   else if (key.includes('border hover')) varName = '--color-border-hover';
+  else if (key.includes('border') && !key.includes('hover')) varName = '--color-border';
+  else if (key.includes('link-hover')) varName = '--color-link-hover';
+  else if (key.includes('secondary-bg')) varName = '--color-surface-secondary';
+  else if (key.includes('secondary -hover')) varName = '--color-secondary-hover';
+  else if (key.includes('focus -ring')) varName = '--color-focus-ring';
+  else if (key.includes('primary')) varName = '--color-primary';
+  else if (key.includes('surface')) varName = '--color-surface';
   else varName = '--' + normalize(key.replace(/color[-\s]*/i, 'color-'));
   
   cssVariables[varName] = obj.value;
@@ -43,6 +43,13 @@ if (rawColor['secondary background'] && rawColor['secondary background']['hover 
 }
 if (rawColor['border color'] && rawColor['border color']['border hover']) {
   if (!cssVariables['--color-border-hover']) cssVariables['--color-border-hover'] = rawColor['border color']['border hover'].value;
+}
+
+// 1b. Gradient System
+const gradients = tokens['gradients'] || {};
+for (const [key, obj] of Object.entries(gradients)) {
+  if (!obj.value) continue;
+  cssVariables['--' + normalize(key)] = obj.value;
 }
 
 // 2. Spacing Variables

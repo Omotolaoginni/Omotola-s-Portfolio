@@ -28,7 +28,7 @@ export default function Home() {
 
           {/* Full H1 heading sits above image */}
           <h1 className={styles.heroHeadingFull}>
-            Designing systems<br />& scale
+            Product Designer<br />& Engineer
           </h1>
 
           {/* Portrait container below heading */}
@@ -46,15 +46,30 @@ export default function Home() {
 
         </div>
 
-        {/* Sub-copy + CTAs — below the stage */}
+        {/* Sub-copy — below the stage */}
         <div className={styles.heroFooter}>
           <Typography as="p" variant="body-large" color="muted" className={styles.heroSubtitle}>
-            I bridge visual craft and strategic UX to build impactful digital products — for fintech systems and the creator economy.
+            I design and build scalable digital products across fintech and creator platforms, using design systems and AI-powered workflows to improve engagement and monetization.
           </Typography>
+        </div>
 
-          <div className={styles.heroActions}>
-            <Button href="/projects" variant="primary">View Selected Work</Button>
-            <Button href="/about" variant="secondary">Read My Process</Button>
+        {/* Tool marquee — full section width */}
+        <div className={styles.heroToolMarquee}>
+          <div className={styles.heroToolMarqueeTrack}>
+            <span className={styles.heroToolItem}><Image src="/icon full color.png" alt="Figma" width={32} height={32} className={styles.toolLogoImage} /></span>
+            <span className={styles.heroToolItem}><span className={styles.toolTextLabel}>Figma Make</span></span>
+            <span className={styles.heroToolItem}><Image src="/Google-Antigravity-Lockup-Full-Color.png" alt="Antigravity" width={180} height={32} className={styles.toolLogoImage} /></span>
+            <span className={styles.heroToolItem}><Image src="/opencode-wordmark-light.png" alt="OpenCode" width={140} height={32} className={styles.toolLogoImage} /></span>
+            <span className={styles.heroToolItem}><Image src="/chatgpt-logo-chat-gpt-icon-on-white-background-free-vector.jpg" alt="ChatGPT" width={32} height={32} className={styles.toolLogoImage} /></span>
+            <span className={styles.heroToolItem}><Image src="/gemini-color.svg" alt="Gemini" width={32} height={32} className={styles.toolLogoImage} /></span>
+            <span className={styles.heroToolItem}><Image src="/claude-color.svg" alt="Claude" width={32} height={32} className={styles.toolLogoImage} /></span>
+            <span className={styles.heroToolItem}><Image src="/icon full color.png" alt="Figma" width={32} height={32} className={styles.toolLogoImage} /></span>
+            <span className={styles.heroToolItem}><span className={styles.toolTextLabel}>Figma Make</span></span>
+            <span className={styles.heroToolItem}><Image src="/Google-Antigravity-Lockup-Full-Color.png" alt="Antigravity" width={180} height={32} className={styles.toolLogoImage} /></span>
+            <span className={styles.heroToolItem}><Image src="/opencode-wordmark-light.png" alt="OpenCode" width={140} height={32} className={styles.toolLogoImage} /></span>
+            <span className={styles.heroToolItem}><Image src="/chatgpt-logo-chat-gpt-icon-on-white-background-free-vector.jpg" alt="ChatGPT" width={32} height={32} className={styles.toolLogoImage} /></span>
+            <span className={styles.heroToolItem}><Image src="/gemini-color.svg" alt="Gemini" width={32} height={32} className={styles.toolLogoImage} /></span>
+            <span className={styles.heroToolItem}><Image src="/claude-color.svg" alt="Claude" width={32} height={32} className={styles.toolLogoImage} /></span>
           </div>
         </div>
 
@@ -70,15 +85,24 @@ export default function Home() {
         <div className={styles.projectGrid}>
           <ProjectCard 
             slug="fintech-dashboard"
-            title="Next-Gen Fintech Dashboard"
-            description="Redesigning a high-volume trading dashboard to increase user retention and improve data density."
-            tags={["Product Design", "Design Systems", "Fintech"]}
+            title="ContentSplit - AI Content Repurposing Engine"
+            description="An AI-powered workflow tool that transforms long-form content into platform, ready posts for Twitter/X, LinkedIn, Instagram, and Email, helping creators publish faster with consistent tone across channels."
+            tags={["AI Workflow Design", "Design Systems", "Creator Tools", "Content Automation"]}
+            imageUrl="/499shots_so.png"
           />
           <ProjectCard 
             slug="creator-platform"
-            title="Creator Economy Platform"
-            description="A seamless monetization and analytics platform designed specifically for independent creators."
-            tags={["UX Research", "UI Design", "SaaS"]}
+            title="Mainstack — Referral &amp; Affiliate Experience"
+            description="Creator-focused referral and affiliate experience designed to help users discover products, promote creator businesses, and earn recurring commissions through a seamless cross-device workflow."
+            tags={["Responsive Design", "Mobile UI Design", "Mobile UI Design", "Visual Collaboration"]}
+            imageUrl="/841shots_so 2.png"
+          />
+          <ProjectCard 
+            slug="project-three"
+            title="Mainstack — Ambassador Growth Program Experience"
+            description="A structured ambassador program designed to enable creators to drive product-led growth through referrals, track performance, and earn recurring rewards within a seamless, incentive-driven ecosystem. The experience focuses on clarity of earning pathways, simplified referral tracking, and motivating sustained user engagement."
+            tags={["UX Strategy", "Growth Systems Design", "Conversion Design", "Product Design"]}
+            imageUrl="/502shots_so.png"
           />
         </div>
       </Section>

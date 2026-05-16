@@ -204,14 +204,14 @@
       "h3": {
         "type": "custom-fontStyle",
         "value": {
-          "fontSize": 40,
+          "fontSize": 32,
           "textDecoration": "none",
           "fontFamily": "Onest",
           "fontWeight": 600,
           "fontStyle": "normal",
           "fontStretch": "normal",
           "letterSpacing": -0.5,
-          "lineHeight": 60,
+          "lineHeight": 48,
           "paragraphIndent": 0,
           "paragraphSpacing": 0,
           "textCase": "none"
