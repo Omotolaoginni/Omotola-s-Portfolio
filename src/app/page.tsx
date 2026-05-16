@@ -94,7 +94,7 @@ export default function Home() {
             slug="creator-platform"
             title="Mainstack — Referral &amp; Affiliate Experience"
             description="Creator-focused referral and affiliate experience designed to help users discover products, promote creator businesses, and earn recurring commissions through a seamless cross-device workflow."
-            tags={["Responsive Design", "Mobile UI Design", "Mobile UI Design", "Visual Collaboration"]}
+            tags={["Responsive Design", "Mobile UI Design", "Visual Collaboration"]}
             imageUrl="/841shots_so 2.png"
           />
           <ProjectCard 
@@ -103,6 +103,20 @@ export default function Home() {
             description="A structured ambassador program designed to enable creators to drive product-led growth through referrals, track performance, and earn recurring rewards within a seamless, incentive-driven ecosystem. The experience focuses on clarity of earning pathways, simplified referral tracking, and motivating sustained user engagement."
             tags={["UX Strategy", "Growth Systems Design", "Conversion Design", "Product Design"]}
             imageUrl="/502shots_so.png"
+          />
+          <ProjectCard 
+            slug="project-four"
+            title="NBC Trade Fair — Landing Page &amp; Commerce Onboarding Experience"
+            description="A conversion-focused landing page designed for a large-scale trade fair commerce platform, enabling vendors and participants to seamlessly onboard into a digital dashboard. The experience guided users from event discovery into account creation, where they could manage product listings, process online orders, and accept POS payments through an integrated commerce system powered by Mainstack."
+            tags={["Landing Page Design", "Payment System Design", "Conversion Funnel Design"]}
+            imageUrl="/126shots_so.png"
+          />
+          <ProjectCard 
+            slug="project-five"
+            title="Smarg – Neobank for African Creatives"
+            description="A modern mobile banking experience designed for African creatives, freelancers, and digital entrepreneurs, combining financial automation, flexible credit access, and device financing to help users manage cash flow, invest in essential tools, and grow sustainable creative careers without heavy upfront financial pressure."
+            tags={["Fintech Product Design", "Creator Economy", "Financial Automation"]}
+            imageUrl="/813shots_so.png"
           />
         </div>
       </Section>

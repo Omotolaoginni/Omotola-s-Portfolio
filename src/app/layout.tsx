@@ -41,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${onest.variable}`}>
-      <body className={onest.className}>
+      <body className={onest.className} suppressHydrationWarning>
         <Navbar />
         <main style={{ flex: 1, backgroundColor: 'var(--color-surface)' }}>
           {children}
