@@ -118,40 +118,160 @@ export default function Home() {
             tags={["Fintech Product Design", "Creator Economy", "Financial Automation"]}
             imageUrl="/813shots_so.png"
           />
+          <ProjectCard 
+            slug="sentinel"
+            title="Sentinel — Third-Party Service Monitoring &amp; Alerting"
+            description="A monitoring service that tracks third-party software and API uptime in real time, helping engineering teams detect outages early and receive instant alerts through their preferred notification channels to prevent costly system disruptions."
+            tags={["SaaS Platform", "API &amp; Dependency Tracking", "Incident Monitoring", "Enterprise UX"]}
+            imageUrl="/707shots_so.png"
+          />
+        </div>
+        <div className={styles.sectionDivider} />
+      </Section>
+
+      {/* 3. About Me Section */}
+      <Section id="about" width="full" padding="none" className={styles.aboutSection}>
+        <div className={styles.aboutGrid}>
+          <div className={styles.aboutText}>
+            <Typography as="h2" variant="h2" className={styles.aboutTitle}>About Me</Typography>
+            <div className={styles.aboutNarrative}>
+              <Typography as="p" variant="body-large" color="muted">
+                I'm a product designer focused on building scalable, systems-driven digital products across UX, UI, and design systems. I use AI to accelerate product thinking and execution, while staying grounded in strong UX principles to ensure clarity and usability in complex workflows. My work is centered on designing structured, consistent experiences where design systems provide the foundation for coherence, especially when working with AI-assisted tools.
+              </Typography>
+            </div>
+          </div>
+          <div className={styles.aboutImageCol}>
+            <div className={styles.aboutImageContainer}>
+              <Image 
+                src="/my-photo 2.png" 
+                alt="Omotola Oginni" 
+                fill
+                className={styles.aboutImage}
+              />
+            </div>
+          </div>
+        </div>
+        <div className={styles.sectionDivider} />
+      </Section>
+
+      {/* 4. Experience Section */}
+      <Section width="full" padding="none" className={styles.experienceSection}>
+        <Typography as="h2" variant="h2" className={styles.experienceTitle}>Experience</Typography>
+        <div className={styles.experienceGrid}>
+          <div className={styles.experienceIntro}>
+            <Typography as="p" variant="body-large" color="muted">
+              I've had the opportunity to work with companies like Mainstack and Smarg, as well as collaborate with clients who understand the value of intentional design. Across FinTech and creator platforms, I bring a user-centered approach to every product, whether that's streamlining a flow, building out a design system, or designing for measurable growth.
+            </Typography>
+          </div>
+          <div className={styles.experienceList}>
+            <div className={styles.experienceItem}>
+              <span className={styles.expCompany}>Mainstack</span>
+              <span className={styles.expRole}>Product Designer</span>
+              <span className={styles.expDuration}>March 2025 – Present</span>
+            </div>
+            <div className={styles.experienceItem}>
+              <span className={styles.expCompany}>Smarg</span>
+              <span className={styles.expRole}>Junior Product Designer</span>
+              <span className={styles.expDuration}>May 2024 – February 2025</span>
+            </div>
+            <div className={styles.experienceItem}>
+              <span className={styles.expCompany}>NVIT (New Vision Institute of Technology)</span>
+              <span className={styles.expRole}>Intern Product Designer → Junior Product Designer</span>
+              <span className={styles.expDuration}>August 2023 – May 2024</span>
+            </div>
+          </div>
         </div>
       </Section>
 
-      {/* 3. About Preview Section */}
-      <Section width="reading" padding="none" className={styles.aboutSection}>
-        <Typography as="h2" variant="h2" className={styles.aboutTitle}>Design Philosophy</Typography>
-        
-        <div className={styles.aboutNarrative}>
-          <Typography as="p" variant="body-large" color="muted">
-            I believe that great design is inherently systemic. It's not just about what an interface looks like, but how it scales, how it solves business constraints, and how effortlessly it guides the user to success.
-          </Typography>
-          <Typography as="p" variant="body-large" color="muted">
-            Over the past 5 years, I've partnered with early-stage founders and enterprise teams to turn ambiguous problems into measurable product outcomes.
-          </Typography>
-        </div>
-
-        <div className={styles.aboutAction}>
-          <Button href="/about" variant="secondary">Read my full story</Button>
+      {/* 5. Skills Marquee */}
+      <Section width="full" padding="none" className={styles.marqueeSection}>
+        <div className={styles.marqueeContainer}>
+          <div className={styles.marqueeRow}>
+            <div className={styles.marqueeTrack}>
+              <span className={styles.marqueeItem}>Product Design</span>
+              <span className={styles.marqueeDot}>•</span>
+              <span className={styles.marqueeItem}>UX Strategy</span>
+              <span className={styles.marqueeDot}>•</span>
+              <span className={styles.marqueeItem}>UI Design</span>
+              <span className={styles.marqueeDot}>•</span>
+              <span className={styles.marqueeItem}>Design Systems</span>
+              <span className={styles.marqueeDot}>•</span>
+              <span className={styles.marqueeItem}>Product Systems Thinking</span>
+              <span className={styles.marqueeDot}>•</span>
+              <span className={styles.marqueeItem}>Product Design</span>
+              <span className={styles.marqueeDot}>•</span>
+              <span className={styles.marqueeItem}>UX Strategy</span>
+              <span className={styles.marqueeDot}>•</span>
+              <span className={styles.marqueeItem}>UI Design</span>
+              <span className={styles.marqueeDot}>•</span>
+              <span className={styles.marqueeItem}>Design Systems</span>
+              <span className={styles.marqueeDot}>•</span>
+              <span className={styles.marqueeItem}>Product Systems Thinking</span>
+            </div>
+          </div>
+          <div className={styles.marqueeRow}>
+            <div className={styles.marqueeTrack}>
+              <span className={styles.marqueeItem}>AI-assisted Product Workflows</span>
+              <span className={styles.marqueeDot}>•</span>
+              <span className={styles.marqueeItem}>Interaction Design</span>
+              <span className={styles.marqueeDot}>•</span>
+              <span className={styles.marqueeItem}>Prototyping</span>
+              <span className={styles.marqueeDot}>•</span>
+              <span className={styles.marqueeItem}>End-to-end Product Execution</span>
+              <span className={styles.marqueeDot}>•</span>
+              <span className={styles.marqueeItem}>AI-assisted Product Workflows</span>
+              <span className={styles.marqueeDot}>•</span>
+              <span className={styles.marqueeItem}>Interaction Design</span>
+              <span className={styles.marqueeDot}>•</span>
+              <span className={styles.marqueeItem}>Prototyping</span>
+              <span className={styles.marqueeDot}>•</span>
+              <span className={styles.marqueeItem}>End-to-end Product Execution</span>
+            </div>
+          </div>
         </div>
       </Section>
 
-      {/* 4. Contact / CTA Section */}
-      <Section width="reading" padding="none" className={styles.contactSection}>
-        <Typography as="h2" variant="display" className={styles.contactTitle}>
-          Let's build something great.
-        </Typography>
-        
-        <Typography as="p" variant="body-large" color="muted" className={styles.contactSubtitle}>
-          Currently looking for senior product roles. Whether you have a project in mind or just want to chat about design systems, I'd love to hear from you.
-        </Typography>
-
-        <a href="mailto:hello@omotola.com" className={styles.contactEmail}>
-          hello@omotola.com
-        </a>
+      {/* 6. Contact Me Section */}
+      <Section width="full" padding="none" className={styles.contactSection}>
+        <div className={styles.contactMarquee}>
+          <div className={styles.contactMarqueeTrack}>
+            <span className={styles.contactMarqueeText}>Let's work together</span>
+            <span className={styles.contactMarqueeDot}>•</span>
+            <span className={styles.contactMarqueeText}>Let's work together</span>
+            <span className={styles.contactMarqueeDot}>•</span>
+            <span className={styles.contactMarqueeText}>Let's work together</span>
+            <span className={styles.contactMarqueeDot}>•</span>
+            <span className={styles.contactMarqueeText}>Let's work together</span>
+            <span className={styles.contactMarqueeDot}>•</span>
+            <span className={styles.contactMarqueeText}>Let's work together</span>
+            <span className={styles.contactMarqueeDot}>•</span>
+            <span className={styles.contactMarqueeText}>Let's work together</span>
+            <span className={styles.contactMarqueeDot}>•</span>
+            <span className={styles.contactMarqueeText}>Let's work together</span>
+            <span className={styles.contactMarqueeDot}>•</span>
+            <span className={styles.contactMarqueeText}>Let's work together</span>
+            <span className={styles.contactMarqueeDot}>•</span>
+          </div>
+        </div>
+        <div className={styles.contactCta}>
+          <Button href="mailto:patience.gennyhatsiawo.com" variant="primary">Contact Me</Button>
+        </div>
+        <div className={styles.contactGrid}>
+          <div className={styles.contactLinks}>
+            <a href="https://behance.net" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>Behance</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>LinkedIn</a>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>Resume</a>
+            <a href="mailto:patience.gennyhatsiawo.com" className={`${styles.contactLink} ${styles.contactLinkEmail}`}>hello@omotola.com</a>
+          </div>
+          <div className={styles.contactMessage}>
+            <Typography as="p" variant="body-large" color="primary">
+              Currently open to new roles and projects.<br />
+              If you're building something meaningful<br />
+              and need a product designer who sweats<br />
+              the details, I'd love to be part of the conversation.
+            </Typography>
+          </div>
+        </div>
       </Section>
     </main>
   );

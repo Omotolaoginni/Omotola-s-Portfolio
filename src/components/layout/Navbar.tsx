@@ -37,13 +37,9 @@ export const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link 
-              href="/about" 
-              className={`${styles.link} ${pathname === '/about' ? styles.active : ''}`}
-              aria-current={pathname === '/about' ? 'page' : undefined}
-            >
+            <a href="#about" className={styles.link}>
               About
-            </Link>
+            </a>
           </li>
           <li>
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>

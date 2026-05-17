@@ -232,6 +232,11 @@
   100% { transform: translate3d(-50%, 0, 0); }
 }
 
+@keyframes marqueeScrollReverse {
+  0%   { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
 .heroToolMarquee {
   width: 100%;
   overflow: hidden;
@@ -302,21 +307,53 @@
 .projectGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 56px;
+  gap: 96px;
+}
+
+.sectionDivider {
+  width: 100%;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+  margin-top: 128px;
 }
 
 /* ─────────────────────────────────────────
-   3. About Preview Section
+   3. About Me Section
 ───────────────────────────────────────── */
 .aboutSection {
   padding-top: var(--spacing-10);
   padding-bottom: var(--spacing-10);
+  margin-top: -16px;
 }
 
 @media (min-width: 768px) {
   .aboutSection {
-    padding-top: var(--spacing-20);
+    padding-top: 0;
     padding-bottom: var(--spacing-20);
+    margin-top: -40px;
+  }
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-11);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .aboutGrid {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: var(--spacing-20);
+  }
+}
+
+.aboutText {
+  order: 1;
+}
+
+@media (min-width: 768px) {
+  .aboutText {
+    order: unset;
   }
 }
 
@@ -334,10 +371,180 @@
   margin-top: var(--spacing-8);
 }
 
+.aboutImageCol {
+  order: 0;
+}
+
+@media (min-width: 768px) {
+  .aboutImageCol {
+    order: unset;
+  }
+}
+
+.aboutImageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  max-width: 360px;
+  margin: 0 auto;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background-color: var(--color-surface-secondary);
+  border: 1px solid var(--color-border);
+}
+
+.aboutImage {
+  object-fit: cover;
+  object-position: center top;
+}
+
 /* ─────────────────────────────────────────
-   4. Contact / CTA Section
+   4. Experience Section
+───────────────────────────────────────── */
+.experienceSection {
+  padding-top: var(--spacing-10);
+  padding-bottom: var(--spacing-10);
+  margin-top: -16px;
+}
+
+@media (min-width: 768px) {
+  .experienceSection {
+    padding-top: 0;
+    padding-bottom: var(--spacing-20);
+    margin-top: -40px;
+  }
+}
+
+.experienceTitle {
+  margin-bottom: var(--spacing-9);
+}
+
+.experienceGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-9);
+}
+
+@media (min-width: 768px) {
+  .experienceGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-20);
+  }
+}
+
+.experienceIntro {
+  max-width: 480px;
+}
+
+.experienceList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-9);
+}
+
+.experienceItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  padding-bottom: var(--spacing-9);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.experienceItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.expCompany {
+  font-family: var(--h3-family);
+  font-size: var(--h3-size);
+  font-weight: var(--h3-weight);
+  color: var(--color-text-primary);
+}
+
+.expRole {
+  font-family: var(--body-text-family);
+  font-size: var(--body-text-size);
+  color: var(--color-text-primary);
+}
+
+.expDuration {
+  font-family: var(--caption-family);
+  font-size: var(--caption-size);
+  color: var(--color-text-muted);
+}
+
+/* ─────────────────────────────────────────
+   5. Skills Marquee Section
+───────────────────────────────────────── */
+.marqueeSection {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.marqueeContainer {
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+}
+
+.marqueeRow {
+  display: flex;
+  width: 100%;
+}
+
+.marqueeRow + .marqueeRow {
+  margin-top: var(--spacing-6);
+}
+
+.marqueeTrack {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-9);
+  width: max-content;
+  animation: marqueeScroll 50s linear infinite;
+  will-change: transform;
+}
+
+.marqueeRow:first-child .marqueeTrack {
+  animation-name: marqueeScrollReverse;
+}
+
+.marqueeItem {
+  font-family: var(--display-text-family);
+  font-size: var(--display-text-size);
+  font-weight: var(--display-text-weight);
+  line-height: 1.1;
+  letter-spacing: var(--display-text-letter-spacing);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+.marqueeDot {
+  color: var(--color-text-primary);
+  font-size: 8rem;
+  line-height: 1;
+  user-select: none;
+}
+
+/* ─────────────────────────────────────────
+   6. Contact / CTA Section
 ───────────────────────────────────────── */
 .contactSection {
+  background-color: var(--color-focus-ring);
   padding-top: var(--spacing-10);
   padding-bottom: var(--spacing-10);
 }
@@ -369,4 +576,107 @@
 
 .contactEmail:hover {
   color: var(--color-link-hover);
+}
+
+.contactMarquee {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: var(--spacing-8);
+}
+
+@keyframes contactMarqueeLTR {
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.contactMarqueeTrack {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-9);
+  width: max-content;
+  animation: contactMarqueeLTR 40s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.contactMarqueeText {
+  font-family: var(--display-text-xl-family);
+  font-size: var(--display-text-xl-size);
+  font-weight: var(--display-text-xl-weight);
+  line-height: var(--display-text-xl-line-height);
+  letter-spacing: var(--display-text-xl-letter-spacing);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+.contactMarqueeDot {
+  color: var(--color-text-primary);
+  font-size: 8rem;
+  line-height: 1;
+  user-select: none;
+}
+
+.contactCta {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-8);
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-10);
+}
+
+@media (min-width: 768px) {
+  .contactGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-20);
+  }
+}
+
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.contactLink {
+  font-family: var(--body-text-family);
+  font-size: var(--body-text-size);
+  font-weight: var(--body-text-weight);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  width: fit-content;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.contactLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.contactLink:hover::after {
+  transform: scaleX(1);
+}
+
+.contactLinkEmail {
+  margin-top: var(--spacing-6);
+  font-family: var(--small-text-family);
+  font-size: var(--small-text-size);
+  font-weight: var(--small-text-weight);
+}
+
+.contactMessage {
+  text-align: left;
+  padding-left: var(--spacing-6);
 }
