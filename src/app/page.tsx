@@ -53,6 +53,12 @@ export default function Home() {
           </Typography>
         </div>
 
+        {/* Scroll Hint Visual Affordance */}
+        <div className={styles.scrollHint}>
+          <span className={styles.scrollHintText}>Scroll</span>
+          <span className={styles.scrollHintArrow}>↓</span>
+        </div>
+
         {/* Tool marquee — full section width */}
         <div className={styles.heroToolMarquee}>
           <div className={styles.heroToolMarqueeTrack}>
@@ -258,18 +264,22 @@ export default function Home() {
         </div>
         <div className={styles.contactGrid}>
           <div className={styles.contactLinks}>
-            <a href="https://behance.net" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>Behance</a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>LinkedIn</a>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>Resume</a>
-            <a href="mailto:patience.gennyhatsiawo.com" className={`${styles.contactLink} ${styles.contactLinkEmail}`}>hello@omotola.com</a>
+            <div className={styles.contactSocials}>
+              <a href="https://behance.net" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>Behance</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>LinkedIn</a>
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>Resume</a>
+            </div>
+            <a href="mailto:hello@omotola.com" className={`${styles.contactLink} ${styles.contactLinkEmail}`}>hello@omotola.com</a>
           </div>
           <div className={styles.contactMessage}>
-            <Typography as="p" variant="body-large" color="primary">
+            <Typography as="p" variant="body-lg" color="inherit" className={styles.contactCtaText}>
               Currently open to new roles and projects.<br />
-              If you're building something meaningful<br />
-              and need a product designer who sweats<br />
-              the details, I'd love to be part of the conversation.
+              If you’re building something meaningful and need a product designer to sweat the details, I would love to be part of the conversation.
             </Typography>
+            
+            <a href="#" className={styles.backToTop} aria-label="Scroll to top of page">
+              Back to top ↑
+            </a>
           </div>
         </div>
       </Section>

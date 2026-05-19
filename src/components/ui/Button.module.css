@@ -20,6 +20,7 @@
 
 .variant-primary:hover {
   background-color: var(--color-link-hover);
+  color: var(--color-surface);
 }
 
 .variant-secondary {
@@ -31,6 +32,7 @@
 .variant-secondary:hover {
   background-color: var(--color-secondary-hover);
   border-color: var(--color-border-hover);
+  color: var(--color-text-primary);
 }
 
 .variant-link {

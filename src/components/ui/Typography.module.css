@@ -57,6 +57,22 @@
   letter-spacing: var(--h3-letter-spacing);
 }
 
+.variant-body-xl {
+  font-family: var(--body-xl-family);
+  font-size: clamp(1.25rem, 3vw, var(--body-xl-size));
+  font-weight: var(--body-xl-weight);
+  line-height: var(--body-xl-line-height);
+  letter-spacing: var(--body-xl-letter-spacing);
+}
+
+.variant-body-lg {
+  font-family: var(--body-lg-family);
+  font-size: clamp(1.125rem, 2.5vw, var(--body-lg-size));
+  font-weight: var(--body-lg-weight);
+  line-height: var(--body-lg-line-height);
+  letter-spacing: var(--body-lg-letter-spacing);
+}
+
 .variant-body-large {
   font-family: var(--body-large-family);
   font-size: var(--body-large-size);

@@ -10,6 +10,7 @@
   --color-secondary-hover: #f6f6f8ff;
   --color-border-hover: #cdcdd5ff;
   --color-focus-ring: #dddbfaff;
+  --color-surface-accent-subtle: rgba(221, 219, 250, 0.07);
   --spacing-0: 0px;
   --spacing-1: 2px;
   --spacing-2: 4px;
@@ -37,6 +38,11 @@
   --radius-lg: 12px;
   --radius-xl: 16px;
   --radius-full: 10000px;
+  --display-text-xxl-size: 12.5rem;
+  --display-text-xxl-line-height: 1.1;
+  --display-text-xxl-weight: 700;
+  --display-text-xxl-family: 'Onest', sans-serif;
+  --display-text-xxl-letter-spacing: -0.01em;
   --display-text-xl-size: 5.5rem;
   --display-text-xl-line-height: 1.5;
   --display-text-xl-weight: 700;
@@ -62,6 +68,16 @@
   --h3-weight: 600;
   --h3-family: 'Onest', sans-serif;
   --h3-letter-spacing: -0.015625em;
+  --body-xl-size: 1.5rem;
+  --body-xl-line-height: 1.5;
+  --body-xl-weight: 400;
+  --body-xl-family: 'Onest', sans-serif;
+  --body-xl-letter-spacing: -0.02em;
+  --body-lg-size: 1.25rem;
+  --body-lg-line-height: 1.6;
+  --body-lg-weight: 400;
+  --body-lg-family: 'Onest', sans-serif;
+  --body-lg-letter-spacing: -0.025em;
   --body-large-size: 1.125rem;
   --body-large-line-height: 1.6;
   --body-large-weight: 400;
@@ -72,6 +88,11 @@
   --body-text-weight: 400;
   --body-text-family: 'Onest', sans-serif;
   --body-text-letter-spacing: -0.03125em;
+  --body-medium-size: 1rem;
+  --body-medium-line-height: 1.5;
+  --body-medium-weight: 500;
+  --body-medium-family: 'Onest', sans-serif;
+  --body-medium-letter-spacing: -0.03125em;
   --small-text-size: 0.875rem;
   --small-text-line-height: 1.5999999999999999;
   --small-text-weight: 500;

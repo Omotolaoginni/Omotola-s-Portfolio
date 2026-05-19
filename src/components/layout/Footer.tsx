@@ -13,18 +13,6 @@ export const Footer = () => {
           <Typography as="span" variant="caption" color="muted">
             &copy; {year} Omotola Oginni. Built with Next.js.
           </Typography>
-          
-          <div className={styles.socials}>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.link}>
-              LinkedIn
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className={styles.link}>
-              Twitter
-            </a>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>
-              Resume
-            </a>
-          </div>
         </div>
       </Section>
     </footer>
