@@ -53,12 +53,6 @@ export default function Home() {
           </Typography>
         </div>
 
-        {/* Scroll Hint Visual Affordance */}
-        <div className={styles.scrollHint}>
-          <span className={styles.scrollHintText}>Scroll</span>
-          <span className={styles.scrollHintArrow}>↓</span>
-        </div>
-
         {/* Tool marquee — full section width */}
         <div className={styles.heroToolMarquee}>
           <div className={styles.heroToolMarqueeTrack}>
@@ -76,6 +70,12 @@ export default function Home() {
             <span className={styles.heroToolItem}><Image src="/chatgpt-logo-chat-gpt-icon-on-white-background-free-vector.jpg" alt="ChatGPT" width={32} height={32} className={styles.toolLogoImage} /></span>
             <span className={styles.heroToolItem}><Image src="/gemini-color.svg" alt="Gemini" width={32} height={32} className={styles.toolLogoImage} /></span>
             <span className={styles.heroToolItem}><Image src="/claude-color.svg" alt="Claude" width={32} height={32} className={styles.toolLogoImage} /></span>
+          </div>
+
+          {/* Scroll Hint Visual Affordance */}
+          <div className={styles.scrollHint}>
+            <span className={styles.scrollHintText}>Scroll</span>
+            <span className={styles.scrollHintArrow}>↓</span>
           </div>
         </div>
 
@@ -238,7 +238,7 @@ export default function Home() {
       </Section>
 
       {/* 6. Contact Me Section */}
-      <Section width="full" padding="none" className={styles.contactSection}>
+      <Section id="contact" width="full" padding="none" className={styles.contactSection}>
         <div className={styles.contactMarquee}>
           <div className={styles.contactMarqueeTrack}>
             <span className={styles.contactMarqueeText}>Let's work together</span>
@@ -260,16 +260,16 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.contactCta}>
-          <Button href="mailto:patience.gennyhatsiawo.com" variant="primary">Contact Me</Button>
+          <Button href="mailto:patience.oginni@gmail.com" variant="primary">Contact Me</Button>
         </div>
         <div className={styles.contactGrid}>
           <div className={styles.contactLinks}>
             <div className={styles.contactSocials}>
-              <a href="https://behance.net" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>Behance</a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>LinkedIn</a>
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>Resume</a>
+              <a href="https://www.behance.net/omotolaolatejuoginni" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>Behance</a>
+              <a href="https://www.linkedin.com/in/omotolaolatejuoginni/" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>LinkedIn</a>
+              <a href="https://docs.google.com/document/d/1aBhZ6sg49tFvuqVxjYqIfrH2tpYkNEadeubp_Ez4Hzo/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>Resume</a>
             </div>
-            <a href="mailto:hello@omotola.com" className={`${styles.contactLink} ${styles.contactLinkEmail}`}>hello@omotola.com</a>
+            <a href="mailto:patience.oginni@gmail.com" className={`${styles.contactLink} ${styles.contactLinkEmail}`}>patience.oginni@gmail.com</a>
           </div>
           <div className={styles.contactMessage}>
             <Typography as="p" variant="body-lg" color="inherit" className={styles.contactCtaText}>

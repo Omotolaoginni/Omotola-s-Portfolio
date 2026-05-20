@@ -42,12 +42,12 @@ export const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>
+            <a href="https://docs.google.com/document/d/1aBhZ6sg49tFvuqVxjYqIfrH2tpYkNEadeubp_Ez4Hzo/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer" className={styles.link}>
               Resume
             </a>
           </li>
           <li>
-            <a href="/contact" className={styles.link}>
+            <a href="#contact" className={styles.link}>
               Contact
             </a>
           </li>

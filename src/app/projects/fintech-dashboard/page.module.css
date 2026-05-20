@@ -1,0 +1,279 @@
+/* ─────────────────────────────────────────
+   ContentSplit — Project Detail Page
+───────────────────────────────────────── */
+
+/* ── Page wrapper ── */
+.page {
+  padding-top: 10rem;
+  padding-bottom: var(--spacing-20);
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding-top: 12rem;
+  }
+}
+
+/* ── 1. Hero — two-column split ── */
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-8);
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .heroGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-20);
+    align-items: center;
+  }
+}
+
+.heroTitle {
+  font-family: var(--display-text-family);
+  font-size: clamp(2.5rem, 5vw, var(--display-text-size));
+  font-weight: var(--display-text-weight);
+  line-height: 1.1;
+  letter-spacing: var(--display-text-letter-spacing);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.heroOverview {
+  font-family: var(--body-large-family);
+  font-size: var(--body-large-size);
+  font-weight: var(--body-large-weight);
+  line-height: var(--body-large-line-height);
+  letter-spacing: var(--body-large-letter-spacing);
+  color: var(--color-text-muted);
+  margin: 0;
+  max-width: 480px;
+}
+
+@media (min-width: 768px) {
+  .heroOverview {
+    padding-top: 0;
+  }
+}
+
+/* ── 2. Divider ── */
+.divider {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+  margin-top: var(--spacing-13);
+  margin-bottom: var(--spacing-9);
+}
+
+/* ── 3. Check it Out link — right-aligned ── */
+.checkItOutRow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.checkItOut {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-family: var(--body-text-family);
+  font-size: var(--body-text-size);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.checkItOut:hover {
+  color: var(--color-primary);
+}
+
+.checkItOut::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.checkItOut:hover::after {
+  transform: scaleX(1);
+}
+
+.checkItOutArrow {
+  font-size: 1.1em;
+  transition: transform 0.2s ease;
+}
+
+.checkItOut:hover .checkItOutArrow {
+  transform: translate(2px, -2px);
+}
+
+/* ── 4. Hero Mockup Container ── */
+.heroMockup {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: var(--color-surface-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  margin-top: var(--spacing-13);
+}
+
+.heroMockupImage {
+  object-fit: cover;
+}
+
+/* ── 5. Project Description ── */
+.descriptionSection {
+  margin-top: var(--spacing-13);
+}
+
+.descriptionText {
+  font-family: var(--body-lg-family);
+  font-size: var(--body-lg-size);
+  font-weight: var(--body-lg-weight);
+  line-height: var(--body-lg-line-height);
+  letter-spacing: var(--body-lg-letter-spacing);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ── 6. Project Metadata ── */
+.metadataSection {
+  margin-top: var(--spacing-20);
+}
+
+.metadataGrid {
+  display: flex;
+  flex-direction: column;
+}
+
+.metadataRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-4);
+  padding-top: var(--spacing-8);
+  padding-bottom: var(--spacing-8);
+  border-bottom: 1px solid var(--color-border);
+}
+
+@media (min-width: 768px) {
+  .metadataRow {
+    grid-template-columns: 200px 1fr;
+    gap: var(--spacing-20);
+  }
+}
+
+.metadataRow:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.metadataLabel {
+  font-family: var(--caption-family);
+  font-size: var(--caption-size);
+  font-weight: var(--caption-weight);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.metadataValue {
+  font-family: var(--body-text-family);
+  font-size: var(--body-text-size);
+  font-weight: var(--body-text-weight);
+  color: var(--color-text-primary);
+  line-height: var(--body-text-line-height);
+}
+
+.metadataList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2) var(--spacing-6);
+}
+
+.metadataList li {
+  font-family: var(--body-text-family);
+  font-size: var(--body-text-size);
+  font-weight: var(--body-text-weight);
+  color: var(--color-text-primary);
+  line-height: var(--body-text-line-height);
+}
+
+/* ── 7. Visual Showcase ── */
+.showcaseSection {
+  margin-top: var(--spacing-20);
+}
+
+.showcaseGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-9);
+}
+
+.showcaseImageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: var(--color-surface-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.showcaseImage {
+  object-fit: cover;
+}
+
+/* ── 8. Video Showcase ── */
+.videoSection {
+  margin-top: var(--spacing-20);
+}
+
+.videoContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: var(--color-surface-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoPlaceholderIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background-color: color-mix(in srgb, var(--color-border) 70%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoPlaceholderIcon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--color-text-muted);
+  margin-left: 3px;
+}
+
+.videoElement {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+}
