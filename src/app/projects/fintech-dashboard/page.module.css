@@ -32,7 +32,7 @@
 
 .heroTitle {
   font-family: var(--display-text-family);
-  font-size: clamp(2.5rem, 5vw, var(--display-text-size));
+  font-size: 32px;
   font-weight: var(--display-text-weight);
   line-height: 1.1;
   letter-spacing: var(--display-text-letter-spacing);
@@ -132,22 +132,7 @@
   object-fit: cover;
 }
 
-/* ── 5. Project Description ── */
-.descriptionSection {
-  margin-top: var(--spacing-13);
-}
-
-.descriptionText {
-  font-family: var(--body-lg-family);
-  font-size: var(--body-lg-size);
-  font-weight: var(--body-lg-weight);
-  line-height: var(--body-lg-line-height);
-  letter-spacing: var(--body-lg-letter-spacing);
-  color: var(--color-text-muted);
-  margin: 0;
-}
-
-/* ── 6. Project Metadata ── */
+/* ── 5. Project Metadata ── */
 .metadataSection {
   margin-top: var(--spacing-20);
 }
@@ -211,17 +196,7 @@
   line-height: var(--body-text-line-height);
 }
 
-/* ── 7. Visual Showcase ── */
-.showcaseSection {
-  margin-top: var(--spacing-20);
-}
-
-.showcaseGrid {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-9);
-}
-
+/* ── 6. UI Screenshot Container Styles ── */
 .showcaseImageContainer {
   position: relative;
   width: 100%;
@@ -236,44 +211,124 @@
   object-fit: cover;
 }
 
-/* ── 8. Video Showcase ── */
-.videoSection {
+/* ── 7. Editorial Layout Sections (Introduction, Problem, Workflow, Contribution, Insights) ── */
+.editorialSection {
   margin-top: var(--spacing-20);
+  padding-top: var(--spacing-16);
+  border-top: 1px solid color-mix(in srgb, var(--color-border) 40%, transparent);
 }
 
-.videoContainer {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background-color: var(--color-surface-secondary);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  overflow: hidden;
+.editorialGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-8);
+}
+
+@media (min-width: 992px) {
+  .editorialGrid {
+    grid-template-columns: 320px 1fr;
+    gap: var(--spacing-16);
+  }
+}
+
+.editorialHeading {
+  font-family: var(--h2-family);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: var(--h2-letter-spacing);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.editorialContent {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: var(--spacing-8);
 }
 
-.videoPlaceholderIcon {
-  width: 64px;
-  height: 64px;
-  border-radius: var(--radius-full);
-  background-color: color-mix(in srgb, var(--color-border) 70%, transparent);
+/* ── 8. Workflow Step Grid ── */
+.workflowStepGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-8);
+}
+
+@media (min-width: 576px) {
+  .workflowStepGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .workflowStepGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-10);
+  }
+}
+
+.workflowStep {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--spacing-4);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: var(--spacing-2);
 }
 
-.videoPlaceholderIcon svg {
-  width: 24px;
-  height: 24px;
-  color: var(--color-text-muted);
-  margin-left: 3px;
+.workflowStepTitle {
+  font-family: var(--body-xl-family);
+  font-size: var(--body-xl-size);
+  font-weight: 600;
+  color: var(--color-text-primary);
 }
 
-.videoElement {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: var(--radius-xl);
+.workflowStepDesc {
+  font-family: var(--body-text-family);
+  font-size: var(--body-text-size);
+  line-height: 1.6;
+}
+
+/* ── 9. UI Screenshots Grid ── */
+.uiScreenshotsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+}
+
+.uiScreenshotWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.uiScreenshotLabel {
+  font-family: var(--body-text-family);
+  font-size: var(--small-text-size);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── 10. Contribution Groups ── */
+.contributionGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-border) 40%, transparent);
+  padding-bottom: var(--spacing-6);
+}
+
+.contributionGroup:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.contributionTitle {
+  font-family: var(--body-xl-family);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.contributionDesc {
+  font-family: var(--body-large-family);
+  line-height: 1.6;
 }
