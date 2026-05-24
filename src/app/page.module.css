@@ -772,7 +772,7 @@
 }
 
 .backToTop {
-  display: inline-block;
+  display: block;
   margin-top: var(--spacing-6);
   font-family: var(--body-text-family);
   font-size: var(--body-text-size);
@@ -783,6 +783,7 @@
   transition: color 0.2s ease;
   position: relative;
   top: 32px;
+  text-align: right;
 }
 
 .backToTop:hover {

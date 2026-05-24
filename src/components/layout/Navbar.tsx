@@ -28,13 +28,12 @@ export const Navbar = () => {
         </div>
         <ul className={styles.links}>
           <li>
-            <Link 
-              href="/projects" 
-              className={`${styles.link} ${pathname.startsWith('/projects') ? styles.active : ''}`}
-              aria-current={pathname.startsWith('/projects') ? 'page' : undefined}
+            <a 
+              href="#work" 
+              className={styles.link}
             >
               Work
-            </Link>
+            </a>
           </li>
           <li>
             <a href="#about" className={styles.link}>

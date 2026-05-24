@@ -82,7 +82,7 @@ export default function Home() {
       </Section>
 
       {/* 2. Selected Projects Section */}
-      <Section width="full" padding="none" className={styles.projectsSection}>
+      <Section width="full" padding="none" className={styles.projectsSection} id="work">
         <div className={styles.projectsHeader}>
           <Typography as="h2" variant="h2">Selected Work</Typography>
           <Button href="/projects" variant="link">View all projects &rarr;</Button>
@@ -269,7 +269,7 @@ export default function Home() {
               <a href="https://www.linkedin.com/in/omotolaolatejuoginni/" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>LinkedIn</a>
               <a href="https://docs.google.com/document/d/1aBhZ6sg49tFvuqVxjYqIfrH2tpYkNEadeubp_Ez4Hzo/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>Resume</a>
             </div>
-            <a href="mailto:patience.oginni@gmail.com" className={`${styles.contactLink} ${styles.contactLinkEmail}`}>patience.oginni@gmail.com</a>
+            <a href="mailto:patience.oginni@gmail.com" className={`${styles.contactLink} ${styles.contactLinkEmail}`} aria-label="Send email to patience.oginni@gmail.com">hello@omotola.com</a>
           </div>
           <div className={styles.contactMessage}>
             <Typography as="p" variant="body-lg" color="inherit" className={styles.contactCtaText}>
