@@ -77,7 +77,7 @@ export default function ContentSplitProject() {
 
       {/* ── 2. PRODUCT OVERVIEW ── */}
       <Section width="full" padding="none">
-        <div className={styles.editorialSection}>
+        <div className={`${styles.editorialSection} ${styles.editorialSectionNoBorder}`}>
           <div className={styles.editorialGrid}>
             <Typography as="h2" variant="h2" className={styles.editorialHeading}>
               Product Overview
@@ -231,7 +231,7 @@ export default function ContentSplitProject() {
           <Link href="/projects/creator-platform" className={styles.nextProjectCard}>
             <div className={styles.nextProjectImageContainer}>
               <Image
-                src="/841shots_so 2.png"
+                src="/436shots_so.png"
                 alt="Mainstack Referral & Affiliate dashboard"
                 fill
                 className={styles.nextProjectImage}

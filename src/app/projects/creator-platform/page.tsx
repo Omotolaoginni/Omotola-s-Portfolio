@@ -25,6 +25,19 @@ export default function CreatorPlatformProject() {
           </Typography>
         </div>
         <hr className={styles.divider} />
+
+        <div className={styles.checkItOutRow}>
+          <a
+            href="https://mainstack.com/referral-program"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.checkItOut}
+            id="project-external-link"
+          >
+            Check it out <span className={styles.checkItOutArrow}>↗</span>
+          </a>
+        </div>
+
         <div className={styles.heroMockup}>
           <Image
             src="/193shots_so.png"
@@ -38,7 +51,7 @@ export default function CreatorPlatformProject() {
 
       {/* ── 2. INTRO / OVERVIEW ── */}
       <Section width="full" padding="none">
-        <div className={styles.editorialSection}>
+        <div className={`${styles.editorialSection} ${styles.editorialSectionNoBorder}`}>
           <div className={styles.editorialGrid}>
             <Typography as="h2" variant="h2" className={styles.editorialHeading}>
               Product Overview

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Section } from "@/components/layout/Section";
 import { Typography } from "@/components/ui/Typography";
+import { VideoPlayer } from "./VideoPlayer";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -25,6 +26,19 @@ export default function AmbassadorProgramProject() {
           </Typography>
         </div>
         <hr className={styles.divider} />
+
+        <div className={styles.checkItOutRow}>
+          <a
+            href="https://mainstack.com/ambassador-program"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.checkItOut}
+            id="project-external-link"
+          >
+            Check it out <span className={styles.checkItOutArrow}>↗</span>
+          </a>
+        </div>
+
         <div className={styles.heroMockup}>
           <Image
             src="/194shots_so.png"
@@ -36,26 +50,7 @@ export default function AmbassadorProgramProject() {
         </div>
       </Section>
 
-      {/* ── 2. INTRO / OVERVIEW ── */}
-      <Section width="full" padding="none">
-        <div className={styles.editorialSection}>
-          <div className={styles.editorialGrid}>
-            <Typography as="h2" variant="h2" className={styles.editorialHeading}>
-              Product Overview
-            </Typography>
-            <div className={styles.editorialContent}>
-              <Typography as="p" variant="body-large" color="muted">
-                Mainstack Ambassador Growth Program is a referral driven growth system that enables creators to become official ambassadors of Mainstack. It provides a structured way for users to refer others to the platform and earn recurring commissions based on successful sign ups and activity generated through their referral links.
-              </Typography>
-              <Typography as="p" variant="body-large" color="muted">
-                The experience is designed to support scalable acquisition while giving ambassadors visibility into their performance, earnings, and referral impact.
-              </Typography>
-            </div>
-          </div>
-        </div>
-      </Section>
-
-      {/* ── 3. METADATA ── */}
+      {/* ── 2. METADATA ── */}
       <Section width="full" padding="none">
         <div className={styles.metadataSection}>
           <div className={styles.metadataGrid}>
@@ -74,6 +69,25 @@ export default function AmbassadorProgramProject() {
             <div className={styles.metadataRow}>
               <span className={styles.metadataLabel}>Services Provided</span>
               <span className={styles.metadataValue}>UX Strategy, Growth Systems Design, Conversion Design, Product Design</span>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* ── 3. PRODUCT OVERVIEW ── */}
+      <Section width="full" padding="none">
+        <div className={`${styles.editorialSection} ${styles.editorialSectionNoBorder}`}>
+          <div className={styles.editorialGrid}>
+            <Typography as="h2" variant="h2" className={styles.editorialHeading}>
+              Product Overview
+            </Typography>
+            <div className={styles.editorialContent}>
+              <Typography as="p" variant="body-large" color="muted">
+                Mainstack Ambassador Growth Program is a referral driven growth system that enables creators to become official ambassadors of Mainstack. It provides a structured way for users to refer others to the platform and earn recurring commissions based on successful sign ups and activity generated through their referral links.
+              </Typography>
+              <Typography as="p" variant="body-large" color="muted">
+                The experience is designed to support scalable acquisition while giving ambassadors visibility into their performance, earnings, and referral impact.
+              </Typography>
             </div>
           </div>
         </div>
@@ -98,36 +112,12 @@ export default function AmbassadorProgramProject() {
         </div>
       </Section>
 
-      {/* ── SOLUTION VIDEO ── */}
-      <Section width="full" padding="none">
-        <div className={`${styles.editorialSection} ${styles.solutionSection}`}>
-          <div className={styles.editorialGrid}>
-            <Typography as="h2" variant="h2" className={styles.editorialHeading}>
-              Solution
-            </Typography>
-            <div className={styles.editorialContent}>
-              <div className={styles.videoContainer}>
-                <video
-                  className={styles.videoPlayer}
-                  controls
-                  preload="none"
-                  playsInline
-                  aria-label="Ambassador program walkthrough"
-                >
-                  <source src="/ambassador-walkthrough.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Section>
-
       {/* ── 5. HOW IT WORKS ── */}
       <Section width="full" padding="none">
         <div className={styles.editorialSection}>
           <div className={styles.editorialGrid}>
             <Typography as="h2" variant="h2" className={styles.editorialHeading}>
-              How It Works
+              How it works
             </Typography>
             <div className={styles.editorialContent}>
               <Typography as="p" variant="body-large" color="muted">
@@ -151,14 +141,7 @@ export default function AmbassadorProgramProject() {
               <Typography as="p" variant="body-large" color="muted">
                 The system is designed to provide clarity around performance, earnings, and referral impact in real time.
               </Typography>
-              <div className={styles.showcaseImageContainer}>
-                <Image
-                  src="/502shots_so.png"
-                  alt="Ambassador referral workflow"
-                  fill
-                  className={styles.showcaseImage}
-                />
-              </div>
+              <VideoPlayer />
             </div>
           </div>
         </div>
@@ -177,50 +160,11 @@ export default function AmbassadorProgramProject() {
               </Typography>
               <div className={styles.showcaseImageContainer}>
                 <Image
-                  src="/502shots_so.png"
+                  src="/Frame 4.png"
                   alt="Mobile responsive ambassador experience"
                   fill
                   className={styles.showcaseImage}
                 />
-              </div>
-            </div>
-          </div>
-        </div>
-      </Section>
-
-      {/* ── 7. EXPERIENCE / FLOW ── */}
-      <Section width="full" padding="none">
-        <div className={styles.editorialSection}>
-          <div className={styles.editorialGrid}>
-            <Typography as="h2" variant="h2" className={styles.editorialHeading}>
-              Experience &amp; Flow
-            </Typography>
-            <div className={styles.editorialContent}>
-              <div className={styles.uiScreenshotsStack}>
-                <div className={styles.showcaseImageContainer}>
-                  <Image
-                    src="/502shots_so.png"
-                    alt="Ambassador onboarding and enrollment"
-                    fill
-                    className={styles.showcaseImage}
-                  />
-                </div>
-                <div className={styles.showcaseImageContainer}>
-                  <Image
-                    src="/502shots_so.png"
-                    alt="Referral tracking and earnings view"
-                    fill
-                    className={styles.showcaseImage}
-                  />
-                </div>
-                <div className={styles.showcaseImageContainer}>
-                  <Image
-                    src="/502shots_so.png"
-                    alt="Reward payout and history"
-                    fill
-                    className={styles.showcaseImage}
-                  />
-                </div>
               </div>
             </div>
           </div>

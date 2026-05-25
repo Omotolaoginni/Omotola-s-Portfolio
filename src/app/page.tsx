@@ -101,7 +101,7 @@ export default function Home() {
             title="Mainstack — Referral &amp; Affiliate Experience"
             description="Creator-focused referral and affiliate experience designed to help users discover products, promote creator businesses, and earn recurring commissions through a seamless cross-device workflow."
             tags={["Responsive Design", "Mobile UI Design", "Visual Collaboration"]}
-            imageUrl="/841shots_so 2.png"
+            imageUrl="/436shots_so.png"
           />
           <ProjectCard 
             slug="project-three"

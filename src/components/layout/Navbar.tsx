@@ -2,12 +2,9 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import styles from './Navbar.module.css';
 
 export const Navbar = () => {
-  const pathname = usePathname();
-  
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
@@ -36,7 +33,7 @@ export const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="#about" className={styles.link}>
+            <a href="/#about" className={styles.link}>
               About
             </a>
           </li>
