@@ -3,6 +3,7 @@ import { Section } from "@/components/layout/Section";
 import { Button } from "@/components/ui/Button";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { Typography } from "@/components/ui/Typography";
+import { ContactSection } from "@/components/layout/ContactSection";
 import Image from "next/image";
 
 export default function Home() {
@@ -90,35 +91,35 @@ export default function Home() {
         
         <div className={styles.projectGrid}>
           <ProjectCard 
-            slug="fintech-dashboard"
+            slug="contentsplit"
             title="ContentSplit - AI Content Repurposing Engine"
             description="An AI-powered workflow tool that transforms long-form content into platform, ready posts for Twitter/X, LinkedIn, Instagram, and Email, helping creators publish faster with consistent tone across channels."
             tags={["AI Workflow Design", "Design Systems", "Creator Tools", "Content Automation"]}
             imageUrl="/499shots_so.png"
           />
           <ProjectCard 
-            slug="creator-platform"
+            slug="mainstack-refer-earn"
             title="Mainstack — Referral &amp; Affiliate Experience"
             description="Creator-focused referral and affiliate experience designed to help users discover products, promote creator businesses, and earn recurring commissions through a seamless cross-device workflow."
             tags={["Responsive Design", "Mobile UI Design", "Visual Collaboration"]}
             imageUrl="/436shots_so.png"
           />
           <ProjectCard 
-            slug="project-three"
+            slug="ambassador-program"
             title="Mainstack — Ambassador Growth Program Experience"
             description="A structured ambassador program designed to enable creators to drive product-led growth through referrals, track performance, and earn recurring rewards within a seamless, incentive-driven ecosystem. The experience focuses on clarity of earning pathways, simplified referral tracking, and motivating sustained user engagement."
             tags={["UX Strategy", "Growth Systems Design", "Conversion Design", "Product Design"]}
             imageUrl="/502shots_so.png"
           />
           <ProjectCard 
-            slug="project-four"
+            slug="nbc-trade-fair"
             title="NBC Trade Fair — Landing Page &amp; Commerce Onboarding Experience"
             description="A conversion-focused landing page designed for a large-scale trade fair commerce platform, enabling vendors and participants to seamlessly onboard into a digital dashboard. The experience guided users from event discovery into account creation, where they could manage product listings, process online orders, and accept POS payments through an integrated commerce system powered by Mainstack."
             tags={["Landing Page Design", "Payment System Design", "Conversion Funnel Design"]}
             imageUrl="/126shots_so.png"
           />
           <ProjectCard 
-            slug="project-five"
+            slug="smarg"
             title="Smarg – Neobank for African Creatives"
             description="A modern mobile banking experience designed for African creatives, freelancers, and digital entrepreneurs, combining financial automation, flexible credit access, and device financing to help users manage cash flow, invest in essential tools, and grow sustainable creative careers without heavy upfront financial pressure."
             tags={["Fintech Product Design", "Creator Economy", "Financial Automation"]}
@@ -126,7 +127,7 @@ export default function Home() {
           />
           <ProjectCard 
             slug="sentinel"
-            title="Sentinel — Third-Party Service Monitoring &amp; Alerting"
+            title="Sentinel Landing Page Redesign"
             description="A monitoring service that tracks third-party software and API uptime in real time, helping engineering teams detect outages early and receive instant alerts through their preferred notification channels to prevent costly system disruptions."
             tags={["SaaS Platform", "API &amp; Dependency Tracking", "Incident Monitoring", "Enterprise UX"]}
             imageUrl="/707shots_so.png"
@@ -142,7 +143,7 @@ export default function Home() {
             <Typography as="h2" variant="h2" className={styles.aboutTitle}>About Me</Typography>
             <div className={styles.aboutNarrative}>
               <Typography as="p" variant="body-large" color="muted">
-                I'm a product designer focused on building scalable, systems-driven digital products across UX, UI, and design systems. I use AI to accelerate product thinking and execution, while staying grounded in strong UX principles to ensure clarity and usability in complex workflows. My work is centered on designing structured, consistent experiences where design systems provide the foundation for coherence, especially when working with AI-assisted tools.
+                I&apos;m a product designer focused on building scalable, systems-driven digital products across UX, UI, and design systems. I use AI to accelerate product thinking and execution, while staying grounded in strong UX principles to ensure clarity and usability in complex workflows. My work is centered on designing structured, consistent experiences where design systems provide the foundation for coherence, especially when working with AI-assisted tools.
               </Typography>
             </div>
           </div>
@@ -166,7 +167,7 @@ export default function Home() {
         <div className={styles.experienceGrid}>
           <div className={styles.experienceIntro}>
             <Typography as="p" variant="body-large" color="muted">
-              I've had the opportunity to work with companies like Mainstack and Smarg, as well as collaborate with clients who understand the value of intentional design. Across FinTech and creator platforms, I bring a user-centered approach to every product, whether that's streamlining a flow, building out a design system, or designing for measurable growth.
+              I&apos;ve had the opportunity to work with companies like Mainstack and Smarg, as well as collaborate with clients who understand the value of intentional design. Across FinTech and creator platforms, I bring a user-centered approach to every product, whether that&apos;s streamlining a flow, building out a design system, or designing for measurable growth.
             </Typography>
           </div>
           <div className={styles.experienceList}>
@@ -237,52 +238,8 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* 6. Contact Me Section */}
-      <Section id="contact" width="full" padding="none" className={styles.contactSection}>
-        <div className={styles.contactMarquee}>
-          <div className={styles.contactMarqueeTrack}>
-            <span className={styles.contactMarqueeText}>Let's work together</span>
-            <span className={styles.contactMarqueeDot}>•</span>
-            <span className={styles.contactMarqueeText}>Let's work together</span>
-            <span className={styles.contactMarqueeDot}>•</span>
-            <span className={styles.contactMarqueeText}>Let's work together</span>
-            <span className={styles.contactMarqueeDot}>•</span>
-            <span className={styles.contactMarqueeText}>Let's work together</span>
-            <span className={styles.contactMarqueeDot}>•</span>
-            <span className={styles.contactMarqueeText}>Let's work together</span>
-            <span className={styles.contactMarqueeDot}>•</span>
-            <span className={styles.contactMarqueeText}>Let's work together</span>
-            <span className={styles.contactMarqueeDot}>•</span>
-            <span className={styles.contactMarqueeText}>Let's work together</span>
-            <span className={styles.contactMarqueeDot}>•</span>
-            <span className={styles.contactMarqueeText}>Let's work together</span>
-            <span className={styles.contactMarqueeDot}>•</span>
-          </div>
-        </div>
-        <div className={styles.contactCta}>
-          <Button href="mailto:patience.oginni@gmail.com" variant="primary">Contact Me</Button>
-        </div>
-        <div className={styles.contactGrid}>
-          <div className={styles.contactLinks}>
-            <div className={styles.contactSocials}>
-              <a href="https://www.behance.net/omotolaolatejuoginni" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>Behance</a>
-              <a href="https://www.linkedin.com/in/omotolaolatejuoginni/" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>LinkedIn</a>
-              <a href="https://docs.google.com/document/d/1aBhZ6sg49tFvuqVxjYqIfrH2tpYkNEadeubp_Ez4Hzo/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>Resume</a>
-            </div>
-            <a href="mailto:patience.oginni@gmail.com" className={`${styles.contactLink} ${styles.contactLinkEmail}`} aria-label="Send email to patience.oginni@gmail.com">hello@omotola.com</a>
-          </div>
-          <div className={styles.contactMessage}>
-            <Typography as="p" variant="body-lg" color="inherit" className={styles.contactCtaText}>
-              Currently open to new roles and projects.<br />
-              If you’re building something meaningful and need a product designer to sweat the details, I would love to be part of the conversation.
-            </Typography>
-            
-            <a href="#" className={styles.backToTop} aria-label="Scroll to top of page">
-              Back to top ↑
-            </a>
-          </div>
-        </div>
-      </Section>
+      <ContactSection id="contact" />
+
     </main>
   );
 }

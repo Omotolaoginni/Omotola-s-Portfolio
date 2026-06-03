@@ -1,0 +1,23 @@
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-family: var(--body-text-family);
+  font-size: var(--small-text-size);
+  font-weight: var(--small-text-weight);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.location {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.separator {
+  color: var(--color-text-muted);
+}
+
+.time {
+  font-variant-numeric: tabular-nums;
+}

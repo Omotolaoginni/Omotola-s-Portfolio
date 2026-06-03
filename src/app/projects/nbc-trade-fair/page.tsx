@@ -272,7 +272,7 @@ export default function NbcTradeFairProject() {
           <Typography as="span" variant="caption" color="muted" className={styles.nextLabel}>
             Next Project
           </Typography>
-          <Link href="/projects/project-five" className={styles.nextProjectCard}>
+          <Link href="/projects/smarg" className={styles.nextProjectCard}>
             <div className={styles.nextProjectImageContainer}>
               <Image
                 src="/813shots_so.png"

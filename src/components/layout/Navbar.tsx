@@ -1,10 +1,26 @@
 "use client";
 
-import React from 'react';
+import React, { useCallback } from 'react';
 import Link from 'next/link';
+import { useRouter, usePathname } from 'next/navigation';
 import styles from './Navbar.module.css';
+import { LiveStatus } from './LiveStatus';
 
 export const Navbar = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleWorkClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+
+    if (pathname === '/') {
+      const el = document.getElementById('work');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      router.push('/#work');
+    }
+  }, [pathname, router]);
+
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
@@ -26,16 +42,17 @@ export const Navbar = () => {
         <ul className={styles.links}>
           <li>
             <a 
-              href="#work" 
+              href="/#work" 
               className={styles.link}
+              onClick={handleWorkClick}
             >
               Work
             </a>
           </li>
           <li>
-            <a href="/#about" className={styles.link}>
+            <Link href="/#about" className={styles.link}>
               About
-            </a>
+            </Link>
           </li>
           <li>
             <a href="https://docs.google.com/document/d/1aBhZ6sg49tFvuqVxjYqIfrH2tpYkNEadeubp_Ez4Hzo/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer" className={styles.link}>
@@ -43,11 +60,14 @@ export const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="#contact" className={styles.link}>
+            <Link href="/contact" className={styles.link}>
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
+        <div className={styles.statusWrapper}>
+          <LiveStatus />
+        </div>
       </nav>
     </header>
   );

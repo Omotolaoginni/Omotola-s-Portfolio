@@ -190,7 +190,7 @@ export default function CreatorPlatformProject() {
           <Typography as="span" variant="caption" color="muted" className={styles.nextLabel}>
             Next Project
           </Typography>
-          <Link href="/projects/project-three" className={styles.nextProjectCard}>
+          <Link href="/projects/ambassador-program" className={styles.nextProjectCard}>
             <div className={styles.nextProjectImageContainer}>
               <Image
                 src="/502shots_so.png"

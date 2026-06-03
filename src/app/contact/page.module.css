@@ -1,0 +1,271 @@
+.page {
+  padding-top: 10rem;
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding-top: 12rem;
+  }
+}
+
+.headingBlock {
+  margin-bottom: 0;
+}
+
+.contactHeading {
+  margin: 0;
+  font-family: var(--display-text-family);
+  font-size: clamp(3.5rem, 10vw, 6.25rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: var(--display-text-letter-spacing);
+  color: var(--color-text-primary);
+}
+
+.headingDivider {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  margin: var(--spacing-9) 0 var(--spacing-13) 0;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-13);
+  align-items: start;
+}
+
+@media (min-width: 992px) {
+  .contentGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-20);
+  }
+}
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.contactSubtext {
+  color: var(--color-text-muted);
+  max-width: 440px;
+}
+
+.contactEmailLink {
+  font-family: var(--caption-family);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  width: fit-content;
+}
+
+.contactEmailLink:hover {
+  opacity: 0.7;
+}
+
+.rightCol {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (min-width: 992px) {
+  .rightCol {
+    justify-content: center;
+  }
+}
+
+.formCard {
+  width: 100%;
+  max-width: 560px;
+  background-color: var(--color-surface-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-9);
+}
+
+@media (min-width: 768px) {
+  .formCard {
+    padding: var(--spacing-10);
+  }
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.formLabel {
+  font-family: var(--caption-family);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.formInput {
+  width: 100%;
+  padding: var(--spacing-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: var(--body-text-family);
+  font-size: var(--body-text-size);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.formInput::placeholder {
+  color: var(--color-text-muted);
+}
+
+.formInput:focus {
+  border-color: var(--color-text-primary);
+  box-shadow: 0 0 0 1px var(--color-text-primary);
+}
+
+.formTextarea {
+  width: 100%;
+  padding: var(--spacing-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: var(--body-text-family);
+  font-size: var(--body-text-size);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+  min-height: 100px;
+}
+
+.formTextarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.formTextarea:focus {
+  border-color: var(--color-text-primary);
+  box-shadow: 0 0 0 1px var(--color-text-primary);
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkboxInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+.checkboxControl {
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  color: var(--color-surface);
+}
+
+.checkboxInput:checked + .checkboxControl {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.checkboxInput:focus-visible + .checkboxControl {
+  box-shadow: 0 0 0 3px var(--color-focus-ring);
+  border-color: var(--color-primary);
+}
+
+.checkboxLabel:hover .checkboxControl {
+  border-color: var(--color-border-hover);
+}
+
+.checkboxIcon {
+  width: 10px;
+  height: 10px;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  display: block;
+}
+
+.checkboxInput:checked + .checkboxControl .checkboxIcon {
+  opacity: 1;
+}
+
+.checkboxText {
+  font-family: var(--body-text-family);
+  font-size: var(--body-text-size);
+  color: var(--color-text-primary);
+}
+
+.formSubmit {
+  width: 100%;
+  padding: var(--spacing-4) var(--spacing-8);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--body-text-family);
+  font-size: var(--body-text-size);
+  font-weight: 600;
+  color: var(--color-surface);
+  background-color: var(--color-text-primary);
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.formSubmit:hover {
+  opacity: 0.85;
+}
+
+.formSubmit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.formMessage {
+  padding: var(--spacing-3) var(--spacing-4);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-secondary);
+  font-family: var(--body-text-family);
+  font-size: var(--body-text-size);
+  text-align: center;
+  border: 1px solid var(--color-border);
+}
+
+.formMessageSuccess {
+  color: var(--color-primary);
+}
+
+.formMessageError {
+  color: var(--color-text-primary);
+}

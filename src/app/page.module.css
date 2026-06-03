@@ -767,7 +767,7 @@
 }
 
 .contactCtaText {
-  font-size: 1.25rem !important; /* 20px */
+  font-size: 1.25rem !important;
   line-height: 1.6 !important;
 }
 
@@ -789,3 +789,4 @@
 .backToTop:hover {
   color: var(--color-focus-ring);
 }
+

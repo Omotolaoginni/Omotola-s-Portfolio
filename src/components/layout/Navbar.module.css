@@ -23,6 +23,7 @@
     justify-content: center;
     align-items: center;
     gap: var(--spacing-10);
+    position: relative;
   }
 
   .brand {
@@ -79,4 +80,16 @@
 .link:hover,
 .link.active {
   color: var(--color-primary);
+}
+
+.statusWrapper {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .statusWrapper {
+    position: absolute;
+    right: var(--spacing-6);
+  }
 }

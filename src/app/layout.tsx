@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${onest.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${onest.variable}`} data-scroll-behavior="smooth" suppressHydrationWarning>
       <body className={onest.className} suppressHydrationWarning>
         <Navbar />
         <main style={{ flex: 1, backgroundColor: 'var(--color-surface)' }}>

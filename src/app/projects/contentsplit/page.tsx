@@ -186,7 +186,7 @@ export default function ContentSplitProject() {
             </Typography>
             <div className={styles.editorialContent}>
               <Typography as="p" variant="body-large" color="muted">
-                My primary contributions to ContentSplit focused on strengthening the product's visual consistency and usability through design system refinement and UI/UX audits.
+                My primary contributions to ContentSplit focused on strengthening the product&apos;s visual consistency and usability through design system refinement and UI/UX audits.
               </Typography>
               <Typography as="p" variant="body-large" color="muted">
                 I worked on defining and refining the color system to ensure consistency across different content states, platform outputs, and interaction feedback. This helped establish a more structured and scalable visual language across the product.
@@ -228,7 +228,7 @@ export default function ContentSplitProject() {
           <Typography as="span" variant="caption" color="muted" className={styles.nextLabel}>
             Next Project
           </Typography>
-          <Link href="/projects/creator-platform" className={styles.nextProjectCard}>
+          <Link href="/projects/mainstack-refer-earn" className={styles.nextProjectCard}>
             <div className={styles.nextProjectImageContainer}>
               <Image
                 src="/436shots_so.png"

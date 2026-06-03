@@ -194,7 +194,7 @@ export default function AmbassadorProgramProject() {
           <Typography as="span" variant="caption" color="muted" className={styles.nextLabel}>
             Next Project
           </Typography>
-          <Link href="/projects/project-four" className={styles.nextProjectCard}>
+          <Link href="/projects/nbc-trade-fair" className={styles.nextProjectCard}>
             <div className={styles.nextProjectImageContainer}>
               <Image
                 src="/126shots_so.png"
