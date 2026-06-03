@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState, type FormEvent } from "react";
+import { Button } from "@/components/ui/Button";
 import { Section } from "@/components/layout/Section";
 import { Typography } from "@/components/ui/Typography";
 import { ContactSection } from "@/components/layout/ContactSection";
@@ -139,9 +140,9 @@ export default function ContactPage() {
                 <div className={`${styles.formMessage} ${styles.formMessageError}`}>{errorMessage}</div>
               )}
 
-              <button type="submit" className={styles.formSubmit} disabled={status === "loading"}>
+              <Button type="submit" variant="primary" className={styles.formSubmit} disabled={status === "loading"}>
                 {status === "loading" ? "Sending..." : "Submit"}
-              </button>
+              </Button>
               </form>
             </div>
           </div>

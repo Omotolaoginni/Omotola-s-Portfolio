@@ -15,6 +15,18 @@ export default function Home() {
         {/* Decorative ambient background — non-interactive, aria-hidden */}
         <div className={styles.heroAccentEllipse} aria-hidden="true" />
 
+        {/* Decorative wave — full-width, behind hero content */}
+        <div className={styles.heroDecoVectorWrapper}>
+          <Image
+            src="/Vector 13301.svg"
+            alt=""
+            aria-hidden="true"
+            width={1440}
+            height={383}
+            className={styles.heroDecoVector}
+          />
+        </div>
+
         {/* Hero stage — heading ABOVE portrait */}
         <div className={styles.heroStage}>
 

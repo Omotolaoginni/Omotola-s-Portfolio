@@ -9,12 +9,23 @@
   white-space: nowrap;
 }
 
+.location,
+.separator,
+.time {
+  line-height: 1;
+}
+
 .location {
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
 .separator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
   color: var(--color-text-muted);
 }
 

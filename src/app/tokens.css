@@ -93,6 +93,9 @@
   --body-medium-weight: 500;
   --body-medium-family: 'Onest', sans-serif;
   --body-medium-letter-spacing: -0.03125em;
+  --font-utility-small-text-size: 0.875rem;
+  --font-utility-small-text-weight: 500;
+  --font-utility-small-text-family: 'Onest', sans-serif;
   --small-text-size: 0.875rem;
   --small-text-line-height: 1.5999999999999999;
   --small-text-weight: 500;

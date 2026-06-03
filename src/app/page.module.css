@@ -53,6 +53,33 @@
   }
 }
 
+.heroDecoVectorWrapper {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100vw;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.heroDecoVector {
+  width: 100vw;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .heroDecoVectorWrapper {
+    top: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .heroDecoVectorWrapper {
+    top: 30px;
+  }
+}
+
 /* Badge row — centered above heading */
 .heroBadgeRow {
   display: flex;
@@ -60,6 +87,7 @@
   margin-bottom: var(--spacing-6);
   position: relative;
   z-index: 1;
+  transform: translateY(-44px);
 }
 
 /* ── Gradient border badge (shimmer sweep)
@@ -132,7 +160,7 @@
   padding: 0;
   width: 100%;
   margin-bottom: 0;
-  transform: translateY(40px);
+  transform: translateY(-4px);
   position: relative;
   z-index: 2;
 }
@@ -150,6 +178,7 @@
   position: relative;
   margin: 0 auto;
   z-index: 1;
+  transform: translateY(-44px);
 }
 
 @media (min-width: 768px) {
