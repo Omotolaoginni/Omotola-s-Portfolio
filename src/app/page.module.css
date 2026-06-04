@@ -3,6 +3,8 @@
 ──────────────────────────────────────── */
 .heroSection {
   position: relative;
+  isolation: isolate;
+  z-index: 0;
   padding-top: 11.25rem;
   padding-bottom: 0;
 }
