@@ -202,7 +202,6 @@
   font-size: var(--caption-size);
   font-weight: var(--caption-weight);
   letter-spacing: 0.06em;
-  text-transform: uppercase;
   color: var(--color-text-muted);
 }
 

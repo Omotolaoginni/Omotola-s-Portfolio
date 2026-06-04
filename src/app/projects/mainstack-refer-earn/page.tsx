@@ -68,22 +68,22 @@ export default function CreatorPlatformProject() {
       {/* ── 3. METADATA ── */}
       <Section width="full" padding="none">
         <div className={styles.metadataSection}>
-          <div className={styles.metadataGrid}>
+            <div className={styles.metadataGrid}>
             <div className={styles.metadataRow}>
-              <span className={styles.metadataLabel}>Client</span>
-              <span className={styles.metadataValue}>Mainstack</span>
+              <span className={styles.metadataLabel}>Year</span>
+              <span className={styles.metadataValue}>2024</span>
             </div>
             <div className={styles.metadataRow}>
               <span className={styles.metadataLabel}>Role</span>
-              <span className={styles.metadataValue}>Product Design + Responsive Design + UX Design + Design Collaboration</span>
+              <span className={styles.metadataValue}>Product Designer · Growth UX Designer</span>
             </div>
             <div className={styles.metadataRow}>
-              <span className={styles.metadataLabel}>Year</span>
-              <span className={styles.metadataValue}>2025</span>
+              <span className={styles.metadataLabel}>Project Type</span>
+              <span className={styles.metadataValue}>Affiliate &amp; Monetization System UX</span>
             </div>
             <div className={styles.metadataRow}>
-              <span className={styles.metadataLabel}>Services Provided</span>
-              <span className={styles.metadataValue}>Responsive Design, Landing Page UX, Mobile Adaptation, Interaction Design, Visual Hierarchy</span>
+              <span className={styles.metadataLabel}>Domain</span>
+              <span className={styles.metadataValue}>Creator Economy / Fintech Growth</span>
             </div>
           </div>
         </div>
