@@ -4,9 +4,17 @@
 .heroSection {
   position: relative;
   isolation: isolate;
-  z-index: 0;
+  width: 100%;
   padding-top: 11.25rem;
   padding-bottom: 0;
+}
+
+.heroInner {
+  margin: 0 auto;
+  padding-left: var(--spacing-6);
+  padding-right: var(--spacing-6);
+  width: 100%;
+  max-width: 1200px;
 }
 
 /* ── Hero Accent Ellipse ────────────────────────────────

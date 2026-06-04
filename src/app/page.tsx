@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main>
       {/* 1. Hero Section */}
-      <Section width="full" padding="none" className={styles.heroSection}>
+      <section className={styles.heroSection}>
 
         {/* Decorative ambient background — non-interactive, aria-hidden */}
         <div className={styles.heroAccentEllipse} aria-hidden="true" />
@@ -27,72 +27,75 @@ export default function Home() {
           />
         </div>
 
-        {/* Hero stage — heading ABOVE portrait */}
-        <div className={styles.heroStage}>
+        <div className={styles.heroInner}>
 
-          {/* Introductory Badge — gradient border, centered */}
-          <div className={styles.heroBadgeRow}>
-            <div className={styles.heroBadgeGradientRing}>
-              <div className={styles.heroBadgeGradientInner}>
-                HELLO! I AM OMOTOLA OGINNI
+          {/* Hero stage — heading ABOVE portrait */}
+          <div className={styles.heroStage}>
+
+            {/* Introductory Badge — gradient border, centered */}
+            <div className={styles.heroBadgeRow}>
+              <div className={styles.heroBadgeGradientRing}>
+                <div className={styles.heroBadgeGradientInner}>
+                  HELLO! I AM OMOTOLA OGINNI
+                </div>
               </div>
             </div>
+
+            {/* Full H1 heading sits above image */}
+            <h1 className={styles.heroHeadingFull}>
+              Product Designer<br />& Engineer
+            </h1>
+
+            {/* Portrait container below heading */}
+            <div className={styles.heroPortraitWrapper}>
+              <div className={styles.heroPortrait}>
+<Image 
+                  src="/my-photo 2.png" 
+                  alt="Omotola Oginni" 
+                  fill
+                  className={styles.heroImage}
+                  priority
+                />
+              </div>
+            </div>
+
           </div>
 
-          {/* Full H1 heading sits above image */}
-          <h1 className={styles.heroHeadingFull}>
-            Product Designer<br />& Engineer
-          </h1>
+          {/* Sub-copy — below the stage */}
+          <div className={styles.heroFooter}>
+            <Typography as="p" variant="body-large" color="muted" className={styles.heroSubtitle}>
+              I design and build scalable digital products across fintech and creator platforms, using design systems and AI-powered workflows to improve engagement and monetization.
+            </Typography>
+          </div>
 
-          {/* Portrait container below heading */}
-          <div className={styles.heroPortraitWrapper}>
-            <div className={styles.heroPortrait}>
-<Image 
-                src="/my-photo 2.png" 
-                alt="Omotola Oginni" 
-                fill
-                className={styles.heroImage}
-                priority
-              />
+          {/* Tool marquee — full section width */}
+          <div className={styles.heroToolMarquee}>
+            <div className={styles.heroToolMarqueeTrack}>
+              <span className={styles.heroToolItem}><Image src="/icon full color.png" alt="Figma" width={32} height={32} className={styles.toolLogoImage} /></span>
+              <span className={styles.heroToolItem}><span className={styles.toolTextLabel}>Figma Make</span></span>
+              <span className={styles.heroToolItem}><Image src="/Google-Antigravity-Lockup-Full-Color.png" alt="Antigravity" width={180} height={32} className={styles.toolLogoImage} /></span>
+              <span className={styles.heroToolItem}><Image src="/opencode-wordmark-light.png" alt="OpenCode" width={140} height={32} className={styles.toolLogoImage} /></span>
+              <span className={styles.heroToolItem}><Image src="/chatgpt-logo-chat-gpt-icon-on-white-background-free-vector.jpg" alt="ChatGPT" width={32} height={32} className={styles.toolLogoImage} /></span>
+              <span className={styles.heroToolItem}><Image src="/gemini-color.svg" alt="Gemini" width={32} height={32} className={styles.toolLogoImage} /></span>
+              <span className={styles.heroToolItem}><Image src="/claude-color.svg" alt="Claude" width={32} height={32} className={styles.toolLogoImage} /></span>
+              <span className={styles.heroToolItem}><Image src="/icon full color.png" alt="Figma" width={32} height={32} className={styles.toolLogoImage} /></span>
+              <span className={styles.heroToolItem}><span className={styles.toolTextLabel}>Figma Make</span></span>
+              <span className={styles.heroToolItem}><Image src="/Google-Antigravity-Lockup-Full-Color.png" alt="Antigravity" width={180} height={32} className={styles.toolLogoImage} /></span>
+              <span className={styles.heroToolItem}><Image src="/opencode-wordmark-light.png" alt="OpenCode" width={140} height={32} className={styles.toolLogoImage} /></span>
+              <span className={styles.heroToolItem}><Image src="/chatgpt-logo-chat-gpt-icon-on-white-background-free-vector.jpg" alt="ChatGPT" width={32} height={32} className={styles.toolLogoImage} /></span>
+              <span className={styles.heroToolItem}><Image src="/gemini-color.svg" alt="Gemini" width={32} height={32} className={styles.toolLogoImage} /></span>
+              <span className={styles.heroToolItem}><Image src="/claude-color.svg" alt="Claude" width={32} height={32} className={styles.toolLogoImage} /></span>
+            </div>
+
+            {/* Scroll Hint Visual Affordance */}
+            <div className={styles.scrollHint}>
+              <span className={styles.scrollHintText}>Scroll</span>
+              <span className={styles.scrollHintArrow}>↓</span>
             </div>
           </div>
 
         </div>
-
-        {/* Sub-copy — below the stage */}
-        <div className={styles.heroFooter}>
-          <Typography as="p" variant="body-large" color="muted" className={styles.heroSubtitle}>
-            I design and build scalable digital products across fintech and creator platforms, using design systems and AI-powered workflows to improve engagement and monetization.
-          </Typography>
-        </div>
-
-        {/* Tool marquee — full section width */}
-        <div className={styles.heroToolMarquee}>
-          <div className={styles.heroToolMarqueeTrack}>
-            <span className={styles.heroToolItem}><Image src="/icon full color.png" alt="Figma" width={32} height={32} className={styles.toolLogoImage} /></span>
-            <span className={styles.heroToolItem}><span className={styles.toolTextLabel}>Figma Make</span></span>
-            <span className={styles.heroToolItem}><Image src="/Google-Antigravity-Lockup-Full-Color.png" alt="Antigravity" width={180} height={32} className={styles.toolLogoImage} /></span>
-            <span className={styles.heroToolItem}><Image src="/opencode-wordmark-light.png" alt="OpenCode" width={140} height={32} className={styles.toolLogoImage} /></span>
-            <span className={styles.heroToolItem}><Image src="/chatgpt-logo-chat-gpt-icon-on-white-background-free-vector.jpg" alt="ChatGPT" width={32} height={32} className={styles.toolLogoImage} /></span>
-            <span className={styles.heroToolItem}><Image src="/gemini-color.svg" alt="Gemini" width={32} height={32} className={styles.toolLogoImage} /></span>
-            <span className={styles.heroToolItem}><Image src="/claude-color.svg" alt="Claude" width={32} height={32} className={styles.toolLogoImage} /></span>
-            <span className={styles.heroToolItem}><Image src="/icon full color.png" alt="Figma" width={32} height={32} className={styles.toolLogoImage} /></span>
-            <span className={styles.heroToolItem}><span className={styles.toolTextLabel}>Figma Make</span></span>
-            <span className={styles.heroToolItem}><Image src="/Google-Antigravity-Lockup-Full-Color.png" alt="Antigravity" width={180} height={32} className={styles.toolLogoImage} /></span>
-            <span className={styles.heroToolItem}><Image src="/opencode-wordmark-light.png" alt="OpenCode" width={140} height={32} className={styles.toolLogoImage} /></span>
-            <span className={styles.heroToolItem}><Image src="/chatgpt-logo-chat-gpt-icon-on-white-background-free-vector.jpg" alt="ChatGPT" width={32} height={32} className={styles.toolLogoImage} /></span>
-            <span className={styles.heroToolItem}><Image src="/gemini-color.svg" alt="Gemini" width={32} height={32} className={styles.toolLogoImage} /></span>
-            <span className={styles.heroToolItem}><Image src="/claude-color.svg" alt="Claude" width={32} height={32} className={styles.toolLogoImage} /></span>
-          </div>
-
-          {/* Scroll Hint Visual Affordance */}
-          <div className={styles.scrollHint}>
-            <span className={styles.scrollHintText}>Scroll</span>
-            <span className={styles.scrollHintArrow}>↓</span>
-          </div>
-        </div>
-
-      </Section>
+      </section>
 
       {/* 2. Selected Projects Section */}
       <Section width="full" padding="none" className={styles.projectsSection} id="work">
