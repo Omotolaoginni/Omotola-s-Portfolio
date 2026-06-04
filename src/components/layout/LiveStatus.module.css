@@ -24,9 +24,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1em;
-  height: 1em;
   color: var(--color-text-muted);
+  line-height: 1;
 }
 
 .time {
