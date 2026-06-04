@@ -141,7 +141,7 @@ export default function Home() {
             slug="sentinel"
             title="Sentinel Landing Page Redesign"
             description="A monitoring service that tracks third-party software and API uptime in real time, helping engineering teams detect outages early and receive instant alerts through their preferred notification channels to prevent costly system disruptions."
-            tags={["Incident Monitoring & Alerting UX", "UX Strategy & Improvement"]}
+            tags={["SaaS Product Design", "Incident Monitoring & Alerting UX", "UX Strategy & Improvement"]}
             imageUrl="/707shots_so.png"
           />
         </div>
