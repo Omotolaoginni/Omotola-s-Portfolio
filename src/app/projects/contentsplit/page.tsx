@@ -57,11 +57,11 @@ export default function ContentSplitProject() {
             <div className={styles.metadataGrid}>
             <div className={styles.metadataRow}>
               <span className={styles.metadataLabel}>Year</span>
-              <span className={styles.metadataValue}>2024</span>
+              <span className={styles.metadataValue}>2026</span>
             </div>
             <div className={styles.metadataRow}>
               <span className={styles.metadataLabel}>Role</span>
-              <span className={styles.metadataValue}>Product Designer · UX Designer (Capstone Project)</span>
+              <span className={styles.metadataValue}>Product Designer · UX Designer</span>
             </div>
             <div className={styles.metadataRow}>
               <span className={styles.metadataLabel}>Project Type</span>
