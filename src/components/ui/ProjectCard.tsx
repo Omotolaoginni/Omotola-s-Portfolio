@@ -26,12 +26,13 @@ export const ProjectCard = ({ slug, title, description, tags, imageUrl }: Projec
   };
 
   return (
-    <div
-      ref={wrapperRef}
-      className={styles.wrapper}
-      onPointerMove={handleMove}
-      onPointerLeave={() => setVisible(false)}
-    >
+      <div
+        ref={wrapperRef}
+        className={styles.wrapper}
+        data-cursor-hover
+        onPointerMove={handleMove}
+        onPointerLeave={() => setVisible(false)}
+      >
       <Link href={`/projects/${slug}`} className={styles.card}>
         <div className={styles.imageContainer}>
           {imageUrl ? (

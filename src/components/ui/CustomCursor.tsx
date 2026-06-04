@@ -18,7 +18,7 @@ export const CustomCursor = () => {
 
     const onMove = (e: MouseEvent) => {
       setPos({ x: e.clientX, y: e.clientY });
-      setVisible(true);
+      if (!visible) setVisible(true);
 
       let el = e.target;
       let found = false;
@@ -33,20 +33,17 @@ export const CustomCursor = () => {
     };
 
     document.addEventListener("mousemove", onMove);
+    return () => document.removeEventListener("mousemove", onMove);
+  }, [isTouch, visible]);
 
-    return () => {
-      document.removeEventListener("mousemove", onMove);
-    };
-  }, [isTouch]);
-
-  if (isTouch || !visible) return null;
+  if (isTouch) return null;
 
   return (
     <div
       className={`${styles.cursor} ${hovering ? styles.hovering : ""}`}
-      style={{ left: pos.x, top: pos.y }}
+      style={{ left: pos.x, top: pos.y, opacity: visible ? 1 : 0 }}
     >
-      <span className={styles.label}>View Project</span>
+      {hovering && <span className={styles.label}>View Project</span>}
     </div>
   );
 };

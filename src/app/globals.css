@@ -31,6 +31,16 @@ body {
   letter-spacing: var(--body-text-letter-spacing);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: none;
+}
+
+body a,
+body button,
+body input,
+body textarea,
+body select,
+body [role="button"] {
+  cursor: none;
 }
 
 * {

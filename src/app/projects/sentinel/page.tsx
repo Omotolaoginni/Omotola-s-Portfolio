@@ -130,12 +130,13 @@ export default function SentinelProject() {
                   </Typography>
                   <div className={styles.beforeAfterImageContainer}>
                     <Image
-                      src="/Image 1.png"
+                      src="/Image - 1.png"
                       alt="Original landing page before redesign"
                       fill
                       sizes="(max-width: 1440px) 100vw, 1440px"
                       className={styles.showcaseImage}
                       priority
+                      placeholder="empty"
                     />
                   </div>
                 </div>
@@ -150,11 +151,13 @@ export default function SentinelProject() {
                   </Typography>
                   <div className={styles.beforeAfterImageContainer}>
                     <Image
-                      src="/Image 2.png"
+                      src="/Image - 2.png"
                       alt="Redesigned landing page after redesign"
                       fill
                       sizes="(max-width: 1440px) 100vw, 1440px"
                       className={styles.showcaseImage}
+                      priority
+                      placeholder="empty"
                     />
                   </div>
                 </div>
