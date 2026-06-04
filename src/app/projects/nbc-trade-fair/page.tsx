@@ -52,22 +52,22 @@ export default function NbcTradeFairProject() {
       {/* ── 2. METADATA ── */}
       <Section width="full" padding="none">
         <div className={styles.metadataSection}>
-          <div className={styles.metadataGrid}>
+            <div className={styles.metadataGrid}>
             <div className={styles.metadataRow}>
-              <span className={styles.metadataLabel}>Client</span>
-              <span className={styles.metadataValue}>Mainstack</span>
+              <span className={styles.metadataLabel}>Year</span>
+              <span className={styles.metadataValue}>2024</span>
             </div>
             <div className={styles.metadataRow}>
               <span className={styles.metadataLabel}>Role</span>
-              <span className={styles.metadataValue}>Product Design + Responsive Design + UX Design + Design Collaboration</span>
+              <span className={styles.metadataValue}>Product Designer · Experience Designer</span>
             </div>
             <div className={styles.metadataRow}>
-              <span className={styles.metadataLabel}>Year</span>
-              <span className={styles.metadataValue}>2025</span>
+              <span className={styles.metadataLabel}>Project Type</span>
+              <span className={styles.metadataValue}>Event Platform / Trade Fair Experience Design</span>
             </div>
             <div className={styles.metadataRow}>
-              <span className={styles.metadataLabel}>Services Provided</span>
-              <span className={styles.metadataValue}>Responsive Design, Landing Page UX, Mobile Adaptation, Interaction Design, Visual Hierarchy</span>
+              <span className={styles.metadataLabel}>Domain</span>
+              <span className={styles.metadataValue}>Consumer Engagement / Event Ecosystem</span>
             </div>
           </div>
         </div>
