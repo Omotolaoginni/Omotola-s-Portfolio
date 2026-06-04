@@ -124,7 +124,7 @@ export default function Home() {
             title="Mainstack — Ambassador Growth Program Experience"
             description="A structured ambassador program designed to enable creators to drive product-led growth through referrals, track performance, and earn recurring rewards within a seamless, incentive-driven ecosystem. The experience focuses on clarity of earning pathways, simplified referral tracking, and motivating sustained user engagement."
             tags={["UX Strategy", "Growth Systems Design", "Conversion Design", "Product Design"]}
-            imageUrl="/502shots_so.png"
+            imageUrl="/305shots_so.png"
           />
           <ProjectCard 
             slug="nbc-trade-fair"
