@@ -54,22 +54,22 @@ export default function ContentSplitProject() {
 
         {/* ── Metadata Strip ── */}
         <div className={styles.metadataSection}>
-          <div className={styles.metadataGrid}>
+            <div className={styles.metadataGrid}>
             <div className={styles.metadataRow}>
-              <span className={styles.metadataLabel}>Client</span>
-              <span className={styles.metadataValue}>Capstone Project</span>
+              <span className={styles.metadataLabel}>Year</span>
+              <span className={styles.metadataValue}>2024</span>
             </div>
             <div className={styles.metadataRow}>
               <span className={styles.metadataLabel}>Role</span>
-              <span className={styles.metadataValue}>Product Design + Design Systems + UI Engineering</span>
+              <span className={styles.metadataValue}>Product Designer · UX Designer (Capstone Project)</span>
             </div>
             <div className={styles.metadataRow}>
-              <span className={styles.metadataLabel}>Year</span>
-              <span className={styles.metadataValue}>2026</span>
+              <span className={styles.metadataLabel}>Project Type</span>
+              <span className={styles.metadataValue}>AI-assisted MVP / Content System</span>
             </div>
             <div className={styles.metadataRow}>
-              <span className={styles.metadataLabel}>Services</span>
-              <span className={styles.metadataValue}>UI/UX Auditing, Color System Design, Responsive Design</span>
+              <span className={styles.metadataLabel}>Domain</span>
+              <span className={styles.metadataValue}>Content Distribution / Product Thinking</span>
             </div>
           </div>
         </div>
