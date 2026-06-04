@@ -38,22 +38,22 @@ export default function SentinelProject() {
 
       <Section width="full" padding="none">
         <div className={styles.metadataSection}>
-          <div className={styles.metadataGrid}>
-            <div className={styles.metadataRow}>
-              <span className={styles.metadataLabel}>Client</span>
-              <span className={styles.metadataValue}>Sentinel</span>
-            </div>
-            <div className={styles.metadataRow}>
-              <span className={styles.metadataLabel}>Role</span>
-              <span className={styles.metadataValue}>Product Design, Dashboard Design, UX Research</span>
-            </div>
+            <div className={styles.metadataGrid}>
             <div className={styles.metadataRow}>
               <span className={styles.metadataLabel}>Year</span>
               <span className={styles.metadataValue}>2024</span>
             </div>
             <div className={styles.metadataRow}>
-              <span className={styles.metadataLabel}>Services Provided</span>
-              <span className={styles.metadataValue}>Dashboard Design, Data Visualization, UX Research, Interaction Design, Alerting Systems</span>
+              <span className={styles.metadataLabel}>Role</span>
+              <span className={styles.metadataValue}>Product Designer · UI/UX Designer</span>
+            </div>
+            <div className={styles.metadataRow}>
+              <span className={styles.metadataLabel}>Project Type</span>
+              <span className={styles.metadataValue}>SaaS Landing Page Redesign</span>
+            </div>
+            <div className={styles.metadataRow}>
+              <span className={styles.metadataLabel}>Domain</span>
+              <span className={styles.metadataValue}>Monitoring &amp; Alerting Systems</span>
             </div>
           </div>
         </div>
