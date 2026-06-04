@@ -49,22 +49,22 @@ export default function SmargProject() {
 
       <Section width="full" padding="none">
         <div className={styles.metadataSection}>
-          <div className={styles.metadataGrid}>
-            <div className={styles.metadataRow}>
-              <span className={styles.metadataLabel}>Client</span>
-              <span className={styles.metadataValue}>Smarg</span>
-            </div>
-            <div className={styles.metadataRow}>
-              <span className={styles.metadataLabel}>Role</span>
-              <span className={styles.metadataValue}>Product Design, UX Design, Responsive Design, Competitive Analysis</span>
-            </div>
+            <div className={styles.metadataGrid}>
             <div className={styles.metadataRow}>
               <span className={styles.metadataLabel}>Year</span>
               <span className={styles.metadataValue}>2024</span>
             </div>
             <div className={styles.metadataRow}>
-              <span className={styles.metadataLabel}>Services Provided</span>
-              <span className={styles.metadataValue}>Mobile Product Design, Financial UX, Interaction Design, Responsive Design, UX Research, Design Systems</span>
+              <span className={styles.metadataLabel}>Role</span>
+              <span className={styles.metadataValue}>Product Designer · Interaction Designer</span>
+            </div>
+            <div className={styles.metadataRow}>
+              <span className={styles.metadataLabel}>Project Type</span>
+              <span className={styles.metadataValue}>Financial Product UX + Landing Page System</span>
+            </div>
+            <div className={styles.metadataRow}>
+              <span className={styles.metadataLabel}>Domain</span>
+              <span className={styles.metadataValue}>Fintech / Payments Infrastructure</span>
             </div>
           </div>
         </div>
