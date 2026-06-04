@@ -53,22 +53,22 @@ export default function AmbassadorProgramProject() {
       {/* ── 2. METADATA ── */}
       <Section width="full" padding="none">
         <div className={styles.metadataSection}>
-          <div className={styles.metadataGrid}>
-            <div className={styles.metadataRow}>
-              <span className={styles.metadataLabel}>Client</span>
-              <span className={styles.metadataValue}>Mainstack</span>
-            </div>
-            <div className={styles.metadataRow}>
-              <span className={styles.metadataLabel}>Role</span>
-              <span className={styles.metadataValue}>UX Strategy + Growth Systems Design + Conversion Design + Product Design</span>
-            </div>
+            <div className={styles.metadataGrid}>
             <div className={styles.metadataRow}>
               <span className={styles.metadataLabel}>Year</span>
               <span className={styles.metadataValue}>2025</span>
             </div>
             <div className={styles.metadataRow}>
-              <span className={styles.metadataLabel}>Services Provided</span>
-              <span className={styles.metadataValue}>UX Strategy, Growth Systems Design, Conversion Design, Product Design</span>
+              <span className={styles.metadataLabel}>Role</span>
+              <span className={styles.metadataValue}>Product Designer · UX Designer (Growth Systems)</span>
+            </div>
+            <div className={styles.metadataRow}>
+              <span className={styles.metadataLabel}>Project Type</span>
+              <span className={styles.metadataValue}>Ambassador &amp; Referral Program Design</span>
+            </div>
+            <div className={styles.metadataRow}>
+              <span className={styles.metadataLabel}>Domain</span>
+              <span className={styles.metadataValue}>Creator Growth Platform</span>
             </div>
           </div>
         </div>
