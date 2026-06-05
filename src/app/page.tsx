@@ -43,7 +43,7 @@ export default function Home() {
 
             {/* Full H1 heading sits above image */}
             <h1 className={styles.heroHeadingFull}>
-              Product Designer<br />& Engineer
+              Product Designer<br />Engineer
             </h1>
 
             {/* Portrait container below heading */}
