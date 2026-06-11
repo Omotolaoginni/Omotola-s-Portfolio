@@ -31,7 +31,7 @@ body {
   letter-spacing: var(--body-text-letter-spacing);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: none;
+  cursor: auto;
 }
 
 body a,
@@ -40,7 +40,7 @@ body input,
 body textarea,
 body select,
 body [role="button"] {
-  cursor: none;
+  cursor: pointer;
 }
 
 * {
