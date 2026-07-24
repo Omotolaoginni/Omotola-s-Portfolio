@@ -91,3 +91,18 @@ p {
   outline-offset: 2px;
   box-shadow: 0 0 0 4px var(--color-focus-ring);
 }
+
+/* Page Container — root desktop frame */
+.page-container {
+  flex: 1;
+  background-color: var(--color-surface);
+  padding-left: var(--spacing-7);
+  padding-right: var(--spacing-7);
+}
+
+@media (max-width: 767px) {
+  .page-container {
+    padding-left: var(--spacing-6);
+    padding-right: var(--spacing-6);
+  }
+}

@@ -40,7 +40,7 @@ export default function CreatorPlatformProject() {
 
         <div className={styles.heroMockup}>
           <Image
-            src="/193shots_so.png"
+            src="/109shots_so.png"
             alt="Mainstack referral dashboard mockup"
             fill
             className={styles.heroMockupImage}
@@ -193,7 +193,7 @@ export default function CreatorPlatformProject() {
           <Link href="/projects/ambassador-program" className={styles.nextProjectCard}>
             <div className={styles.nextProjectImageContainer}>
               <Image
-                src="/502shots_so.png"
+                src="/582shots_so.png"
                 alt="Mainstack Ambassador Program"
                 fill
                 className={styles.nextProjectImage}

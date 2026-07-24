@@ -271,7 +271,7 @@ export default function NbcTradeFairProject() {
           <Link href="/projects/smarg" className={styles.nextProjectCard}>
             <div className={styles.nextProjectImageContainer}>
               <Image
-                src="/813shots_so.png"
+                src="/974shots_so.png"
                 alt="Smarg Neobank"
                 fill
                 className={styles.nextProjectImage}

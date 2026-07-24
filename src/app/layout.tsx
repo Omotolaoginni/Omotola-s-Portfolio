@@ -44,7 +44,7 @@ export default function RootLayout({
     <html lang="en" className={`${onest.variable}`} data-scroll-behavior="smooth" suppressHydrationWarning>
       <body className={onest.className} suppressHydrationWarning>
         <Navbar />
-        <main style={{ flex: 1, backgroundColor: 'var(--color-surface)' }}>
+        <main className="page-container">
           {children}
         </main>
         <Footer />

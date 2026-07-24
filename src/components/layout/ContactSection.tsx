@@ -12,25 +12,8 @@ interface ContactSectionProps {
 export const ContactSection = ({ id, className = '' }: ContactSectionProps) => {
   return (
     <Section id={id} width="full" padding="none" className={`${styles.contactSection} ${className}`}>
-      <div className={styles.contactMarquee}>
-        <div className={styles.contactMarqueeTrack}>
-          <span className={styles.contactMarqueeText}>Let&apos;s work together</span>
-          <span className={styles.contactMarqueeDot}>•</span>
-          <span className={styles.contactMarqueeText}>Let&apos;s work together</span>
-          <span className={styles.contactMarqueeDot}>•</span>
-          <span className={styles.contactMarqueeText}>Let&apos;s work together</span>
-          <span className={styles.contactMarqueeDot}>•</span>
-          <span className={styles.contactMarqueeText}>Let&apos;s work together</span>
-          <span className={styles.contactMarqueeDot}>•</span>
-          <span className={styles.contactMarqueeText}>Let&apos;s work together</span>
-          <span className={styles.contactMarqueeDot}>•</span>
-          <span className={styles.contactMarqueeText}>Let&apos;s work together</span>
-          <span className={styles.contactMarqueeDot}>•</span>
-          <span className={styles.contactMarqueeText}>Let&apos;s work together</span>
-          <span className={styles.contactMarqueeDot}>•</span>
-          <span className={styles.contactMarqueeText}>Let&apos;s work together</span>
-          <span className={styles.contactMarqueeDot}>•</span>
-        </div>
+      <div className={styles.contactHeading}>
+        <Typography as="h2" variant="h2" color="inherit">Let&apos;s work together</Typography>
       </div>
       <div className={styles.contactCta}>
         <Button href="mailto:patience.oginni@gmail.com" variant="primary">Contact Me</Button>

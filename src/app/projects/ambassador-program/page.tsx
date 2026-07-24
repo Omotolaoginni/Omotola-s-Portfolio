@@ -197,7 +197,7 @@ export default function AmbassadorProgramProject() {
           <Link href="/projects/nbc-trade-fair" className={styles.nextProjectCard}>
             <div className={styles.nextProjectImageContainer}>
               <Image
-                src="/126shots_so.png"
+                src="/606shots_so.png"
                 alt="NBC Trade Fair"
                 fill
                 className={styles.nextProjectImage}

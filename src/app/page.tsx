@@ -11,87 +11,30 @@ export default function Home() {
     <main>
       {/* 1. Hero Section */}
       <section className={styles.heroSection}>
-
-        {/* Decorative ambient background — non-interactive, aria-hidden */}
-        <div className={styles.heroAccentEllipse} aria-hidden="true" />
-
-        {/* Decorative wave — full-width, behind hero content */}
-        <div className={styles.heroDecoVectorWrapper}>
-          <Image
-            src="/Vector 13301.svg"
-            alt=""
-            aria-hidden="true"
-            width={1440}
-            height={383}
-            className={styles.heroDecoVector}
-          />
-        </div>
-
         <div className={styles.heroInner}>
 
-          {/* Hero stage — heading ABOVE portrait */}
+          {/* Hero stage — heading and subtitle */}
           <div className={styles.heroStage}>
 
             {/* Introductory Badge — gradient border, centered */}
             <div className={styles.heroBadgeRow}>
               <div className={styles.heroBadgeGradientRing}>
                 <div className={styles.heroBadgeGradientInner}>
-                  HELLO! I AM OMOTOLA OGINNI
+                  HELLO! I'M OMOTOLA OGINNI
                 </div>
               </div>
             </div>
 
-            {/* Full H1 heading sits above image */}
+            {/* Full H1 heading — single line */}
             <h1 className={styles.heroHeadingFull}>
-              Product Designer<br />Engineer
+              Product Designer
             </h1>
 
-            {/* Portrait container below heading */}
-            <div className={styles.heroPortraitWrapper}>
-              <div className={styles.heroPortrait}>
-<Image 
-                  src="/my-photo 2.png" 
-                  alt="Omotola Oginni" 
-                  fill
-                  className={styles.heroImage}
-                  priority
-                />
-              </div>
-            </div>
+            {/* Value proposition — directly below heading */}
+            <p className={styles.heroSubtitle}>
+              I design and build scalable digital products across SaaS, fintech, and creator platforms using design systems, product thinking, and AI-assisted workflows.
+            </p>
 
-          </div>
-
-          {/* Sub-copy — below the stage */}
-          <div className={styles.heroFooter}>
-            <Typography as="p" variant="body-large" color="muted" className={styles.heroSubtitle}>
-              I design and build scalable digital products across fintech and creator platforms, using design systems and AI-powered workflows to improve engagement and monetization.
-            </Typography>
-          </div>
-
-          {/* Tool marquee — full section width */}
-          <div className={styles.heroToolMarquee}>
-            <div className={styles.heroToolMarqueeTrack}>
-              <span className={styles.heroToolItem}><Image src="/icon full color.png" alt="Figma" width={32} height={32} className={styles.toolLogoImage} /></span>
-              <span className={styles.heroToolItem}><span className={styles.toolTextLabel}>Figma Make</span></span>
-              <span className={styles.heroToolItem}><Image src="/Google-Antigravity-Lockup-Full-Color.png" alt="Antigravity" width={180} height={32} className={styles.toolLogoImage} /></span>
-              <span className={styles.heroToolItem}><Image src="/opencode-wordmark-light.png" alt="OpenCode" width={140} height={32} className={styles.toolLogoImage} /></span>
-              <span className={styles.heroToolItem}><Image src="/chatgpt-logo-chat-gpt-icon-on-white-background-free-vector.jpg" alt="ChatGPT" width={32} height={32} className={styles.toolLogoImage} /></span>
-              <span className={styles.heroToolItem}><Image src="/gemini-color.svg" alt="Gemini" width={32} height={32} className={styles.toolLogoImage} /></span>
-              <span className={styles.heroToolItem}><Image src="/claude-color.svg" alt="Claude" width={32} height={32} className={styles.toolLogoImage} /></span>
-              <span className={styles.heroToolItem}><Image src="/icon full color.png" alt="Figma" width={32} height={32} className={styles.toolLogoImage} /></span>
-              <span className={styles.heroToolItem}><span className={styles.toolTextLabel}>Figma Make</span></span>
-              <span className={styles.heroToolItem}><Image src="/Google-Antigravity-Lockup-Full-Color.png" alt="Antigravity" width={180} height={32} className={styles.toolLogoImage} /></span>
-              <span className={styles.heroToolItem}><Image src="/opencode-wordmark-light.png" alt="OpenCode" width={140} height={32} className={styles.toolLogoImage} /></span>
-              <span className={styles.heroToolItem}><Image src="/chatgpt-logo-chat-gpt-icon-on-white-background-free-vector.jpg" alt="ChatGPT" width={32} height={32} className={styles.toolLogoImage} /></span>
-              <span className={styles.heroToolItem}><Image src="/gemini-color.svg" alt="Gemini" width={32} height={32} className={styles.toolLogoImage} /></span>
-              <span className={styles.heroToolItem}><Image src="/claude-color.svg" alt="Claude" width={32} height={32} className={styles.toolLogoImage} /></span>
-            </div>
-
-            {/* Scroll Hint Visual Affordance */}
-            <div className={styles.scrollHint}>
-              <span className={styles.scrollHintText}>Scroll</span>
-              <span className={styles.scrollHintArrow}>↓</span>
-            </div>
           </div>
 
         </div>
@@ -103,62 +46,67 @@ export default function Home() {
           <Typography as="h2" variant="h2">Selected Work</Typography>
           <Button href="/projects" variant="link">View all projects &rarr;</Button>
         </div>
+        <div className={styles.sectionDivider} />
         
         <div className={styles.projectGrid}>
           <ProjectCard 
             slug="contentsplit"
-            title="ContentSplit - AI Content Repurposing Engine"
-            description="An AI-powered workflow tool that transforms long-form content into platform, ready posts for Twitter/X, LinkedIn, Instagram, and Email, helping creators publish faster with consistent tone across channels."
-            tags={["AI Workflow Design", "Design Systems", "Creator Tools", "Content Automation"]}
-            imageUrl="/499shots_so.png"
+            title="ContentSplit"
+            description="AI Content Repurposing Engine"
+            tags={["AI Workflow"]}
+            imageUrl="/561shots_so.png"
           />
           <ProjectCard 
             slug="mainstack-refer-earn"
-            title="Mainstack — Referral &amp; Affiliate Experience"
-            description="Creator-focused referral and affiliate experience designed to help users discover products, promote creator businesses, and earn recurring commissions through a seamless cross-device workflow."
-            tags={["Responsive Design", "Mobile UI Design", "Visual Collaboration"]}
-            imageUrl="/436shots_so.png"
+            title="Mainstack"
+            description="Athlete Experience"
+            tags={["Responsive Design"]}
+            imageUrl="/25shots_so.png"
           />
           <ProjectCard 
             slug="ambassador-program"
-            title="Mainstack — Ambassador Growth Program Experience"
-            description="A structured ambassador program designed to enable creators to drive product-led growth through referrals, track performance, and earn recurring rewards within a seamless, incentive-driven ecosystem. The experience focuses on clarity of earning pathways, simplified referral tracking, and motivating sustained user engagement."
-            tags={["UX Strategy", "Growth Systems Design", "Conversion Design", "Product Design"]}
-            imageUrl="/305shots_so.png"
+            title="Mainstack"
+            description="Ambassador Experience"
+            tags={["Growth Systems"]}
+            imageUrl="/200shots_so.png"
           />
           <ProjectCard 
             slug="nbc-trade-fair"
-            title="NBC Trade Fair — Landing Page &amp; Commerce Onboarding Experience"
-            description="A conversion-focused landing page designed for a large-scale trade fair commerce platform, enabling vendors and participants to seamlessly onboard into a digital dashboard. The experience guided users from event discovery into account creation, where they could manage product listings, process online orders, and accept POS payments through an integrated commerce system powered by Mainstack."
-            tags={["Landing Page Design", "Payment System Design", "Conversion Funnel Design"]}
-            imageUrl="/126shots_so.png"
+            title="Mainstack"
+            description="NBC Trade Fair"
+            tags={["Landing Page"]}
+            imageUrl="/606shots_so.png"
           />
           <ProjectCard 
             slug="smarg"
-            title="Smarg – Neobank for African Creatives"
-            description="A modern mobile banking experience designed for African creatives, freelancers, and digital entrepreneurs, combining financial automation, flexible credit access, and device financing to help users manage cash flow, invest in essential tools, and grow sustainable creative careers without heavy upfront financial pressure."
-            tags={["Fintech Product Design", "Creator Economy", "Financial Automation"]}
-            imageUrl="/813shots_so.png"
+            title="SMARG"
+            description="Neobank for African Creatives"
+            tags={["Fintech"]}
+            imageUrl="/425shots_so.png"
           />
           <ProjectCard 
             slug="sentinel"
-            title="Sentinel Landing Page Redesign"
-            description="A monitoring service that tracks third-party software and API uptime in real time, helping engineering teams detect outages early and receive instant alerts through their preferred notification channels to prevent costly system disruptions."
-            tags={["SaaS Product Design", "Incident Monitoring & Alerting UX", "UX Strategy & Improvement"]}
-            imageUrl="/707shots_so.png"
+            title="Sentinel"
+            description="Landing Page Redesign"
+            tags={["SaaS"]}
+            imageUrl="/162shots_so.png"
           />
         </div>
-        <div className={styles.sectionDivider} />
+
+        {/* About Me transition */}
+        <div className={styles.aboutTransition}>
+          <Typography as="h2" variant="h2">About Me</Typography>
+          <div className={styles.sectionDivider} />
+        </div>
       </Section>
 
       {/* 3. About Me Section */}
       <Section id="about" width="full" padding="none" className={styles.aboutSection}>
         <div className={styles.aboutGrid}>
           <div className={styles.aboutText}>
-            <Typography as="h2" variant="h2" className={styles.aboutTitle}>About Me</Typography>
             <div className={styles.aboutNarrative}>
               <Typography as="p" variant="body-large" color="muted">
-                I&apos;m a product designer focused on building scalable, systems-driven digital products across UX, UI, and design systems. I use AI to accelerate product thinking and execution, while staying grounded in strong UX principles to ensure clarity and usability in complex workflows. My work is centered on designing structured, consistent experiences where design systems provide the foundation for coherence, especially when working with AI-assisted tools.
+                I&apos;m a Product Designer focused on building scalable, systems-driven digital products across SaaS, fintech, and creator platforms. I combine product thinking, design systems, and AI-assisted workflows to design intuitive, accessible, and scalable user experiences. My work is grounded in strong UX principles, using structured systems and thoughtful execution to simplify complex workflows and build products that are consistent, usable, and scalable.
               </Typography>
             </div>
           </div>
@@ -173,12 +121,33 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={styles.sectionDivider} />
       </Section>
 
-      {/* 4. Experience Section */}
+      {/* 4. Tools Section */}
+      <Section width="full" padding="none" className={styles.toolsSection}>
+        <div className={styles.toolsRow}>
+          <div className={styles.toolItem}>
+            <Image src="/icon full color.png" alt="Figma" width={36} height={36} className={styles.toolLogo} />
+          </div>
+          <div className={styles.toolItem}>
+            <span className={styles.toolText}>Figma Make</span>
+          </div>
+          <div className={styles.toolItem}>
+            <Image src="/Google-Antigravity-Lockup-Full-Color.png" alt="Antigravity" width={160} height={28} className={styles.toolLogo} />
+          </div>
+          <div className={styles.toolItem}>
+            <Image src="/claude-color.svg" alt="Claude" width={36} height={36} className={styles.toolLogo} />
+          </div>
+          <div className={styles.toolItem}>
+            <Image src="/chatgpt-logo-chat-gpt-icon-on-white-background-free-vector.jpg" alt="ChatGPT" width={36} height={36} className={styles.toolLogo} />
+          </div>
+        </div>
+      </Section>
+
+      {/* 5. Experience Section */}
       <Section width="full" padding="none" className={styles.experienceSection}>
-        <Typography as="h2" variant="h2" className={styles.experienceTitle}>Experience</Typography>
+        <Typography as="h2" variant="h2">Experience</Typography>
+        <div className={styles.sectionDivider} />
         <div className={styles.experienceGrid}>
           <div className={styles.experienceIntro}>
             <Typography as="p" variant="body-large" color="muted">
@@ -189,7 +158,7 @@ export default function Home() {
             <div className={styles.experienceItem}>
               <span className={styles.expCompany}>Mainstack</span>
               <span className={styles.expRole}>Product Designer</span>
-              <span className={styles.expDuration}>March 2025 – Present</span>
+              <span className={styles.expDuration}>March 2025 – June 2026</span>
             </div>
             <div className={styles.experienceItem}>
               <span className={styles.expCompany}>Smarg</span>
@@ -205,7 +174,7 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* 5. Skills Marquee */}
+      {/* 6. Skills Marquee */}
       <Section width="full" padding="none" className={styles.marqueeSection}>
         <div className={styles.marqueeContainer}>
           <div className={styles.marqueeRow}>

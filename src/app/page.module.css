@@ -1,95 +1,86 @@
+/* About Me transition — label + divider */
+.aboutTransition {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutTransition .sectionDivider {
+  margin-top: var(--spacing-1);
+}
+
 /* ─────────────────────────────────────────
-   1. Hero Section
+   4. Tools Section
+──────────────────────────────────────── */
+.toolsSection {
+  padding-top: var(--spacing-9);
+  padding-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toolsLabel {
+  font-family: var(--caption-family);
+  font-size: var(--caption-size);
+  font-weight: var(--caption-weight);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-10);
+}
+
+.toolsRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-18);
+}
+
+.toolItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.toolItem:hover {
+  transform: translateY(-4px) scale(1.05);
+  opacity: 0.8;
+}
+
+.toolLogo {
+  object-fit: contain;
+}
+
+.toolText {
+  font-family: var(--body-text-family);
+  font-size: var(--body-text-size);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .toolsRow {
+    gap: var(--spacing-10);
+  }
+}
+
+/* ─────────────────────────────────────────
+   5. Experience Section
 ──────────────────────────────────────── */
 .heroSection {
-  position: relative;
-  isolation: isolate;
   width: 100%;
-  padding-top: 11.25rem;
+  padding-top: 7rem;
   padding-bottom: 0;
 }
 
 .heroInner {
-  position: relative;
-  z-index: 1;
   margin: 0 auto;
-  padding-left: var(--spacing-6);
-  padding-right: var(--spacing-6);
   width: 100%;
   max-width: 1200px;
-}
-
-/* ── Hero Accent Ellipse ────────────────────────────────
-   Non-circular radial glow field using gradient token.
-   scaleY(0.5) compresses vertical axis producing the
-   flattened arch anchored at top-center.
-────────────────────────────────────────────── */
-.heroAccentEllipse {
-  position: absolute;
-  top: -200px;
-  left: 50%;
-  transform: translateX(-50%) scaleY(0.5);
-  transform-origin: top center;
-
-  width: 160%;
-  max-width: 1600px;
-  height: 680px;
-
-  background: var(--gradient-hero-glow);
-
-  opacity: 0.9;
-  filter: blur(40px);
-
-  pointer-events: none;
-  z-index: 0;
-}
-
-@media (min-width: 768px) {
-  .heroAccentEllipse {
-    width: 140%;
-    height: 700px;
-    top: -200px;
-    /* Maintain proportional scaleY distortion at larger breakpoints */
-    transform: translateX(-50%) scaleY(0.45);
-    filter: blur(32px);
-    opacity: 0.6;
-  }
-}
-
-@media (min-width: 1200px) {
-  .heroAccentEllipse {
-    height: 800px;
-    top: -200px;
-    transform: translateX(-50%) scaleY(0.42);
-    filter: blur(40px);
-  }
-}
-
-.heroDecoVectorWrapper {
-  position: absolute;
-  top: 50px;
-  left: 0;
-  width: 100vw;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.5;
-}
-
-.heroDecoVector {
-  width: 100vw;
-  height: auto;
-}
-
-@media (min-width: 768px) {
-  .heroDecoVectorWrapper {
-    top: 40px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .heroDecoVectorWrapper {
-    top: 30px;
-  }
 }
 
 /* Badge row — centered above heading */
@@ -182,20 +173,18 @@
   display: block;
 }
 
-/* Portrait wrapper — sits below the heading */
+/* Portrait wrapper — sits below the subtitle */
 .heroPortraitWrapper {
-  /* 280px + 32px = 312px → 312/16 = 19.5rem (mobile) */
-  max-width: 20.5rem;
+  max-width: 17rem;
   width: 100%;
   position: relative;
   margin: 0 auto;
   z-index: 1;
-  transform: translateY(-44px);
 }
 
 @media (min-width: 768px) {
   .heroPortraitWrapper {
-    max-width: 32.5rem;
+    max-width: 27rem;
   }
 }
 
@@ -265,7 +254,15 @@
 }
 
 .heroSubtitle {
-  margin-bottom: var(--spacing-9);
+  font-family: var(--body-large-family);
+  font-size: var(--body-large-size);
+  line-height: var(--body-large-line-height);
+  color: var(--color-text-muted);
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto;
+  padding-top: var(--spacing-5);
+  padding-bottom: var(--spacing-8);
 }
 
 @keyframes marqueeScroll {
@@ -278,55 +275,14 @@
   100% { transform: translate3d(0, 0, 0); }
 }
 
-.scrollHint {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  gap: var(--spacing-2);
-  margin-top: 0;
-  margin-bottom: 0;
-  color: var(--color-text-muted);
-  font-family: var(--caption-family);
-  font-size: var(--caption-size);
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  user-select: none;
-}
-
-.scrollHintText {
-  opacity: 0.8;
-}
-
-.scrollHintArrow {
-  font-size: 14px;
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(6px);
-  }
-  60% {
-    transform: translateY(3px);
-  }
-}
-
 .heroToolMarquee {
   width: 100%;
   overflow: hidden;
-  padding-left: var(--spacing-6);
-  padding-right: var(--spacing-6);
-  padding-bottom: var(--spacing-6);
-  margin-top: 0;
-  border-bottom: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+  padding-top: var(--spacing-10);
+  padding-bottom: var(--spacing-10);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-18);
+  gap: var(--spacing-10);
 }
 
 .heroToolMarqueeTrack {
@@ -383,20 +339,33 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 52px;
+  margin-bottom: var(--spacing-2);
+}
+
+.projectsHeader + .sectionDivider {
+  margin-bottom: var(--spacing-12);
 }
 
 .projectGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 96px;
+  row-gap: var(--spacing-13);
+  column-gap: var(--spacing-17);
+}
+
+@media (min-width: 768px) {
+  .projectGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .sectionDivider {
   width: 100%;
-  border-bottom: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
-  margin-top: 128px;
+  height: 1px;
+  background-color: color-mix(in srgb, var(--color-border) 50%, transparent);
 }
+
+
 
 /* ─────────────────────────────────────────
    3. About Me Section
@@ -447,6 +416,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-4);
+  font-size: 20px;
 }
 
 .aboutAction {
@@ -467,9 +437,9 @@
   position: relative;
   width: 100%;
   aspect-ratio: 3 / 4;
-  max-width: 360px;
+  max-width: 424px;
   margin: 0 auto;
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-sm);
   overflow: hidden;
   background-color: var(--color-surface-secondary);
   border: 1px solid var(--color-border);
@@ -498,6 +468,10 @@
 }
 
 .experienceTitle {
+  margin-bottom: var(--spacing-2);
+}
+
+.experienceSection .sectionDivider {
   margin-bottom: var(--spacing-9);
 }
 

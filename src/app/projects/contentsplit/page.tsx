@@ -44,7 +44,7 @@ export default function ContentSplitProject() {
         {/* ── Hero Mockup ── */}
         <div className={styles.heroMockup}>
           <Image
-            src="/499shots_so.png"
+            src="/561shots_so.png"
             alt="ContentSplit dashboard mockup"
             fill
             className={styles.heroMockupImage}
@@ -231,7 +231,7 @@ export default function ContentSplitProject() {
           <Link href="/projects/mainstack-refer-earn" className={styles.nextProjectCard}>
             <div className={styles.nextProjectImageContainer}>
               <Image
-                src="/436shots_so.png"
+                src="/64shots_so.png"
                 alt="Mainstack Referral & Affiliate dashboard"
                 fill
                 className={styles.nextProjectImage}

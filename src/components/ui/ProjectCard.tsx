@@ -29,11 +29,11 @@ export const ProjectCard = ({ slug, title, description, tags, imageUrl }: Projec
         <div className={styles.content}>
           <h3 className={styles.title}>{title}</h3>
           <p className={styles.description}>{description}</p>
-          <div className={styles.tags}>
-            {tags.map((tag, i) => (
-              <Badge key={`${tag}-${i}`}>{tag}</Badge>
-            ))}
-          </div>
+          {tags.length > 0 && (
+            <div className={styles.tags}>
+              <Badge>{tags[0]}</Badge>
+            </div>
+          )}
         </div>
       </Link>
     </div>

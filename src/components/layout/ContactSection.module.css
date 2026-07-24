@@ -3,6 +3,9 @@
   color: var(--color-surface);
   padding-top: var(--spacing-10);
   padding-bottom: var(--spacing-10);
+  margin-left: calc(-1 * var(--spacing-7));
+  margin-right: calc(-1 * var(--spacing-7));
+  width: calc(100% + var(--spacing-7) * 2);
 }
 
 @media (min-width: 768px) {
@@ -12,42 +15,21 @@
   }
 }
 
-.contactMarquee {
-  overflow: hidden;
-  width: 100%;
+@media (max-width: 767px) {
+  .contactSection {
+    margin-left: calc(-1 * var(--spacing-6));
+    margin-right: calc(-1 * var(--spacing-6));
+    width: calc(100% + var(--spacing-6) * 2);
+  }
+}
+
+.contactHeading {
   margin-bottom: var(--spacing-16);
+  text-align: center;
 }
 
-@keyframes contactMarqueeLTR {
-  0%   { transform: translate3d(0, 0, 0); }
-  100% { transform: translate3d(-50%, 0, 0); }
-}
-
-.contactMarqueeTrack {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-9);
-  width: max-content;
-  animation: contactMarqueeLTR 40s linear infinite;
-  will-change: transform;
-  backface-visibility: hidden;
-}
-
-.contactMarqueeText {
-  font-family: var(--display-text-xxl-family);
-  font-size: clamp(5rem, 15vw, var(--display-text-xxl-size));
-  font-weight: var(--display-text-xxl-weight);
-  line-height: var(--display-text-xxl-line-height);
-  letter-spacing: var(--display-text-xxl-letter-spacing);
-  color: var(--color-surface);
-  white-space: nowrap;
-}
-
-.contactMarqueeDot {
-  color: inherit;
-  font-size: clamp(5rem, 15vw, var(--display-text-xxl-size));
-  line-height: 1;
-  user-select: none;
+.contactHeading h2 {
+  font-size: 120px;
 }
 
 .contactCta {
