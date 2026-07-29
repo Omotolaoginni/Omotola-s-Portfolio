@@ -98,7 +98,7 @@ export default function Home() {
       {/* 3. About Me Section */}
       <Section id="about" width="full" padding="none" className={styles.aboutSection}>
         <div className={styles.aboutHeader}>
-          <Typography as="h2" variant="h2">About Me</Typography>
+          <Typography as="h2" variant="h2">About me</Typography>
           <div className={styles.sectionDivider} />
         </div>
         <div className={styles.aboutGrid}>

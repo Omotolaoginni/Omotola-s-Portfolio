@@ -1,8 +1,15 @@
-/* About Me header — sits above the portrait */
+/* About me header — sits above the portrait */
 .aboutHeader {
   display: flex;
   flex-direction: column;
+  margin-top: 120px;
   margin-bottom: var(--spacing-10);
+}
+
+@media (max-width: 767px) {
+  .aboutHeader {
+    margin-top: 0;
+  }
 }
 
 .aboutHeader .sectionDivider {
@@ -13,8 +20,8 @@
    4. Tools Section
 ──────────────────────────────────────── */
 .toolsSection {
-  padding-top: var(--spacing-21);
-  padding-bottom: var(--spacing-21);
+  padding-top: 0;
+  padding-bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -378,7 +385,7 @@
 @media (min-width: 768px) {
   .aboutSection {
     padding-top: 0;
-    padding-bottom: var(--spacing-20);
+    padding-bottom: 0;
   }
 }
 
@@ -393,6 +400,7 @@
   .aboutGrid {
     grid-template-columns: 1.2fr 0.8fr;
     gap: var(--spacing-20);
+    margin-bottom: 52px;
   }
 }
 
@@ -452,13 +460,13 @@
    4. Experience Section
 ───────────────────────────────────────── */
 .experienceSection {
-  padding-top: var(--spacing-10);
+  padding-top: 240px;
   padding-bottom: var(--spacing-10);
 }
 
 @media (min-width: 768px) {
   .experienceSection {
-    padding-top: 0;
+    padding-top: 240px;
     padding-bottom: var(--spacing-20);
   }
 }
