@@ -1,11 +1,11 @@
-/* About Me transition — label + divider */
-.aboutTransition {
-  margin-top: 120px;
+/* About Me header — sits above the portrait */
+.aboutHeader {
   display: flex;
   flex-direction: column;
+  margin-bottom: var(--spacing-10);
 }
 
-.aboutTransition .sectionDivider {
+.aboutHeader .sectionDivider {
   margin-top: var(--spacing-1);
 }
 
@@ -13,8 +13,8 @@
    4. Tools Section
 ──────────────────────────────────────── */
 .toolsSection {
-  padding-top: var(--spacing-9);
-  padding-bottom: 120px;
+  padding-top: var(--spacing-21);
+  padding-bottom: var(--spacing-21);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -373,14 +373,12 @@
 .aboutSection {
   padding-top: var(--spacing-10);
   padding-bottom: var(--spacing-10);
-  margin-top: -16px;
 }
 
 @media (min-width: 768px) {
   .aboutSection {
     padding-top: 0;
     padding-bottom: var(--spacing-20);
-    margin-top: -40px;
   }
 }
 
@@ -456,14 +454,12 @@
 .experienceSection {
   padding-top: var(--spacing-10);
   padding-bottom: var(--spacing-10);
-  margin-top: -16px;
 }
 
 @media (min-width: 768px) {
   .experienceSection {
     padding-top: 0;
     padding-bottom: var(--spacing-20);
-    margin-top: -40px;
   }
 }
 

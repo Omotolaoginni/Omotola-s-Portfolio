@@ -93,15 +93,14 @@ export default function Home() {
           />
         </div>
 
-        {/* About Me transition */}
-        <div className={styles.aboutTransition}>
-          <Typography as="h2" variant="h2">About Me</Typography>
-          <div className={styles.sectionDivider} />
-        </div>
       </Section>
 
       {/* 3. About Me Section */}
       <Section id="about" width="full" padding="none" className={styles.aboutSection}>
+        <div className={styles.aboutHeader}>
+          <Typography as="h2" variant="h2">About Me</Typography>
+          <div className={styles.sectionDivider} />
+        </div>
         <div className={styles.aboutGrid}>
           <div className={styles.aboutText}>
             <div className={styles.aboutNarrative}>
