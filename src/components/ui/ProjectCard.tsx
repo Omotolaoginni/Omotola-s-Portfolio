@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './ProjectCard.module.css';
-import { Badge } from './Badge';
 
 interface ProjectCardProps {
   slug: string;
@@ -12,11 +11,10 @@ interface ProjectCardProps {
   imageUrl?: string;
 }
 
-export const ProjectCard = ({ slug, title, description, tags, imageUrl }: ProjectCardProps) => {
+export const ProjectCard = ({ slug, title, description, imageUrl }: ProjectCardProps) => {
   return (
       <div
         className={styles.wrapper}
-        data-cursor-hover
       >
       <Link href={`/projects/${slug}`} className={styles.card}>
         <div className={styles.imageContainer}>
@@ -27,13 +25,10 @@ export const ProjectCard = ({ slug, title, description, tags, imageUrl }: Projec
           )}
         </div>
         <div className={styles.content}>
-          <h3 className={styles.title}>{title}</h3>
-          <p className={styles.description}>{description}</p>
-          {tags.length > 0 && (
-            <div className={styles.tags}>
-              <Badge>{tags[0]}</Badge>
-            </div>
-          )}
+          <div className={styles.header}>
+            <h3 className={styles.title}>{title}</h3>
+            <p className={styles.description}>{description}</p>
+          </div>
         </div>
       </Link>
     </div>

@@ -27,7 +27,8 @@ export const metadata: Metadata = {
     description: "A thoughtful product designer who combines visual craft, strategic UX thinking, and scalable systems design to create impactful digital experiences.",
   },
   icons: {
-    icon: '/logo-icon.svg',
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
   },
 };
 

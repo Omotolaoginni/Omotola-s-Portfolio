@@ -2,6 +2,7 @@
 
 import React, { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter, usePathname } from 'next/navigation';
 import styles from './Navbar.module.css';
 import { LiveStatus } from './LiveStatus';
@@ -79,16 +80,7 @@ export const Navbar = () => {
       <nav className={styles.nav}>
         <div className={styles.brand}>
           <Link href="/" className={styles.logo}>
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.logoIcon}>
-              <defs>
-                <linearGradient id="logoGradient" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stopColor="hsl(220, 85%, 55%)" />
-                  <stop offset="100%" stopColor="hsl(265, 75%, 60%)" />
-                </linearGradient>
-              </defs>
-              <rect width="28" height="28" rx="6" fill="url(#logoGradient)"/>
-              <text x="14" y="19" fontFamily="sans-serif" fontSize="14" fontWeight="600" fill="#ffffff" textAnchor="middle">O</text>
-            </svg>
+            <Image src="/my-photo 2.png" alt="Omotola Oginni" width={28} height={28} className={styles.logoAvatar} />
             <span className={styles.logoText}>Omotola Oginni</span>
           </Link>
         </div>

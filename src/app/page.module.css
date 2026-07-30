@@ -379,7 +379,7 @@
 ───────────────────────────────────────── */
 .aboutSection {
   padding-top: var(--spacing-10);
-  padding-bottom: var(--spacing-10);
+  padding-bottom: 0;
 }
 
 @media (min-width: 768px) {
@@ -400,7 +400,13 @@
   .aboutGrid {
     grid-template-columns: 1.2fr 0.8fr;
     gap: var(--spacing-20);
-    margin-bottom: 52px;
+    margin-bottom: 76px;
+  }
+}
+
+@media (max-width: 767px) {
+  .aboutGrid {
+    margin-bottom: var(--spacing-17);
   }
 }
 
@@ -460,13 +466,13 @@
    4. Experience Section
 ───────────────────────────────────────── */
 .experienceSection {
-  padding-top: 240px;
+  margin-top: 120px;
   padding-bottom: var(--spacing-10);
 }
 
 @media (min-width: 768px) {
   .experienceSection {
-    padding-top: 240px;
+    margin-top: 120px;
     padding-bottom: var(--spacing-20);
   }
 }
@@ -487,7 +493,6 @@
 
 @media (min-width: 768px) {
   .experienceGrid {
-    grid-template-columns: 1fr 1fr;
     gap: var(--spacing-20);
   }
 }
@@ -538,8 +543,8 @@
    5. Skills Marquee Section
 ───────────────────────────────────────── */
 .marqueeSection {
-  padding-top: 64px;
-  padding-bottom: 64px;
+  margin-top: 120px;
+  margin-bottom: 64px;
 }
 
 .marqueeContainer {

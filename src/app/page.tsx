@@ -52,42 +52,42 @@ export default function Home() {
           <ProjectCard 
             slug="contentsplit"
             title="ContentSplit"
-            description="AI Content Repurposing Engine"
+            description="AI Content Repurposing Platform"
             tags={["AI Workflow"]}
             imageUrl="/561shots_so.png"
           />
           <ProjectCard 
             slug="mainstack-refer-earn"
             title="Mainstack"
-            description="Athlete Experience"
+            description="Referral & Affiliate Platform"
             tags={["Responsive Design"]}
             imageUrl="/25shots_so.png"
           />
           <ProjectCard 
             slug="ambassador-program"
             title="Mainstack"
-            description="Ambassador Experience"
+            description="Creator Growth Platform"
             tags={["Growth Systems"]}
             imageUrl="/200shots_so.png"
           />
           <ProjectCard 
             slug="nbc-trade-fair"
             title="Mainstack"
-            description="NBC Trade Fair"
+            description="Event Commerce Platform"
             tags={["Landing Page"]}
             imageUrl="/606shots_so.png"
           />
           <ProjectCard 
             slug="smarg"
             title="SMARG"
-            description="Neobank for African Creatives"
+            description="Neobank for Creatives"
             tags={["Fintech"]}
             imageUrl="/425shots_so.png"
           />
           <ProjectCard 
             slug="sentinel"
             title="Sentinel"
-            description="Landing Page Redesign"
+            description="Infrastructure Monitoring Platform"
             tags={["SaaS"]}
             imageUrl="/162shots_so.png"
           />
@@ -105,7 +105,27 @@ export default function Home() {
           <div className={styles.aboutText}>
             <div className={styles.aboutNarrative}>
               <Typography as="p" variant="body-large" color="muted">
-                I&apos;m a Product Designer focused on building scalable, systems-driven digital products across SaaS, fintech, and creator platforms. I combine product thinking, design systems, and AI-assisted workflows to design intuitive, accessible, and scalable user experiences. My work is grounded in strong UX principles, using structured systems and thoughtful execution to simplify complex workflows and build products that are consistent, usable, and scalable.
+                I&apos;m a Product Designer focused on building scalable, systems-driven digital products across SaaS, fintech, and creator platforms. My work combines product thinking, design systems, AI-powered prototyping, and product development to create intuitive, accessible, and scalable user experiences.
+              </Typography>
+            </div>
+            <div className={styles.aboutNarrative}>
+              <Typography as="p" variant="body-large" color="muted">
+                My approach starts with understanding the product, defining clear requirements, and designing systems that bring structure and consistency from idea to implementation. I enjoy creating experiences that balance user needs with business goals while making products easier to use, maintain, and scale.
+              </Typography>
+            </div>
+            <div className={styles.aboutNarrative}>
+              <Typography as="p" variant="body-large" color="muted">
+                Over the past few years, I&apos;ve designed creator growth experiences, fintech products, AI-enabled products, and commerce solutions, contributing to design systems, responsive interfaces, and product workflows that improve engagement, adoption, and consistency across products.
+              </Typography>
+            </div>
+            <div className={styles.aboutNarrative}>
+              <Typography as="p" variant="body-large" color="muted">
+                I use AI to accelerate product thinking, design exploration, prototyping, and implementation while relying on strong UX principles to guide every decision. By combining structured prompting, thoughtful iteration, design systems, and AI-powered product development, I&apos;m able to move ideas from concept to implementation with speed and consistency.
+              </Typography>
+            </div>
+            <div className={styles.aboutNarrative}>
+              <Typography as="p" variant="body-large" color="muted">
+                I believe great products are built on clear systems, thoughtful collaboration, and continuous improvement. I&apos;m looking to collaborate with forward-thinking startups and teams to design products that create value for users, support business growth, and scale with confidence.
               </Typography>
             </div>
           </div>
@@ -148,11 +168,6 @@ export default function Home() {
         <Typography as="h2" variant="h2">Experience</Typography>
         <div className={styles.sectionDivider} />
         <div className={styles.experienceGrid}>
-          <div className={styles.experienceIntro}>
-            <Typography as="p" variant="body-large" color="muted">
-              I&apos;ve had the opportunity to work with companies like Mainstack and Smarg, as well as collaborate with clients who understand the value of intentional design. Across FinTech and creator platforms, I bring a user-centered approach to every product, whether that&apos;s streamlining a flow, building out a design system, or designing for measurable growth.
-            </Typography>
-          </div>
           <div className={styles.experienceList}>
             <div className={styles.experienceItem}>
               <span className={styles.expCompany}>Mainstack</span>
