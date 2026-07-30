@@ -18,7 +18,7 @@ export default function NbcTradeFairProject() {
       <Section width="full" padding="none">
         <div className={styles.heroGrid}>
           <Typography as="h1" variant="display" className={styles.heroTitle}>
-            Building a Responsive Vendor Payment Experience for NBC Trade Fair 2025
+            Responsive Vendor Payment Experience for NBC Trade Fair 2025
           </Typography>
           <Typography as="p" variant="body-large" color="muted" className={styles.heroOverview}>
             Collaborated on the landing page experience and designed the mobile onboarding flow that helped vendors complete payment setup and POS verification seamlessly.
@@ -40,7 +40,7 @@ export default function NbcTradeFairProject() {
 
         <div className={styles.heroMockup}>
           <Image
-            src="/197shots_so.png"
+            src="/289shots_so.png"
             alt="NBC Trade Fair landing page mockup"
             fill
             className={styles.heroMockupImage}
@@ -86,7 +86,7 @@ export default function NbcTradeFairProject() {
               <div className={styles.showcaseImageGrid}>
                 <div className={styles.showcaseImageContainer}>
                   <Image
-                    src="/61shots_so.png"
+                    src="/Mobile 3.png"
                     alt="NBC Trade Fair problem context 1"
                     fill
                     className={styles.showcaseImage}
@@ -94,7 +94,7 @@ export default function NbcTradeFairProject() {
                 </div>
                 <div className={styles.showcaseImageContainer}>
                   <Image
-                    src="/448shots_so.png"
+                    src="/Mobile 5.png"
                     alt="NBC Trade Fair problem context 2"
                     fill
                     className={styles.showcaseImage}
@@ -144,7 +144,7 @@ export default function NbcTradeFairProject() {
               </Typography>
               <div className={styles.showcaseImageContainer}>
                 <Image
-                  src="/177shots_so.png"
+                  src="/464shots_so.png"
                   alt="NBC Trade Fair solution overview"
                   fill
                   className={styles.showcaseImage}
@@ -168,7 +168,7 @@ export default function NbcTradeFairProject() {
               </Typography>
               <div className={styles.showcaseImageContainer}>
                 <Image
-                  src="/Mobile.png"
+                  src="/Mobile 1.png"
                   alt="Mobile onboarding flow"
                   fill
                   className={styles.showcaseImage}
@@ -195,7 +195,7 @@ export default function NbcTradeFairProject() {
               </Typography>
               <div className={styles.showcaseImageContainer}>
                 <Image
-                  src="/Mobile 23.png"
+                  src="/Mobile 2.png"
                   alt="Mobile responsive experience screenshot"
                   fill
                   className={styles.showcaseImage}

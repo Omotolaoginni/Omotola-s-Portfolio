@@ -41,7 +41,7 @@ export default function AmbassadorProgramProject() {
 
         <div className={styles.heroMockup}>
           <Image
-            src="/194shots_so.png"
+            src="/379shots_so.png"
             alt="Mainstack Ambassador Program dashboard mockup"
             fill
             className={styles.heroMockupImage}
@@ -160,7 +160,7 @@ export default function AmbassadorProgramProject() {
               </Typography>
               <div className={styles.showcaseImageContainer}>
                 <Image
-                  src="/Frame 4.png"
+                  src="/Frame 3.png"
                   alt="Mobile responsive ambassador experience"
                   fill
                   className={styles.showcaseImage}
