@@ -20,7 +20,7 @@ export default function Home() {
             <div className={styles.heroBadgeRow}>
               <div className={styles.heroBadgeGradientRing}>
                 <div className={styles.heroBadgeGradientInner}>
-                  HELLO! I'M OMOTOLA OGINNI
+                  HELLO! I&apos;M OMOTOLA OGINNI
                 </div>
               </div>
             </div>

@@ -7,11 +7,9 @@ export const CustomCursor = () => {
   const [pos, setPos] = useState({ x: 0, y: 0 });
   const [hovering, setHovering] = useState(false);
   const [visible, setVisible] = useState(false);
-  const [isTouch, setIsTouch] = useState(false);
-
-  useEffect(() => {
-    setIsTouch("ontouchstart" in window || navigator.maxTouchPoints > 0);
-  }, []);
+  const [isTouch] = useState(() => 
+    typeof window !== 'undefined' && ("ontouchstart" in window || navigator.maxTouchPoints > 0)
+  );
 
   useEffect(() => {
     if (isTouch) return;

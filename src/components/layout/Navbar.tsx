@@ -14,7 +14,6 @@ export const Navbar = () => {
 
   useEffect(() => {
     if (pathname !== '/') {
-      setActiveSection(null);
       return;
     }
 
@@ -86,22 +85,22 @@ export const Navbar = () => {
         </div>
         <ul className={styles.links}>
           <li>
-            <a 
+            <Link 
               href="/#work" 
               className={`${styles.link} ${isActive('work') ? styles.active : ''}`}
               onClick={handleWorkClick}
             >
               Work
-            </a>
+            </Link>
           </li>
           <li>
-            <a 
+            <Link 
               href="/#about" 
               className={`${styles.link} ${isActive('about') ? styles.active : ''}`}
               onClick={handleAboutClick}
             >
               About
-            </a>
+            </Link>
           </li>
           <li>
             <a href="https://docs.google.com/document/d/1lXcMccUO7n-IeZgo5bYloURiSIAXE_qM/edit?usp=sharing&ouid=115004771190897078576&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" className={styles.link}>
