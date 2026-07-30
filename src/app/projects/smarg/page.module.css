@@ -278,12 +278,15 @@
   grid-template-columns: 1fr;
   gap: var(--spacing-6);
   text-decoration: none;
-  border-radius: var(--radius-xl);
   transition: opacity 0.2s ease;
 }
 
 .nextProjectCard:hover {
   opacity: 0.8;
+}
+
+.nextProjectCard:hover .nextProjectImage {
+  transform: scale(1.02);
 }
 
 @media (min-width: 768px) {
@@ -312,6 +315,7 @@
 
 .nextProjectImage {
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .nextProjectContent {

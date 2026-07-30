@@ -223,9 +223,10 @@ export default function SmargProject() {
           <Link href="/projects/sentinel" className={styles.nextProjectCard}>
             <div className={styles.nextProjectImageContainer}>
               <Image
-                src="/707shots_so.png"
+                src="/162shots_so.png"
                 alt="Sentinel"
                 fill
+                sizes="(max-width: 768px) 100vw, 400px"
                 className={styles.nextProjectImage}
               />
             </div>
