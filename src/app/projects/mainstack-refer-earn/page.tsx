@@ -102,7 +102,7 @@ export default function CreatorPlatformProject() {
               </Typography>
               <div className={styles.showcaseImageContainer}>
                 <Image
-                  src="/643shots_so.png"
+                  src="/332shots_so.png"
                   alt="Referral platform problem overview"
                   fill
                   className={styles.showcaseImage}
@@ -126,7 +126,7 @@ export default function CreatorPlatformProject() {
               </Typography>
               <div className={styles.showcaseImageContainer}>
                 <Image
-                  src="/757shots_so.png"
+                  src="/520shots_so.png"
                   alt="How Mainstack referral flow works"
                   fill
                   className={styles.showcaseImage}
@@ -150,8 +150,8 @@ export default function CreatorPlatformProject() {
               </Typography>
               <div className={styles.showcaseImageContainer}>
                 <Image
-                  src="/Frame3.png"
-                  alt="Referral tracking dashboard"
+                  src="/712shots_so.png"
+                  alt="Mobile responsive referral experience"
                   fill
                   className={styles.showcaseImage}
                 />

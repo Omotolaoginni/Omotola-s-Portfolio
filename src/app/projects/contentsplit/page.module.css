@@ -123,7 +123,6 @@
   aspect-ratio: 16 / 9;
   background-color: var(--color-surface-secondary);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
   overflow: hidden;
   margin-top: var(--spacing-13);
 }
@@ -202,7 +201,6 @@
   aspect-ratio: 16 / 9;
   background-color: var(--color-surface-secondary);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
   overflow: hidden;
 }
 
@@ -408,7 +406,6 @@
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  border-radius: var(--radius-xl);
   overflow: hidden;
   background-color: var(--color-surface-secondary);
   border: 1px solid var(--color-border);
