@@ -21,12 +21,12 @@
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  background-color: var(--color-surface-secondary);
   overflow: hidden;
 }
 
 .image {
   object-fit: cover;
+  object-position: center;
   transition: transform 0.3s ease;
 }
 

@@ -150,7 +150,7 @@ export default function CreatorPlatformProject() {
               </Typography>
               <div className={styles.showcaseImageContainer}>
                 <Image
-                  src="/712shots_so.png"
+                  src="/Frame 2.png"
                   alt="Mobile responsive referral experience"
                   fill
                   className={styles.showcaseImage}

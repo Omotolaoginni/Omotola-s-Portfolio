@@ -19,7 +19,7 @@ export const ProjectCard = ({ slug, title, description, imageUrl }: ProjectCardP
       <Link href={`/projects/${slug}`} className={styles.card}>
         <div className={styles.imageContainer}>
           {imageUrl ? (
-            <Image src={imageUrl} alt={title} fill className={styles.image} />
+            <Image src={imageUrl} alt={title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className={styles.image} style={{ objectFit: 'cover' }} />
           ) : (
             <div className={styles.placeholder} />
           )}
