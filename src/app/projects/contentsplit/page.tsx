@@ -91,7 +91,7 @@ export default function ContentSplitProject() {
               </Typography>
               <div className={styles.showcaseImageContainer}>
                 <Image
-                  src="/892shots_so.png"
+                  src="/317shots_so.png"
                   alt="ContentSplit product overview screenshot"
                   fill
                   className={styles.showcaseImage}
@@ -137,7 +137,7 @@ export default function ContentSplitProject() {
               </Typography>
               <div className={styles.showcaseImageContainer}>
                 <Image
-                  src="/493shots_so.png"
+                  src="/157shots_so.png"
                   alt="ContentSplit content transformation flow screenshot"
                   fill
                   className={styles.showcaseImage}
@@ -164,7 +164,7 @@ export default function ContentSplitProject() {
               </Typography>
               <div className={styles.showcaseImageContainer}>
                 <Image
-                  src="/421shots_so.png"
+                  src="/843shots_so.png"
                   alt="ContentSplit key product capabilities screenshot"
                   fill
                   className={styles.showcaseImage}
