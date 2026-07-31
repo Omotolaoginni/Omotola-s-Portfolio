@@ -31,7 +31,7 @@ export default function ContentSplitProject() {
         {/* ── Check it Out Link ── */}
         <div className={styles.checkItOutRow}>
           <a
-            href="https://contentsplit-ai.vercel.app/"
+            href="https://contentsplit-nine.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.checkItOut}
