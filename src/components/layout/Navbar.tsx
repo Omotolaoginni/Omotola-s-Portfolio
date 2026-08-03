@@ -108,6 +108,11 @@ export const Navbar = () => {
             </a>
           </li>
           <li>
+            <a href="https://medium.com/@OmotolaOginni" target="_blank" rel="noopener noreferrer" className={styles.link}>
+              Writing
+            </a>
+          </li>
+          <li>
             <Link href="/contact" className={`${styles.link} ${isActive('contact') ? styles.active : ''}`}>
               Contact
             </Link>
