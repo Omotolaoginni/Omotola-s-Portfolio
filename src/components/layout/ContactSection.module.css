@@ -15,54 +15,6 @@
   }
 }
 
-@media (max-width: 767px) {
-  .contactSection {
-    margin-left: calc(-1 * var(--spacing-6));
-    margin-right: calc(-1 * var(--spacing-6));
-    width: calc(100% + var(--spacing-6) * 2);
-    padding-left: var(--spacing-6);
-    padding-right: var(--spacing-6);
-    padding-top: 0;
-    padding-bottom: var(--spacing-13);
-  }
-
-  .contactHeading {
-    margin-bottom: var(--spacing-9);
-  }
-
-  .contactHeading h2 {
-    font-size: 40px;
-    line-height: 1.15;
-  }
-
-  .contactCta {
-    margin-bottom: var(--spacing-9);
-  }
-
-  .contactCta a {
-    padding: 14px 28px;
-    font-size: 1rem;
-  }
-
-  .contactGrid {
-    gap: var(--spacing-8);
-  }
-
-  .contactCtaText {
-    font-size: 1.0625rem !important;
-    line-height: 1.6 !important;
-  }
-
-  .contactLinkEmail {
-    top: 0;
-  }
-
-  .backToTop {
-    top: 0;
-    margin-top: var(--spacing-8);
-  }
-}
-
 .contactHeading {
   margin-bottom: var(--spacing-16);
   text-align: center;
@@ -202,4 +154,55 @@
 
 .backToTop:hover {
   color: var(--color-focus-ring);
+}
+
+/* ─────────────────────────────────────────
+   Mobile refinements
+───────────────────────────────────────── */
+@media (max-width: 767px) {
+  .contactSection {
+    margin-left: calc(-1 * var(--spacing-6));
+    margin-right: calc(-1 * var(--spacing-6));
+    width: calc(100% + var(--spacing-6) * 2);
+    padding-left: var(--spacing-6);
+    padding-right: var(--spacing-6);
+    padding-top: var(--spacing-13);
+    padding-bottom: var(--spacing-13);
+  }
+
+  .contactHeading {
+    margin-bottom: var(--spacing-9);
+  }
+
+  .contactHeading h2 {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+
+  .contactCta {
+    margin-bottom: var(--spacing-9);
+  }
+
+  .contactCta a {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+
+  .contactGrid {
+    gap: var(--spacing-8);
+  }
+
+  .contactCtaText {
+    font-size: 1.0625rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .contactLinkEmail {
+    top: 0;
+  }
+
+  .backToTop {
+    top: 0;
+    margin-top: var(--spacing-8);
+  }
 }
