@@ -166,7 +166,7 @@
     width: calc(100% + var(--spacing-6) * 2);
     padding-left: var(--spacing-6);
     padding-right: var(--spacing-6);
-    padding-top: var(--spacing-13);
+    padding-top: var(--section-gap-mobile);
     padding-bottom: var(--spacing-13);
   }
 

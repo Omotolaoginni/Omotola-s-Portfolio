@@ -115,3 +115,11 @@
   --gradient-border: linear-gradient(135deg, hsla(var(--hsl-primary), 0.3), hsla(var(--hsl-secondary), 0.15));
   --gradient-hero-glow: radial-gradient(ellipse 70% 55% at 50% 0%, hsla(var(--hsl-primary), 0.12), hsla(var(--hsl-soft-blend), 0.4) 50%, transparent 80%);
 }
+
+/* Responsive gap between major sections on mobile — scales with viewport
+   so the page breathes on small screens while staying intentional. */
+@media (max-width: 767px) {
+  :root {
+    --section-gap-mobile: clamp(var(--spacing-15), 10vw, var(--spacing-18));
+  }
+}

@@ -840,8 +840,8 @@
 
   /* ── Selected Work ── */
   .projectsSection {
-    padding-top: clamp(var(--spacing-10), 8vw, var(--spacing-15));
-    padding-bottom: var(--spacing-13);
+    padding-top: var(--section-gap-mobile);
+    padding-bottom: var(--section-gap-mobile);
   }
 
   .projectsHeader {
@@ -898,8 +898,8 @@
 
   /* ── Tools ── */
   .toolsSection {
-    padding-top: var(--spacing-13);
-    padding-bottom: var(--spacing-13);
+    padding-top: var(--section-gap-mobile);
+    padding-bottom: var(--section-gap-mobile);
   }
 
   .toolsRow {
@@ -923,7 +923,7 @@
   /* ── Experience ── */
   .experienceSection {
     margin-top: 0;
-    padding-bottom: var(--spacing-13);
+    padding-bottom: var(--section-gap-mobile);
   }
 
   .experienceList {
@@ -941,7 +941,7 @@
   /* ── Skills Marquee ── */
   .marqueeSection {
     margin-top: 0;
-    margin-bottom: var(--spacing-13);
+    margin-bottom: 0;
   }
 
   .marqueeItem,
