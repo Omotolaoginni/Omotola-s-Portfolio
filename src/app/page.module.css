@@ -840,7 +840,7 @@
 
   /* ── Selected Work ── */
   .projectsSection {
-    padding-top: clamp(var(--spacing-15), 9vw, var(--spacing-19));
+    padding-top: clamp(var(--spacing-10), 8vw, var(--spacing-15));
     padding-bottom: var(--spacing-13);
   }
 
