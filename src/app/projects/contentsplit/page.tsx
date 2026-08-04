@@ -3,12 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { Section } from "@/components/layout/Section";
 import { Typography } from "@/components/ui/Typography";
+import { VideoPlayer } from "./VideoPlayer";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "ContentSplit — Omotola Oginni",
   description:
-    "AI-powered content repurposing system that transforms long-form writing into platform-ready posts for social and email distribution.",
+    "AI-powered publishing platform that transforms one long-form article into platform ready content for multiple channels.",
 };
 
 export default function ContentSplitProject() {
@@ -21,7 +22,7 @@ export default function ContentSplitProject() {
               ContentSplit
             </Typography>
             <Typography as="p" variant="body-large" color="muted" className={styles.heroOverview}>
-              AI-powered content repurposing system that transforms long-form writing into platform-ready posts for social and email distribution.
+              AI-powered publishing platform that transforms one long-form article into platform ready content for multiple channels.
             </Typography>
         </div>
 
@@ -31,7 +32,7 @@ export default function ContentSplitProject() {
         {/* ── Check it Out Link ── */}
         <div className={styles.checkItOutRow}>
           <a
-            href="https://contentsplit-nine.vercel.app/"
+            href="https://contentsplit-ai.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.checkItOut}
@@ -44,7 +45,7 @@ export default function ContentSplitProject() {
         {/* ── Hero Mockup ── */}
         <div className={styles.heroMockup}>
           <Image
-            src="/561shots_so.png"
+            src="/238shots_so.png"
             alt="ContentSplit dashboard mockup"
             fill
             className={styles.heroMockupImage}
@@ -84,14 +85,11 @@ export default function ContentSplitProject() {
             </Typography>
             <div className={styles.editorialContent}>
               <Typography as="p" variant="body-large" color="muted">
-                ContentSplit is an AI-powered content repurposing tool that helps creators and marketers convert long-form content into multiple platform specific formats. Users paste a blog post or article into the system, and the tool automatically generates optimized versions for Twitter, LinkedIn, Instagram, and Email.
-              </Typography>
-              <Typography as="p" variant="body-large" color="muted">
-                Each output is structured based on platform requirements, allowing users to quickly review, edit, and reuse content without manually rewriting it multiple times.
+                ContentSplit is an AI-powered content publishing platform that helps creators, marketers, and businesses transform a single long-form article into platform ready content in minutes. Users can paste one blog post, choose a single platform or generate content for multiple platforms at once using Batch Mode, then review and refine every output before publishing. The experience is designed to reduce repetitive work while keeping creators in control of their content.
               </Typography>
               <div className={styles.showcaseImageContainer}>
                 <Image
-                  src="/317shots_so.png"
+                  src="/530shots_so.png"
                   alt="ContentSplit product overview screenshot"
                   fill
                   className={styles.showcaseImage}
@@ -111,10 +109,10 @@ export default function ContentSplitProject() {
             </Typography>
             <div className={styles.editorialContent}>
               <Typography as="p" variant="body-large" color="muted">
-                Content creators and marketers spend significant time manually rewriting the same content across multiple platforms. A single blog post often needs to be reformatted into Twitter threads, LinkedIn posts, Instagram captions, and email content. This repetitive process is time consuming, inconsistent, and inefficient.
+                Creating content for multiple platforms usually means rewriting the same ideas several times to match different audiences and content formats. This repetitive workflow slows creators down, introduces inconsistencies, and makes publishing at scale difficult.
               </Typography>
               <Typography as="p" variant="body-large" color="muted">
-                The challenge was to design a system that reduces this friction by automating content transformation while keeping users in control of editing and final output quality.
+                The challenge was to design an AI-first experience that simplifies content repurposing while giving users the flexibility to generate content for a single platform or an entire publishing workflow without sacrificing quality or control.
               </Typography>
             </div>
           </div>
@@ -130,19 +128,21 @@ export default function ContentSplitProject() {
             </Typography>
             <div className={styles.editorialContent}>
               <Typography as="p" variant="body-large" color="muted">
-                Users paste their long form content into the ContentSplit editor. The system processes the input and generates multiple versions of the same content, optimized for different platforms. Users can switch between tabs such as Twitter, LinkedIn, Instagram, and Email to view tailored outputs.
+                Users begin by pasting a long-form article into ContentSplit.
               </Typography>
               <Typography as="p" variant="body-large" color="muted">
-                Each version can be regenerated or edited before copying, allowing flexibility while maintaining platform specific formatting and tone.
+                From there they can choose between two publishing workflows:
               </Typography>
-              <div className={styles.showcaseImageContainer}>
-                <Image
-                  src="/157shots_so.png"
-                  alt="ContentSplit content transformation flow screenshot"
-                  fill
-                  className={styles.showcaseImage}
-                />
-              </div>
+              <Typography as="p" variant="body-large" color="muted">
+                &bull; Single Post Mode, for generating content for one selected platform.
+              </Typography>
+              <Typography as="p" variant="body-large" color="muted">
+                &bull; Batch Mode, for generating content across multiple selected platforms in a single session.
+              </Typography>
+              <Typography as="p" variant="body-large" color="muted">
+                Once the desired platforms are selected, the AI generates platform-specific content optimized for each channel. Users can review, edit, and refine every output before publishing, ensuring the final content aligns with their intent and brand voice.
+              </Typography>
+              <VideoPlayer />
             </div>
           </div>
         </div>
@@ -157,14 +157,11 @@ export default function ContentSplitProject() {
             </Typography>
             <div className={styles.editorialContent}>
               <Typography as="p" variant="body-large" color="muted">
-                ContentSplit is built around a tab based output system where each platform generates a different version of the same input content. Users can regenerate outputs if they are not satisfied and switch between tones such as professional, casual, or punchy.
-              </Typography>
-              <Typography as="p" variant="body-large" color="muted">
-                The system also saves past generations, allowing users to revisit and reuse previously generated content without starting over.
+                ContentSplit provides a flexible AI-powered content generation workflow that allows users to transform a single long-form article into platform-ready content. Users can choose between Single Post Mode for individual platform generation or Batch Mode to generate content for multiple platforms in one session. They can select their preferred platforms, customize the output tone, regenerate results when needed, and refine every AI-generated draft before publishing. The system also preserves previous generations, making it easy to revisit, edit, and reuse content without starting over.
               </Typography>
               <div className={styles.showcaseImageContainer}>
                 <Image
-                  src="/843shots_so.png"
+                  src="/662shots_so.png"
                   alt="ContentSplit key product capabilities screenshot"
                   fill
                   className={styles.showcaseImage}
@@ -207,15 +204,30 @@ export default function ContentSplitProject() {
               Key Insights
             </Typography>
             <div className={styles.editorialContent}>
-              <Typography as="p" variant="body-large" color="muted">
-                A key design challenge was balancing automation with user control in an AI-generated content system. While the system produces multiple platform-specific outputs automatically, users still need clarity, visibility, and the ability to edit or refine results before using them.
-              </Typography>
-              <Typography as="p" variant="body-large" color="muted">
-                Another important challenge was designing effective prompting behavior for the AI system to ensure outputs were not only accurate but also visually structured, readable, and aesthetically pleasing across different content formats. This required careful consideration of how generated text is presented within the interface.
-              </Typography>
-              <Typography as="p" variant="body-large" color="muted">
-                The interface was designed to make content transformation feel predictable, transparent, and easy to iterate on, while maintaining trust in the AI-generated outputs.
-              </Typography>
+              <div className={styles.insightBlock}>
+                <Typography as="h3" variant="h3" className={styles.insightHeading}>
+                  Balancing automation with user control
+                </Typography>
+                <Typography as="p" variant="body-large" color="muted">
+                  One of the biggest design challenges was ensuring AI accelerated the content creation process without removing user control. While ContentSplit generates platform-specific content automatically, users still need the ability to review, edit, regenerate, and refine every output before publishing. Designing around this balance helped create a workflow that feels efficient while keeping creators confident in the final result.
+                </Typography>
+              </div>
+              <div className={styles.insightBlock}>
+                <Typography as="h3" variant="h3" className={styles.insightHeading}>
+                  Designing for different publishing workflows
+                </Typography>
+                <Typography as="p" variant="body-large" color="muted">
+                  Not every creator works the same way. Some publish to a single platform, while others manage content across multiple channels. Supporting both Single Post Mode and Batch Mode required designing flexible workflows that accommodate different publishing habits without increasing complexity.
+                </Typography>
+              </div>
+              <div className={styles.insightBlock}>
+                <Typography as="h3" variant="h3" className={styles.insightHeading}>
+                  Building trust through transparency
+                </Typography>
+                <Typography as="p" variant="body-large" color="muted">
+                  AI-generated content should feel understandable, not unpredictable. The experience was designed to make every step—from content generation to editing and regeneration—clear and transparent. Giving users visibility into the process and control over the final output helps build confidence in AI while encouraging iteration rather than treating generated content as a finished product.
+                </Typography>
+              </div>
             </div>
           </div>
         </div>

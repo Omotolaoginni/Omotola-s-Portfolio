@@ -345,7 +345,7 @@ export default function SentinelProject() {
           <Link href="/projects/contentsplit" className={styles.nextProjectCard}>
             <div className={styles.nextProjectImageContainer}>
               <Image
-                src="/499shots_so.png"
+                src="/238shots_so.png"
                 alt="ContentSplit"
                 fill
                 sizes="(max-width: 768px) 100vw, 400px"

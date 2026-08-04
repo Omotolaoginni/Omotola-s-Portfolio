@@ -208,6 +208,55 @@
   object-fit: cover;
 }
 
+/* ── Video Container ── */
+.videoContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: var(--color-surface-secondary);
+  border: 1px solid var(--color-border);
+}
+
+.videoPlayer {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  background-color: #000;
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.playOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.15);
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s ease;
+}
+
+.playOverlay:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.playIcon {
+  width: 64px;
+  height: 64px;
+  color: #ffffff;
+  opacity: 0.9;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+}
+
 /* ── 7. Editorial Layout Sections (Introduction, Problem, Workflow, Contribution, Insights) ── */
 .editorialSection {
   margin-top: var(--spacing-20);
@@ -217,6 +266,16 @@
 
 .editorialSectionNoBorder {
   border-top: none;
+}
+
+.insightHeading {
+  font-size: 1.25rem;
+}
+
+.insightBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
 }
 
 .editorialGrid {

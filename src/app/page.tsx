@@ -54,7 +54,7 @@ export default function Home() {
             title="ContentSplit"
             description="AI Content Repurposing Platform"
             tags={["AI Workflow"]}
-            imageUrl="/561shots_so.png"
+            imageUrl="/238shots_so.png"
           />
           <ProjectCard 
             slug="mainstack-refer-earn"

@@ -54,6 +54,10 @@ export default function NbcTradeFairProject() {
         <div className={styles.metadataSection}>
             <div className={styles.metadataGrid}>
             <div className={styles.metadataRow}>
+              <span className={styles.metadataLabel}>Year</span>
+              <span className={styles.metadataValue}>2025</span>
+            </div>
+            <div className={styles.metadataRow}>
               <span className={styles.metadataLabel}>Role</span>
               <span className={styles.metadataValue}>Product Designer · Experience Designer</span>
             </div>
