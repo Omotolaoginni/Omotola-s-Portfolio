@@ -313,3 +313,40 @@
   color: var(--color-text-primary);
   margin: 0;
 }
+
+/* ─────────────────────────────────────────
+   Mobile refinements
+───────────────────────────────────────── */
+@media (max-width: 767px) {
+  .page {
+    padding-top: 48px;
+  }
+
+  .divider {
+    margin-top: var(--spacing-9);
+    margin-bottom: var(--spacing-6);
+  }
+
+  .heroMockup {
+    margin-top: var(--spacing-9);
+  }
+
+  .metadataSection {
+    margin-top: var(--spacing-13);
+    padding-top: var(--spacing-9);
+  }
+
+  .editorialSection {
+    margin-top: var(--spacing-13);
+    padding-top: var(--spacing-9);
+  }
+
+  .nextProjectSection {
+    margin-top: var(--spacing-13);
+  }
+
+  .nextDivider {
+    margin-top: var(--spacing-6);
+    margin-bottom: var(--spacing-9);
+  }
+}

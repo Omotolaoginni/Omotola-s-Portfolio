@@ -250,3 +250,16 @@
 .formMessageError {
   color: var(--color-text-primary);
 }
+
+/* ─────────────────────────────────────────
+   Mobile refinements
+───────────────────────────────────────── */
+@media (max-width: 767px) {
+  .page {
+    padding-top: 48px;
+  }
+
+  .headingDivider {
+    margin: var(--spacing-6) 0 var(--spacing-9) 0;
+  }
+}

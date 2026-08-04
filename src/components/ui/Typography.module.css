@@ -104,3 +104,36 @@
   line-height: var(--caption-line-height);
   letter-spacing: var(--caption-letter-spacing);
 }
+
+/* Mobile typography scale */
+@media (max-width: 767px) {
+  .variant-display {
+    font-size: 2.75rem;
+    line-height: 1.12;
+  }
+
+  .variant-h1 {
+    font-size: 2.25rem;
+  }
+
+  .variant-h2 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+
+  .variant-h3 {
+    font-size: 1.375rem;
+  }
+
+  .variant-body-xl {
+    font-size: 1.25rem;
+  }
+
+  .variant-body-lg {
+    font-size: 1.0625rem;
+  }
+
+  .variant-body-large {
+    font-size: 1rem;
+  }
+}

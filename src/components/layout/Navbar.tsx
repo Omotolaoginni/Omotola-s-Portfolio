@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter, usePathname } from 'next/navigation';
@@ -11,6 +11,14 @@ export const Navbar = () => {
   const router = useRouter();
   const pathname = usePathname();
   const [activeSection, setActiveSection] = useState<string | null>(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
+    setMenuOpen(false);
+  }
 
   useEffect(() => {
     if (pathname !== '/') {
@@ -46,6 +54,32 @@ export const Navbar = () => {
     };
   }, [pathname]);
 
+  const closeMenu = useCallback(() => setMenuOpen(false), []);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const handleClickOutside = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        closeMenu();
+      }
+    };
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [menuOpen, closeMenu]);
+
   const handleWorkClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
 
@@ -67,6 +101,16 @@ export const Navbar = () => {
       router.push('/#about');
     }
   }, [pathname, router]);
+
+  const handleMobileWorkClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
+    handleWorkClick(e);
+    closeMenu();
+  }, [handleWorkClick, closeMenu]);
+
+  const handleMobileAboutClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
+    handleAboutClick(e);
+    closeMenu();
+  }, [handleAboutClick, closeMenu]);
 
   const isActive = (section: string) => {
     if (pathname === '/contact' && section === 'contact') return true;
@@ -120,6 +164,74 @@ export const Navbar = () => {
         </ul>
         <div className={styles.statusWrapper}>
           <LiveStatus />
+        </div>
+
+        <div className={styles.mobileNav} ref={menuRef}>
+          <button
+            className={`${styles.hamburger} ${menuOpen ? styles.hamburgerOpen : ''}`}
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-label="Toggle navigation menu"
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+          >
+            <span className={styles.hamburgerLine} />
+            <span className={styles.hamburgerLine} />
+            <span className={styles.hamburgerLine} />
+          </button>
+
+          <div id="mobile-menu" className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ''}`}>
+            <ul className={styles.mobileLinks}>
+              <li>
+                <Link
+                  href="/#work"
+                  className={`${styles.mobileLink} ${isActive('work') ? styles.mobileLinkActive : ''}`}
+                  onClick={handleMobileWorkClick}
+                >
+                  Work
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#about"
+                  className={`${styles.mobileLink} ${isActive('about') ? styles.mobileLinkActive : ''}`}
+                  onClick={handleMobileAboutClick}
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="https://docs.google.com/document/d/1lXcMccUO7n-IeZgo5bYloURiSIAXE_qM/edit?usp=sharing&ouid=115004771190897078576&rtpof=true&sd=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.mobileLink}
+                  onClick={closeMenu}
+                >
+                  Resume
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://medium.com/@OmotolaOginni"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.mobileLink}
+                  onClick={closeMenu}
+                >
+                  Writing
+                </a>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className={`${styles.mobileLink} ${isActive('contact') ? styles.mobileLinkActive : ''}`}
+                  onClick={closeMenu}
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>

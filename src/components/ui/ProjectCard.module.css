@@ -64,3 +64,22 @@
   text-align: right;
   white-space: nowrap;
 }
+
+/* Mobile — more compact cards */
+@media (max-width: 767px) {
+  .content {
+    padding: var(--spacing-4);
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 0.875rem;
+  }
+
+  .header {
+    gap: var(--spacing-3);
+  }
+}
