@@ -44,7 +44,7 @@ export default function Home() {
       <Section width="full" padding="none" className={styles.projectsSection} id="work">
         <div className={styles.projectsHeader}>
           <Typography as="h2" variant="h2">Selected Work</Typography>
-          <Button href="/projects" variant="link">View all projects</Button>
+          <Button href="/projects/contentsplit" variant="link">View all projects</Button>
         </div>
         <div className={styles.sectionDivider} />
         
